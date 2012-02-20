@@ -27,7 +27,8 @@ You'll want to [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/i
 ## Usage
 
 ```ruby
-e = ExifTooler.new("path/to/iPhone 4S.jpg").to_hash
+e = ExifTooler.new("path/to/iPhone 4S.jpg")
+e.to_hash
 #=>{:make => "Apple", :gps_longitude => -122.47566667, …
 e.to_display_hash
 #=>{"Make" => "Apple", "GPS Longitude" => -122.47566667, …
