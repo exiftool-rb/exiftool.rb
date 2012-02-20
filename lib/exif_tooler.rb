@@ -9,6 +9,10 @@ class ExifTooler
   class NoSuchFile < StandardError; end
   class ExifToolNotInstalled < StandardError; end
 
+  def self.exiftool_installed?
+    `exiftool -ver 2> /dev/null`.to_f > 0
+  end
+
   attr_reader :to_hash, :to_display_hash, :symbol_display_hash
 
   def initialize(filename, exiftool_opts = "")

@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "exif_tooler/version"
 
 Gem::Specification.new do |s|
-  s.name        = "exiftooler"
+  s.name        = "exif_tooler"
   s.version     = ExifTooler::VERSION
   s.authors     = ["Matthew McEachen"]
   s.email       = ["matthew-github@mceachen.org"]

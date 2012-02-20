@@ -48,6 +48,15 @@ ExifTooler.new("Gemfile").errors?
 ```
 
 
+## Change history
+
+### 0.0.1
+
+First whack. Read-only support.
+
+### 0.0.2
+
+Added ```.exiftool_installed?```
 
 
 
