@@ -1,0 +1,225 @@
+--- 
+:focal_type: Zoom
+:focus_mode: One-shot AF
+:"shutter-ae_lock": AF/AE lock
+:lens_type: Unknown (-1)
+:color_temp_auto: 4662
+:num_af_points: 9
+:long_focal: 85 mm
+:thumbnail_offset: 9728
+:interop_index: R98 - DCF basic file (sRGB)
+:wb_rggb_levels_custom1: 2095 1023 1023 1316
+:digital_gain: 0
+:create_date: 2004-09-19 12:25:20 -07:00
+:resolution_unit: inches
+:exif_byte_order: Little-endian (Intel, II)
+:photo_effect: "Off"
+:wb_rggb_levels_tungsten: 1410 1023 1023 2408
+:owner_name: unknown
+:white_balance_red: 0
+:file_size: 2.9 MB
+:quality: Fine
+:source_file: test/Canon 20D.jpg
+:exif_version: "0221"
+:aperture: 9.0
+:slow_shutter: None
+:exposure_mode: Auto
+:wb_rggb_levels_custom2: 1912 1023 1023 1627
+:focal_plane_x_size: 23.04 mm
+:sequence_number: 0
+:wb_rggb_levels_auto: 1973 1023 1023 1663
+:color_temp_fluorescent: 3952
+:wb_rggb_levels_cloudy: 2160 1023 1023 1373
+:long_exposure_noise_reduction2: "Off"
+:original_decision_data_offset: 0
+:white_balance: Auto
+:focal_plane_resolution_unit: inches
+:compression: JPEG (old-style)
+:flash: Off, Did not fire
+:black_mask_bottom_border: 0
+:focal_length: 85.0 mm
+:contrast: "+1"
+:focus_continuous: Single
+:file_name: Canon 20D.jpg
+:aperture_value: 9.0
+:flash_firing: Fires
+:auto_iso: 100
+:control_mode: Camera Local Control
+:color_temp_daylight: 5200
+:y_resolution: 72
+:optical_zoom_code: n/a
+:directory: test
+:iso_expansion: "On"
+:wb_bracket_value_gm: 0
+:picture_style: None
+:af_points_in_focus: 4
+:sensor_width: 3596
+:aeb_bracket_value: 0
+:thumbnail_image_valid_area: 0 159 7 112
+:modify_date: 2004-09-19 12:25:20 -07:00
+:wb_rggb_levels_daylight: 1995 1023 1023 1509
+:continuous_drive: Single
+:y_cb_cr_sub_sampling: YCbCr4:2:2 (2 1)
+:wb_shift_ab: 0
+:make: Canon
+:model: Canon EOS 20D
+:zoom_target_width: 0
+:safety_shift_in_av_or_tv: Disable
+:serial_number: 0330113864
+:color_components: 3
+:white_balance_blue: 0
+:color_temp_tungsten: 3196
+:self_timer2: 0
+:add_original_decision_data: "Off"
+:canon_image_type: Canon EOS 20D
+:canon_flash_mode: "Off"
+:bracket_shot_number: 0
+:exif_image_width: 3504
+:canon_firmware_version: Firmware 1.0.2
+:exposure_compensation: 0
+:shooting_mode: Program AE
+:metering_mode: Evaluative
+:f_number: 9.0
+:auto_exposure_bracketing: "Off"
+:af_image_width: 3504
+:max_aperture: 5.6
+:bits_per_sample: 8
+:color_tone: Normal
+:bulb_duration: 0
+:measured_ev: 13.25
+:scale_factor35efl: 1.6
+:flash_exposure_comp: 0
+:iso: 200
+:focal_plane_y_size: 15.37 mm
+:hyperfocal_distance: 41.74 m
+:black_mask_right_border: 0
+:scene_capture_type: Standard
+:shutter_speed: !ruby/object:Rational 
+  denominator: 250
+  numerator: 1
+:fov: 15.4 deg
+:valid_af_points: 9
+:file_modify_date: 2012-01-06 23:27:41 -08:00
+:encoding_process: Baseline DCT, Huffman coding
+:set_function_when_shooting: Image replay
+:sensor_red_level: 0
+:toning_effect: None
+:shutter_curtain_sync: 1st-curtain sync
+:superimposed_display: "On"
+:measured_rggb: 674 1024 1024 670
+:af_area_y_positions: 504 270 270 4 4 4 -262 -262 -496
+:sharpness_frequency: n/a
+:self_timer: "Off"
+:wb_rggb_levels_fluorescent: 1797 1023 1023 2058
+:components_configuration: Y, Cb, Cr, -
+:bracket_mode: "Off"
+:black_mask_top_border: 0
+:black_mask_left_border: 0
+:sensor_bottom_border: 2354
+:lens_af_stop_button: AF stop
+:mirror_lockup: Disable
+:blue_balance: 1.638424
+:wb_rggb_levels_shade: 2292 1023 1023 1267
+:focal_units: 1/mm
+:file_permissions: rw-r--r--
+:color_temperature: 4800
+:focal_plane_x_resolution: 2886.363636
+:flash_guide_number: 0
+:red_balance: 1.943842
+:af_image_height: 2336
+:file_number: 793-9390
+:filter_effect: None
+:target_exposure_time: !ruby/object:Rational 
+  denominator: 251
+  numerator: 1
+:nd_filter: n/a
+:canon_exposure_mode: Program AE
+:color_temp_as_shot: 4662
+:canon_image_size: Large
+:sensor_left_border: 84
+:bracket_value: 0
+:circle_of_confusion: 0.019 mm
+:manual_flash_output: n/a
+:light_value: 13.3
+:base_iso: 200
+:menu_button_display_position: Previous (top if power off)
+:serial_number_format: Format 2
+:digital_zoom: None
+:exposure_program: Program AE
+:sensor_height: 2360
+:sharpness: "+1"
+:color_temp_cloudy: 6000
+:wb_rggb_levels: 1973 1015 1015 1663
+:af_area_width: 78
+:color_temp_custom1: 6163
+:wb_rggb_levels_as_shot: 1973 1015 1015 1663
+:date_time_original: 2004-09-19 12:25:20 -07:00
+:canon_model_id: EOS 20D
+:long_exposure_noise_reduction: "Off"
+:shutter_speed_value: !ruby/object:Rational 
+  denominator: 250
+  numerator: 1
+:focal_plane_y_resolution: 2885.805763
+:custom_rendered: Normal
+:measured_ev2: 13.5
+:mime_type: image/jpeg
+:exposure_time: !ruby/object:Rational 
+  denominator: 250
+  numerator: 1
+:easy_mode: Manual
+:exif_tool_version: 8.59
+:flash_bits: (none)
+:record_mode: JPEG
+:ettlii: Evaluative
+:color_temp_custom2: 4792
+:wb_shift_gm: 0
+:aeb_sequence_auto_cancel: 0,-,+/Enabled
+:color_temp_flash: 6309
+:user_comment: ""
+:thumbnail_length: 11259
+:color_space: sRGB
+:interop_version: "0100"
+:image_height: 2336
+:lens_id: Unknown 17-85mm
+:x_resolution: 72
+:zoom_source_width: 0
+:wb_rggb_levels_flash: 2187 1023 1023 1333
+:flash_sync_speed_av: Auto
+:target_aperture: 9
+:file_type: JPEG
+:camera_type: EOS Mid-range
+:orientation: Horizontal (normal)
+:canon_image_width: 3504
+:af_area_x_positions: 8 -555 571 -931 8 947 -555 571 8
+:color_temp_shade: 7000
+:saturation: "+1"
+:y_cb_cr_positioning: Co-sited
+:sensor_blue_level: 0
+:sensor_top_border: 19
+:sensor_right_border: 3587
+:lens: 17.0 - 85.0 mm
+:thumbnail_image: (Binary data 11259 bytes)
+:flash_activity: 0
+:image_width: 3504
+:exif_image_height: 2336
+:min_aperture: 32
+:exposure_level_increments: !ruby/object:Rational 
+  denominator: 3
+  numerator: 1
+:short_focal: 17 mm
+:drive_mode: Single-frame Shooting
+:af_point_selection_method: Normal
+:macro_mode: Normal
+:af_area_height: 78
+:auto_rotate: None
+:image_size: 3504x2336
+:focus_range: Not Known
+:vrd_offset: 0
+:canon_image_height: 2336
+:wb_bracket_value_ab: 0
+:af_assist_beam: Emits
+:tone_curve: Standard
+:focal_length35efl: "85.0 mm (35 mm equivalent: 132.8 mm)"
+:wb_bracket_mode: "Off"
+:lens35efl: "17.0 - 85.0 mm (35 mm equivalent: 26.6 - 132.8 mm)"
+:flashpix_version: "0100"

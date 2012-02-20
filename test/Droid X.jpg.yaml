@@ -1,0 +1,87 @@
+--- 
+:flashpix_version: "0100"
+:interop_index: R98 - DCF basic file (sRGB)
+:f_number: 2.8
+:thumbnail_image: (Binary data 32586 bytes)
+:brightness_value: -0.8203125
+:image_size: 3264x1840
+:y_cb_cr_positioning: Centered
+:x_resolution: 300
+:compression: JPEG (old-style)
+:software: 2.2
+:focal_length: 5.0 mm
+:resolution_unit: inches
+:iso: 637
+:exif_version: "0220"
+:bits_per_sample: 8
+:subject_distance_range: Unknown
+:mime_type: image/jpeg
+:file_size: 2023 kB
+:sharpness: Normal
+:exif_image_width: 3264
+:directory: test
+:thumbnail_offset: 2150
+:metering_mode: Center-weighted average
+:image_unique_id: ""
+:y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
+:y_resolution: 300
+:orientation: Rotate 90 CW
+:thumbnail_length: 32586
+:scene_type: Directly photographed
+:hyperfocal_distance: 2.24 m
+:create_date: 2010-12-08 01:15:37 -08:00
+:exif_tool_version: 8.59
+:source_file: test/Droid X.jpg
+:focal_length_in35mm_format: 38 mm
+:subject_distance: 0 m
+:light_value: 4.2
+:focal_length35efl: "5.0 mm (35 mm equivalent: 38.0 mm)"
+:compressed_bits_per_pixel: 4
+:aperture_value: 2.8
+:file_name: Droid X.jpg
+:saturation: Normal
+:file_permissions: rwxr--r--
+:image_width: 3264
+:exposure_mode: Auto
+:sensing_method: One-chip color area
+:fov: 50.7 deg
+:user_comment: ""
+:flash: Auto, Did not fire
+:image_height: 1840
+:exposure_compensation: 0
+:date_time_original: 2010-12-08 01:15:37 -08:00
+:exposure_index: 637
+:file_type: JPEG
+:gain_control: High gain up
+:components_configuration: Cb, Y, Cr, Y
+:interop_version: "0100"
+:max_aperture_value: 2.8
+:shutter_speed: !ruby/object:Rational 
+  denominator: 15
+  numerator: 1
+:encoding_process: Baseline DCT, Huffman coding
+:exposure_time: !ruby/object:Rational 
+  denominator: 15
+  numerator: 1
+:exposure_program: Program AE
+:shutter_speed_value: !ruby/object:Rational 
+  denominator: 15
+  numerator: 1
+:exif_byte_order: Little-endian (Intel, II)
+:digital_zoom_ratio: 0
+:exif_image_height: 1840
+:modify_date: 2010-12-08 01:15:37 -08:00
+:make: Motorola
+:color_components: 3
+:model: DROIDX 6d460001fff80000015d7d330e01c011
+:circle_of_confusion: 0.004 mm
+:white_balance: Auto
+:file_source: Digital Camera
+:contrast: Normal
+:aperture: 2.8
+:file_modify_date: 2010-12-07 15:15:40 -08:00
+:color_space: sRGB
+:light_source: Standard Light A
+:custom_rendered: Custom
+:scene_capture_type: Standard
+:scale_factor35efl: 7.6
