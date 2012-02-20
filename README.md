@@ -40,6 +40,7 @@ e.symbol_display_hash
 * ```ExifTooler::NoSuchFile``` is raised if the provided filename doesn't exist.
 * ```ExifTooler::ExifToolNotInstalled``` is raised if ```exiftool``` isn't in your ```PATH```.
 * If ExifTool has a problem reading EXIF data, no exception is raised, but ```#errors?``` will return true:
+
 ```ruby
 ExifTooler.new("Gemfile").errors?
 #=> true
