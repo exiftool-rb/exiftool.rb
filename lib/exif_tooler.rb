@@ -6,10 +6,10 @@ require 'time'
 require 'rational'
 
 class ExifTooler
-  class NoSuchFile < StandardError
-  end
-  class ExifToolNotInstalled < StandardError
-  end
+  class NoSuchFile < StandardError; end
+  class ExifToolNotInstalled < StandardError; end
+
+  attr_reader :to_hash, :to_display_hash, :symbol_display_hash
 
   def initialize(filename, exiftool_opts = "")
     raise NoSuchFile, filename unless File.exist?(filename)
@@ -23,30 +23,18 @@ class ExifTooler
     @raw.has_key? "Error"
   end
 
-  def to_hash
-    @sym_hash
-  end
-
-  def to_display_hash
-    @display_hash
-  end
-
-  def symbol_display_hash
-    @symbol_display_hash
-  end
-
   private
 
-  WB1 = /([A-Z\d]+)([A-Z][a-z])/
-  WB2 = /([a-z\d])([A-Z])/
+  WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/]
+  FRACTION_RE = /\d+\/\d+/
 
   def convert_exiftool_hash
-    @sym_hash = { }
-    @display_hash = { }
+    @to_hash = { }
+    @to_display_hash = { }
     @symbol_display_hash = { }
 
     @raw.each do |k, v|
-      display_key = k.gsub(WB1, '\1 \2').gsub(WB2, '\1 \2')
+      display_key = WORD_BOUNDARY_RES.inject(k) { |k, ea| k.gsub(ea, '\1 \2') }
       sym_key = display_key.downcase.gsub(' ', '_').to_sym
       if sym_key == :gps_latitude || sym_key == :gps_longitude
         value, direction = v.split(" ")
@@ -54,11 +42,11 @@ class ExifTooler
         v *= -1 if direction == 'S' || direction == 'W'
       elsif display_key =~ /\bdate\b/i
         v = Time.parse(v)
-      elsif v =~ /\d+\/\d+/
+      elsif v =~ FRACTION_RE
         v = Rational(*v.split('/').collect { |ea| ea.to_i })
       end
-      @display_hash[display_key] = v
-      @sym_hash[sym_key] = v
+      @to_hash[sym_key] = v
+      @to_display_hash[display_key] = v
       @symbol_display_hash[sym_key] = display_key
     end
   end
