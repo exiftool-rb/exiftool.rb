@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = ExifTooler::VERSION
   s.authors     = ["Matthew McEachen"]
   s.email       = ["matthew-github@mceachen.org"]
-  s.homepage    = "https://github.com/mceachen/exiftooler"
-  s.summary     = %q{Simple EXIFTool wrapper}
-  s.description = %q{Simple EXIFTool wrapper}
+  s.homepage    = "https://github.com/mceachen/exif_tooler"
+  s.summary     = %q{Simple ExifTool wrapper}
+  s.description = %q{Simple ExifTool wrapper}
 
   s.rubyforge_project = "exiftooler"
 
