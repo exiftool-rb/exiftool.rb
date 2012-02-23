@@ -12,19 +12,23 @@ class Exiftoolr
     `exiftool -ver 2> /dev/null`.to_f > 0
   end
 
+  def self.expand_path(filename)
+    raise NoSuchFile, filename unless File.exist?(filename)
+    File.expand_path(filename)
+  end
+
   def initialize(filenames, exiftool_opts = "")
     escaped_filenames = filenames.to_a.collect do |f|
-      raise NoSuchFile, f unless File.exist?(f)
-      Shellwords.escape(f)
+      Shellwords.escape(self.class.expand_path(f))
     end.join(" ")
     json = `exiftool #{exiftool_opts} -j −coordFormat "%.8f" -dateFormat "%Y-%m-%d %H:%M:%S" #{escaped_filenames} 2> /dev/null`
     raise ExiftoolNotInstalled if json == ""
-    @file2result = {}
-    JSON.parse(json).each{|raw| @file2result[raw["SourceFile"]] = Result.new(raw)}
+    @file2result = { }
+    JSON.parse(json).each { |raw| @file2result[raw["SourceFile"]] = Result.new(raw) }
   end
 
   def result_for(filename)
-    @file2result[filename]
+    @file2result[self.class.expand_path(filename)]
   end
 
   def files_with_results
@@ -44,7 +48,7 @@ class Exiftoolr
   end
 
   def errors?
-    @file2result.values.any?{|ea|ea.errors?}
+    @file2result.values.any? { |ea| ea.errors? }
   end
 
   private
