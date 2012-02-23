@@ -32,8 +32,16 @@ class Exiftoolr
       end
     end
 
+    def [](key)
+      @to_hash[key]
+    end
+
+    def source_file
+      self[:source_file]
+    end
+
     def errors?
-      @raw_hash.has_key? "Error"
+      self[:error] == "Unknown file type" || self[:warning] == "Unsupported file type"
     end
   end
 end

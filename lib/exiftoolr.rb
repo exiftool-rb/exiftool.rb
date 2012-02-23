@@ -6,6 +6,7 @@ require 'shellwords'
 
 class Exiftoolr
   class NoSuchFile < StandardError; end
+  class NotAFile < StandardError; end
   class ExiftoolNotInstalled < StandardError; end
 
   def self.exiftool_installed?
@@ -14,6 +15,7 @@ class Exiftoolr
 
   def self.expand_path(filename)
     raise NoSuchFile, filename unless File.exist?(filename)
+    raise NotAFile, filename unless File.file?(filename)
     File.expand_path(filename)
   end
 
@@ -24,7 +26,9 @@ class Exiftoolr
     json = `exiftool #{exiftool_opts} -j −coordFormat "%.8f" -dateFormat "%Y-%m-%d %H:%M:%S" #{escaped_filenames} 2> /dev/null`
     raise ExiftoolNotInstalled if json == ""
     @file2result = { }
-    JSON.parse(json).each { |raw| @file2result[raw["SourceFile"]] = Result.new(raw) }
+    JSON.parse(json).each do |raw|
+      @file2result[r.source_file] = Result.new(raw)
+    end
   end
 
   def result_for(filename)
@@ -32,7 +36,7 @@ class Exiftoolr
   end
 
   def files_with_results
-    @file2result.keys
+    @file2result.values.collect{|r|r.source_file unless r.errors?}.compact
   end
 
   def to_hash

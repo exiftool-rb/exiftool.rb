@@ -12,6 +12,12 @@ class TestExiftoolr < Test::Unit::TestCase
     end
   end
 
+  def test_directory
+    assert_raise Exiftoolr::NotAFile do
+      Exiftoolr.new("lib")
+    end
+  end
+
   def test_invalid_exif
     assert Exiftoolr.new("Gemfile").errors?
   end
@@ -24,8 +30,13 @@ class TestExiftoolr < Test::Unit::TestCase
   end
 
   def validate_result(result, filename)
-    assert !result.errors?
     yaml_file = "#{filename}.yaml"
+    if File.exist?(yaml_file)
+      assert !result.errors?
+    else
+      assert result.errors?
+      return
+    end
     exif = result.to_hash
     File.open(yaml_file, 'w') { |out| YAML.dump(exif, out) } if DUMP_RESULTS
     e = File.open(yaml_file) { |f| YAML::load(f) }
@@ -38,6 +49,14 @@ class TestExiftoolr < Test::Unit::TestCase
   def test_multi_matches
     filenames = Dir["**/*.jpg"].to_a
     e = Exiftoolr.new(filenames)
+    filenames.each { |f| validate_result(e.result_for(f), f) }
+  end
+
+  def test_error_filtering
+    filenames = Dir["**/*.*"].to_a
+    e = Exiftoolr.new(filenames)
+    expected_files = Dir["**/*.jpg"].to_a.collect{|f|File.expand_path(f)}.sort
+    assert_equal expected_files, e.files_with_results.sort
     filenames.each { |f| validate_result(e.result_for(f), f) }
   end
 end

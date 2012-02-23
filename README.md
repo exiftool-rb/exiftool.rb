@@ -50,6 +50,8 @@ e = Exiftoolr.new(Dir["**/*.jpg"])
 result = e.result_for("path/to/iPhone 4S.jpg")
 result.to_hash
 # => {:make => "Apple", :gps_longitude => -122.47566667, …
+result[:gps_longitude]
+# => -122.47566667
 
 e.files_with_results
 # => ["path/to/iPhone 4S.jpg", "path/to/Droid X.jpg", …
