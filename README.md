@@ -27,6 +27,8 @@ or add to your Gemfile:
 gem 'exiftoolr'
 ```
 
+and run ```bundle```.
+
 ## Usage
 
 ```ruby
