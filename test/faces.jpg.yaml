@@ -1,327 +1,327 @@
 --- 
-:region_applied_to_dimensions_h: 2336
-:aeb_sequence_auto_cancel: 0,-,+/Enabled
-:color_components: 3
-:sensor_width: 3596
-:picture_style: None
-:color_temp_flash: 6303
-:"profile_description_ml-ko-kr": !binary |
-  7Lm066mU6528IFJHQiDtlITroZztjIzsnbw=
-
-:white_balance_blue: 0
-:orientation: Horizontal (normal)
-:user_comment: ""
+:black_mask_bottom_border: 0
+:red_trc: (Binary data 14 bytes)
+:wb_rggb_levels_custom2: 1734 1023 1023 1901
+:serial_number: 0720413239
+:fov: 68.3 deg
 :self_timer2: 0
-:add_original_decision_data: "On"
-:media_white_point: 0.95047 1 1.0891
-:canon_image_width: 3504
-:thumbnail_length: 12170
-:color_tone: Normal
-:bulb_duration: 0
-:rendering_intent: Perceptual
-:af_area_x_positions: 8 -555 571 -931 8 947 -555 571 8
-:canon_image_type: Canon EOS 20D
+:file_size: 3.8 MB
+:wb_rggb_levels: 1822 1015 1015 1709
+:wb_shift_ab: 0
+:lens35efl: "17.0 - 40.0 mm (35 mm equivalent: 26.6 - 62.5 mm)"
+:thumbnail_image_valid_area: 0 159 7 112
 :"profile_description_ml-zh-cn": !binary |
   55u45py6IFJHQiDmj4/ov7Dmlofku7Y=
 
-:short_focal: 17 mm
-:color_temp_tungsten: 3203
-:color_temp_shade: 7000
-:region_applied_to_dimensions_w: 3504
-:measured_ev: 14.12
-:drive_mode: Single-frame Shooting
-:saturation: Normal
-:flash_exposure_comp: !ruby/object:Rational 
-  denominator: 3
-  numerator: 2
+:current_iptc_digest: b443520a10119da99c2550175e6d0efb
+:model: Canon EOS 20D
 :af_point_selection_method: Normal
-:toning_effect: None
-:iso: 400
-:profile_date_time: 2003-07-01 00:00:00 -07:00
-:scale_factor35efl: 1.6
-:macro_mode: Normal
-:shutter_curtain_sync: 1st-curtain sync
-:af_area_height: 78
-:"profile_description_ml-zh-tw": !binary |
-  5pW45L2N55u45qmfIFJHQiDoibLlvanmj4/ov7A=
-
-:superimposed_display: "On"
-:focal_type: Zoom
-:auto_rotate: None
-:software: Picasa
-:af_area_y_positions: 504 270 270 4 4 4 -262 -262 -496
-:focus_mode: One-shot AF
-:wb_rggb_levels_shade: 2215 1023 1023 1341
-:sharpness_frequency: n/a
-:profile_class: Input Device Profile
-:lens_type: Unknown (-1)
-:green_matrix_column: 0.35332 0.67441 0.09042
-:focal_units: 1/mm
-:measured_rggb: 641 1024 1024 660
-:quality: Fine
-:color_temp_auto: 4599
-:file_permissions: rw-r--r--
-:cmm_flags: Not Embedded, Independent
-:source_file: test/faces.jpg
-:num_af_points: 9
-:bracket_value: 0
-:color_temperature: 4300
-:exif_version: "0221"
-:long_focal: 40 mm
-:circle_of_confusion: 0.019 mm
-:focal_plane_x_resolution: 3959.322034
-:iptc_digest: b443520a10119da99c2550175e6d0efb
-:aperture: 4.0
-:profile_description_ml: Camera RGB Profile
-:manual_flash_output: n/a
-:make: Canon
-:flash: Off, Did not fire
-:slow_shutter: None
-:black_mask_bottom_border: 0
-:envelope_record_version: 4
-:light_value: 14.0
-:exposure_mode: Auto
-:long_exposure_noise_reduction: "On"
-:base_iso: 400
-:color_space_data: "RGB "
-:focal_length: 17.0 mm
-:contrast: Normal
-:shutter_speed_value: !ruby/object:Rational 
-  denominator: 4000
-  numerator: 1
-:menu_button_display_position: Previous (top if power off)
-:warning: Invalid original decision data
-:focal_plane_y_resolution: 3959.322034
-:aeb_bracket_value: 0
-:focus_continuous: Single
-:profile_cmm_type: appl
-:measured_ev2: 14.125
-:thumbnail_image_valid_area: 0 159 7 112
 :aperture_value: 4.0
-:continuous_drive: Single
-:color_space: sRGB
-:mime_type: image/jpeg
-:profile_connection_space: "XYZ "
-:modify_date: 2012-02-15 22:58:07 -08:00
-:blue_matrix_column: 0.15662 0.08336 0.71953
-:interop_version: "0100"
-:custom_rendered: Normal
-:canon_flash_mode: "Off"
-:wb_rggb_levels_daylight: 1933 1023 1023 1607
-:region_type: 
-- Face
-- Face
-- Face
-- Face
-- Face
-:image_height: 2336
-:bracket_shot_number: 0
-:y_cb_cr_positioning: Co-sited
-:lens_id: Unknown 17-40mm
-:red_trc: (Binary data 14 bytes)
-:exif_image_width: 3504
-:shooting_mode: Depth-of-field AE
-:sensor_blue_level: 0
-:x_resolution: 72
-:xmp_toolkit: XMP Core 5.1.2
-:canon_firmware_version: Firmware 2.0.3
-:chromatic_adaptation: 1.04788 0.02292 -0.0502 0.02957 0.99049 -0.01706 -0.00923 0.01508 0.75165
-:sensor_top_border: 19
-:focal_plane_y_size: 15.37 mm
-:"shutter-ae_lock": AF/AE lock
-:exposure_compensation: 0
-:sensor_right_border: 3587
-:hyperfocal_distance: 3.76 m
-:image_size: 3504x2336
-:lens: 17.0 - 40.0 mm
 :coded_character_set: UTF8
-:black_mask_right_border: 0
-:file_name: faces.jpg
-:primary_platform: Apple Computer Inc.
+:user_comment: ""
+:color_space: sRGB
 :focus_range: Not Known
-:scene_capture_type: Standard
-:thumbnail_image: (Binary data 12170 bytes)
-:vrd_offset: 0
-:self_timer: "Off"
-:shutter_speed: !ruby/object:Rational 
-  denominator: 4000
-  numerator: 1
-:connection_space_illuminant: 0.9642 1 0.82491
-:fov: 68.3 deg
-:canon_image_height: 2336
-:region_area_x: 
-- 0.549658
-- 0.858162
-- 0.730736
-- 0.453196
-- 0.118579
-:thumbnail_offset: 4036
-:wb_bracket_value_ab: 0
-:green_trc: (Binary data 14 bytes)
-:bracket_mode: "Off"
-:interop_index: R98 - DCF basic file (sRGB)
+:"profile_description_ml-ja-jp": !binary |
+  44Kr44Oh44OpIFJHQiDjg5fjg63jg5XjgqHjgqTjg6s=
+
+:zoom_target_width: 0
+:device_model: ""
 :flash_guide_number: 0
-:wb_rggb_levels_fluorescent: 1743 1023 1023 2205
-:region_area_w: 
-- 0.0667808
-- 0.103881
-- 0.0687785
-- 0.0753424
-- 0.11387
-:wb_rggb_levels_custom1: 1096 1023 1023 2793
-:red_balance: 1.795074
-:components_configuration: Y, Cb, Cr, -
-:region_area_unit: 
-- normalized
-- normalized
-- normalized
-- normalized
-- normalized
-:digital_gain: 0
-:profile_copyright: Copyright 2003 Apple Computer Inc., all rights reserved.
-:af_image_height: 2336
-:wb_rggb_levels_custom2: 1734 1023 1023 1901
-:create_date: 2005-11-26 14:20:34 -08:00
-:resolution_unit: inches
-:"profile_description_ml-sv-se": "RGB-profil f\xC3\xB6r Kamera"
-:target_exposure_time: !ruby/object:Rational 
-  denominator: 4008
-  numerator: 1
 :focal_plane_x_size: 23.04 mm
-:serial_number_format: Format 2
-:file_number: 326-2647
-:region_name: 
-- Matthew McEachen
-- Karen McEachen
-- Ruth McEachen
-- James McEachen
-- Jamie McEachen
+:saturation: Normal
+:quality: Fine
+:"profile_description_ml-it-it": Profilo RGB Fotocamera
+:focal_type: Zoom
+:iso: 400
 :sequence_number: 0
-:device_manufacturer: appl
-:wb_rggb_levels_auto: 1822 1023 1023 1709
-:digital_zoom: None
-:filter_effect: None
-:region_applied_to_dimensions_unit: pixel
-:sharpness: 0
-:flash_firing: Fires
-:color_temp_fluorescent: 3961
-:exposure_time: !ruby/object:Rational 
-  denominator: 4000
-  numerator: 1
-:color_temp_cloudy: 6000
+:profile_file_signature: acsp
+:wb_rggb_levels_as_shot: 1822 1015 1015 1709
+:black_mask_left_border: 0
+:long_exposure_noise_reduction2: "Off"
+:color_temp_custom2: 4301
+:blue_trc: (Binary data 14 bytes)
+:color_temp_custom1: 2694
+:compression: JPEG (old-style)
+:exif_tool_version: 8.59
+:focal_plane_resolution_unit: inches
+:sensor_left_border: 84
+:sensor_red_level: 0
+:wb_rggb_levels_custom1: 1096 1023 1023 2793
+:"profile_description_ml-ko-kr": !binary |
+  7Lm066mU6528IFJHQiDtlITroZztjIzsnbw=
+
+:photo_effect: "Off"
+:af_area_x_positions: 8 -555 571 -931 8 947 -555 571 8
+:profile_version: 2.2.0
+:control_mode: Camera Local Control
+:flash_activity: 0
+:connection_space_illuminant: 0.9642 1 0.82491
+:sensor_width: 3596
+:color_tone: Normal
+:measured_rggb: 641 1024 1024 660
+:create_date: 2005-11-26 14:20:34 -08:00
+:shooting_mode: Depth-of-field AE
+:application_record_version: 4
+:af_image_width: 3504
+:wb_bracket_mode: "Off"
+:lens_type: Unknown (-1)
+:focal_units: 1/mm
+:make: Canon
+:safety_shift_in_av_or_tv: Enable
+:aeb_bracket_value: 0
+:profile_id: 0
+:software: Picasa
+:serial_number_format: Format 2
+:measured_ev: 14.12
+:shutter_curtain_sync: 1st-curtain sync
+:white_balance_blue: 0
+:exif_byte_order: Little-endian (Intel, II)
+:short_focal: 17 mm
+:device_attributes: Reflective, Glossy, Positive, Color
 :region_area_y: 
 - 0.248716
 - 0.486301
 - 0.243365
 - 0.360873
 - 0.466182
-:auto_iso: 100
-:wb_rggb_levels_cloudy: 2087 1023 1023 1459
-:easy_mode: Manual
-:exposure_program: Not Defined
-:"profile_description_ml-pt-br": "Perfil RGB de C\xC3\xA2mera"
-:directory: test
-:control_mode: Camera Local Control
-:profile_creator: appl
-:exif_tool_version: 8.59
-:sensor_height: 2360
-:y_cb_cr_sub_sampling: YCbCr4:2:2 (2 1)
-:color_temp_daylight: 5200
+:custom_rendered: Normal
+:sensor_top_border: 19
+:focal_plane_y_size: 15.37 mm
+:continuous_drive: Single
+:profile_cmm_type: appl
+:drive_mode: Single-frame Shooting
+:toning_effect: None
+:red_balance: 1.795074
+:af_area_y_positions: 504 270 270 4 4 4 -262 -262 -496
+:mime_type: image/jpeg
+:color_components: 3
+:region_area_x: 
+- 0.549658
+- 0.858162
+- 0.730736
+- 0.453196
+- 0.118579
+:wb_rggb_levels_shade: 2215 1023 1023 1341
+:x_resolution: 72
+:cmm_flags: Not Embedded, Independent
+:focus_mode: One-shot AF
 :"profile_description_ml-fi-fi": Kameran RGB-profiili
-:profile_file_signature: acsp
-:ettlii: Evaluative
-:wb_shift_ab: 0
-:y_resolution: 72
-:model: Canon EOS 20D
-:zoom_source_width: 0
-:flash_bits: (none)
-:application_record_version: 4
-:zoom_target_width: 0
-:wb_rggb_levels_flash: 2112 1023 1023 1414
-:record_mode: JPEG
-:flash_sync_speed_av: Auto
-:metering_mode: Center-weighted average
-:safety_shift_in_av_or_tv: Enable
-:"profile_description_ml-no-no": RGB-kameraprofil
-:camera_type: EOS Mid-range
-:f_number: 4.0
-:serial_number: 0720413239
-:flash_activity: 0
-:auto_exposure_bracketing: "Off"
+:blue_matrix_column: 0.15662 0.08336 0.71953
+:canon_image_size: Large
+:original_decision_data_offset: 3968887
+:focal_plane_y_resolution: 3959.322034
+:hyperfocal_distance: 3.76 m
+:lens_id: Unknown 17-40mm
 :target_aperture: 4
-:device_model: ""
-:image_width: 3504
+:color_temp_cloudy: 6000
+:wb_rggb_levels_auto: 1822 1023 1023 1709
+:envelope_record_version: 4
+:shutter_speed: !ruby/object:Rational 
+  denominator: 4000
+  numerator: 1
+:color_space_data: "RGB "
+:af_image_height: 2336
+:zoom_source_width: 0
+:exposure_compensation: 0
+:long_exposure_noise_reduction: "On"
+:light_value: 14.0
+:region_applied_to_dimensions_unit: pixel
+:manual_flash_output: n/a
+:y_resolution: 72
+:white_balance: Auto
+:flash_exposure_comp: !ruby/object:Rational 
+  denominator: 3
+  numerator: 2
+:superimposed_display: "On"
+:date_time_original: 2005-11-26 14:20:34 -08:00
+:wb_rggb_levels_cloudy: 2087 1023 1023 1459
+:region_applied_to_dimensions_h: 2336
+:interop_version: "0100"
+:flash_bits: (none)
+:shutter_speed_value: !ruby/object:Rational 
+  denominator: 4000
+  numerator: 1
+:source_file: test/faces.jpg
 :file_type: JPEG
-:"profile_description_ml-de-de": "RGB-Profil f\xC3\xBCr Kameras"
-:af_image_width: 3504
+:file_name: faces.jpg
+:iptc_digest: b443520a10119da99c2550175e6d0efb
+:filter_effect: None
+:sensor_right_border: 3587
+:canon_exposure_mode: Depth-of-field AE
+:"profile_description_ml-es-es": "Perfil RGB para C\xC3\xA1mara"
+:profile_description_ml: Camera RGB Profile
+:resolution_unit: inches
+:region_area_w: 
+- 0.0667808
+- 0.103881
+- 0.0687785
+- 0.0753424
+- 0.11387
+:bracket_value: 0
+:digital_zoom: None
+:y_cb_cr_positioning: Co-sited
+:exif_image_width: 3504
+:af_points_in_focus: 0,1,2,3,4,5,6,7,8
+:color_temp_shade: 7000
+:sensor_blue_level: 0
+:canon_image_type: Canon EOS 20D
+:region_applied_to_dimensions_w: 3504
+:num_af_points: 9
+:exif_version: "0221"
+:y_cb_cr_sub_sampling: YCbCr4:2:2 (2 1)
+:color_temp_tungsten: 3203
+:aeb_sequence_auto_cancel: 0,-,+/Enabled
+:metering_mode: Center-weighted average
+:thumbnail_length: 12170
+:green_matrix_column: 0.35332 0.67441 0.09042
+:scale_factor35efl: 1.6
+:image_size: 3504x2336
+:measured_ev2: 14.125
+:focus_continuous: Single
+:primary_platform: Apple Computer Inc.
+:lens_af_stop_button: ONE SHOT <-> AI SERVO
+:media_white_point: 0.95047 1 1.0891
+:image_height: 2336
+:file_permissions: rw-r--r--
+:lens: 17.0 - 40.0 mm
+:add_original_decision_data: "On"
+:"profile_description_ml-nl-nl": RGB-profiel Camera
+:profile_class: Input Device Profile
+:flash: Off, Did not fire
+:digital_gain: 0
+:thumbnail_image: (Binary data 12170 bytes)
+:exif_image_height: 2336
+:iso_expansion: "Off"
 :red_matrix_column: 0.45427 0.24263 0.01482
-:valid_af_points: 9
-:af_assist_beam: Emits
+:macro_mode: Normal
+:aperture: 4.0
+:color_temp_as_shot: 4599
+:rendering_intent: Perceptual
+:directory: test
+:wb_rggb_levels_flash: 2112 1023 1023 1414
+:mirror_lockup: Disable
+:menu_button_display_position: Previous (top if power off)
+:profile_copyright: Copyright 2003 Apple Computer Inc., all rights reserved.
+:easy_mode: Manual
+:auto_exposure_bracketing: "Off"
+:color_temp_flash: 6303
+:sensor_height: 2360
+:auto_iso: 100
+:nd_filter: n/a
+:set_function_when_shooting: Change quality
+:green_trc: (Binary data 14 bytes)
+:vrd_offset: 0
 :exposure_level_increments: !ruby/object:Rational 
   denominator: 3
   numerator: 1
-:file_modify_date: 2012-02-15 22:58:07 -08:00
-:bits_per_sample: 8
-:tone_curve: Standard
-:exif_image_height: 2336
-:blue_trc: (Binary data 14 bytes)
-:encoding_process: Baseline DCT, Huffman coding
-:focal_length35efl: "17.0 mm (35 mm equivalent: 26.6 mm)"
-:black_mask_top_border: 0
-:set_function_when_shooting: Change quality
-:profile_description: Camera RGB Profile
-:sensor_red_level: 0
-:lens35efl: "17.0 - 40.0 mm (35 mm equivalent: 26.6 - 62.5 mm)"
-:black_mask_left_border: 0
-:"profile_description_ml-nl-nl": RGB-profiel Camera
-:sensor_bottom_border: 2354
-:flashpix_version: "0100"
-:profile_id: 0
-:exif_byte_order: Little-endian (Intel, II)
-:wb_bracket_mode: "Off"
-:"profile_description_ml-fr-fu": "Profil RVB de l\xE2\x80\x99appareil-photo"
-:lens_af_stop_button: ONE SHOT <-> AI SERVO
-:photo_effect: "Off"
-:mirror_lockup: Disable
-:nd_filter: n/a
-:"profile_description_ml-ja-jp": !binary |
-  44Kr44Oh44OpIFJHQiDjg5fjg63jg5XjgqHjgqTjg6s=
-
+:wb_bracket_value_gm: 0
 :region_area_h: 
 - 0.119007
 - 0.1875
 - 0.12286
 - 0.101884
 - 0.189212
-:wb_rggb_levels_tungsten: 1382 1023 1023 2574
-:file_size: 3.8 MB
-:current_iptc_digest: b443520a10119da99c2550175e6d0efb
-:canon_exposure_mode: Depth-of-field AE
-:blue_balance: 1.683744
-:"profile_description_ml-it-it": Profilo RGB Fotocamera
-:color_temp_as_shot: 4599
-:long_exposure_noise_reduction2: "Off"
-:owner_name: unknown
-:canon_image_size: Large
-:wb_rggb_levels: 1822 1015 1015 1709
-:device_attributes: Reflective, Glossy, Positive, Color
-:original_decision_data_offset: 3968887
-:white_balance_red: 0
-:af_area_width: 78
-:sensor_left_border: 84
-:focal_plane_resolution_unit: inches
-:compression: JPEG (old-style)
-:"profile_description_ml-es-es": "Perfil RGB para C\xC3\xA1mara"
-:optical_zoom_code: n/a
-:color_temp_custom1: 2694
-:iso_expansion: "Off"
-:white_balance: Auto
-:"profile_description_ml-da-dk": RGB-beskrivelse til Kamera
-:profile_version: 2.2.0
-:wb_rggb_levels_as_shot: 1822 1015 1015 1709
-:color_temp_custom2: 4301
-:date_time_original: 2005-11-26 14:20:34 -08:00
-:wb_bracket_value_gm: 0
-:canon_model_id: EOS 20D
-:af_points_in_focus: 0,1,2,3,4,5,6,7,8
+:wb_rggb_levels_fluorescent: 1743 1023 1023 2205
+:orientation: Horizontal (normal)
+:exposure_time: !ruby/object:Rational 
+  denominator: 4000
+  numerator: 1
+:components_configuration: Y, Cb, Cr, -
+:color_temp_daylight: 5200
+:region_area_unit: 
+- normalized
+- normalized
+- normalized
+- normalized
+- normalized
+:color_temperature: 4300
+:thumbnail_offset: 4036
+:sharpness_frequency: n/a
 :wb_shift_gm: 0
+:"profile_description_ml-da-dk": RGB-beskrivelse til Kamera
+:region_name: 
+- Matthew McEachen
+- Karen McEachen
+- Ruth McEachen
+- James McEachen
+- Jamie McEachen
+:focal_length: 17.0 mm
+:device_manufacturer: appl
+:slow_shutter: None
+:canon_image_width: 3504
+:focal_length35efl: "17.0 mm (35 mm equivalent: 26.6 mm)"
+:warning: Invalid original decision data
+:bulb_duration: 0
+:color_temp_fluorescent: 3961
+:bracket_shot_number: 0
+:"profile_description_ml-pt-br": "Perfil RGB de C\xC3\xA2mera"
+:picture_style: None
+:bits_per_sample: 8
+:region_type: 
+- Face
+- Face
+- Face
+- Face
+- Face
+:canon_firmware_version: Firmware 2.0.3
+:sharpness: 0
+:file_number: 326-2647
+:modify_date: 2012-02-15 22:58:07 -08:00
+:"profile_description_ml-zh-tw": !binary |
+  5pW45L2N55u45qmfIFJHQiDoibLlvanmj4/ov7A=
+
+:self_timer: "Off"
+:encoding_process: Baseline DCT, Huffman coding
+:color_temp_auto: 4599
+:profile_creator: appl
+:af_assist_beam: Emits
+:optical_zoom_code: n/a
+:contrast: Normal
+:white_balance_red: 0
+:owner_name: unknown
+:xmp_toolkit: XMP Core 5.1.2
+:canon_model_id: EOS 20D
+:wb_bracket_value_ab: 0
+:target_exposure_time: !ruby/object:Rational 
+  denominator: 4008
+  numerator: 1
+:auto_rotate: None
+:bracket_mode: "Off"
+:valid_af_points: 9
+:scene_capture_type: Standard
+:exposure_mode: Auto
+:tone_curve: Standard
+:chromatic_adaptation: 1.04788 0.02292 -0.0502 0.02957 0.99049 -0.01706 -0.00923 0.01508 0.75165
+:long_focal: 40 mm
+:file_modify_date: 2012-02-19 21:49:48 -08:00
+:flash_sync_speed_av: Auto
+:"profile_description_ml-sv-se": "RGB-profil f\xC3\xB6r Kamera"
+:profile_connection_space: "XYZ "
+:wb_rggb_levels_daylight: 1933 1023 1023 1607
+:black_mask_right_border: 0
+:camera_type: EOS Mid-range
+:"profile_description_ml-de-de": "RGB-Profil f\xC3\xBCr Kameras"
+:record_mode: JPEG
+:interop_index: R98 - DCF basic file (sRGB)
+:profile_date_time: 2003-07-01 00:00:00 -07:00
+:base_iso: 400
+:focal_plane_x_resolution: 3959.322034
+:flashpix_version: "0100"
+:canon_image_height: 2336
+:"profile_description_ml-no-no": RGB-kameraprofil
+:profile_description: Camera RGB Profile
+:wb_rggb_levels_tungsten: 1382 1023 1023 2574
+:black_mask_top_border: 0
+:exposure_program: Not Defined
+:"profile_description_ml-fr-fu": "Profil RVB de l\xE2\x80\x99appareil-photo"
+:blue_balance: 1.683744
+:ettlii: Evaluative
+:image_width: 3504
+:"shutter-ae_lock": AF/AE lock
+:af_area_height: 78
+:sensor_bottom_border: 2354
+:af_area_width: 78
+:flash_firing: Fires
+:circle_of_confusion: 0.019 mm
+:canon_flash_mode: "Off"
+:f_number: 4.0

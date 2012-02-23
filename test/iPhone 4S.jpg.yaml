@@ -1,80 +1,80 @@
 --- 
-:flashpix_version: "0100"
-:gps_position: 37.50233333 N, 122.47566667 W
-:f_number: 2.4
-:thumbnail_image: (Binary data 5987 bytes)
-:brightness_value: 11.27442702
-:image_size: 3264x2448
-:y_cb_cr_positioning: Centered
-:x_resolution: 72
-:compression: JPEG (old-style)
-:software: 5.0.1
-:focal_length: 4.3 mm
-:resolution_unit: inches
-:iso: 64
-:exif_version: "0221"
-:bits_per_sample: 8
-:mime_type: image/jpeg
-:file_size: 1954 kB
-:subject_area: 1631 1223 881 881
-:exif_image_width: 3264
-:directory: test
-:thumbnail_offset: 914
-:sharpness: Normal
-:metering_mode: Multi-segment
-:y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
-:y_resolution: 72
-:gps_altitude: 14.2 m Above Sea Level
-:orientation: Horizontal (normal)
-:thumbnail_length: 5987
-:hyperfocal_distance: 2.08 m
-:create_date: 2011-11-23 09:39:52 -08:00
-:exif_tool_version: 8.59
-:source_file: test/iPhone 4S.jpg
-:focal_length_in35mm_format: 35 mm
-:gps_altitude_ref: Above Sea Level
-:light_value: 15.8
-:focal_length35efl: "4.3 mm (35 mm equivalent: 35.0 mm)"
-:aperture_value: 2.4
-:file_name: iPhone 4S.jpg
-:file_permissions: rw-r--r--
-:image_width: 3264
-:exposure_mode: Auto
-:gps_img_direction_ref: True North
-:sensing_method: One-chip color area
-:fov: 54.4 deg
-:flash: Auto, Did not fire
-:image_height: 2448
-:gps_time_stamp: "19:03:32"
-:date_time_original: 2011-11-23 09:39:52 -08:00
-:file_type: JPEG
+:gps_latitude_ref: North
+:model: iPhone 4S
+:color_space: sRGB
 :components_configuration: Y, Cb, Cr, -
+:exif_byte_order: Big-endian (Motorola, MM)
+:sensing_method: One-chip color area
+:create_date: 2011-11-23 09:39:52 -08:00
+:bits_per_sample: 8
+:date_time_original: 2011-11-23 09:39:52 -08:00
+:source_file: test/iPhone 4S.jpg
+:gps_img_direction: 121.9838275
+:thumbnail_length: 5987
+:exif_image_width: 3264
+:exposure_program: Program AE
+:compression: JPEG (old-style)
+:image_size: 3264x2448
+:mime_type: image/jpeg
 :gps_longitude: -122.47566667
+:x_resolution: 72
+:orientation: Horizontal (normal)
+:software: 5.0.1
+:thumbnail_offset: 914
+:gps_altitude_ref: Above Sea Level
 :shutter_speed: !ruby/object:Rational 
   denominator: 6135
   numerator: 1
-:gps_img_direction: 121.9838275
+:directory: test
+:flashpix_version: "0100"
+:y_cb_cr_positioning: Centered
+:flash: Auto, Did not fire
+:f_number: 2.4
+:gps_altitude: 14.2 m Above Sea Level
+:file_modify_date: 2012-02-19 21:49:48 -08:00
+:y_resolution: 72
 :encoding_process: Baseline DCT, Huffman coding
+:thumbnail_image: (Binary data 5987 bytes)
+:exposure_mode: Auto
+:white_balance: Auto
+:circle_of_confusion: 0.004 mm
+:metering_mode: Multi-segment
+:gps_latitude: 37.50233333
+:color_components: 3
+:image_height: 2448
+:exif_tool_version: 8.59
 :exposure_time: !ruby/object:Rational 
   denominator: 6135
   numerator: 1
-:exposure_program: Program AE
-:gps_latitude_ref: North
+:gps_longitude_ref: West
+:resolution_unit: inches
+:scene_capture_type: Standard
+:gps_position: 37.50233333 N, 122.47566667 W
+:file_name: iPhone 4S.jpg
+:hyperfocal_distance: 2.08 m
+:focal_length35efl: "4.3 mm (35 mm equivalent: 35.0 mm)"
+:y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
+:aperture: 2.4
+:fov: 54.4 deg
+:brightness_value: 11.27442702
+:file_permissions: rw-r--r--
+:gps_img_direction_ref: True North
+:exif_version: "0221"
+:sharpness: Normal
+:gps_time_stamp: "19:03:32"
+:aperture_value: 2.4
+:exif_image_height: 2448
+:focal_length: 4.3 mm
+:light_value: 15.8
+:modify_date: 2011-11-23 09:39:52 -08:00
 :shutter_speed_value: !ruby/object:Rational 
   denominator: 6135
   numerator: 1
-:exif_byte_order: Big-endian (Motorola, MM)
-:exif_image_height: 2448
-:modify_date: 2011-11-23 09:39:52 -08:00
 :make: Apple
-:color_components: 3
-:model: iPhone 4S
-:circle_of_confusion: 0.004 mm
-:white_balance: Auto
-:gps_latitude: 37.50233333
-:aperture: 2.4
-:file_modify_date: 2011-11-23 09:39:52 -08:00
-:color_space: sRGB
-:scene_capture_type: Standard
-:gps_longitude_ref: West
+:file_size: 1954 kB
+:subject_area: 1631 1223 881 881
+:focal_length_in35mm_format: 35 mm
+:image_width: 3264
+:file_type: JPEG
 :scale_factor35efl: 8.2
+:iso: 64

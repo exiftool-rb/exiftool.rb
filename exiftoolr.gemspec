@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "exif_tooler/version"
+require "exiftoolr/version"
 
 Gem::Specification.new do |s|
-  s.name        = "exif_tooler"
-  s.version     = ExifTooler::VERSION
+  s.name        = "exiftoolr"
+  s.version     = Exiftoolr::VERSION
   s.authors     = ["Matthew McEachen"]
   s.email       = ["matthew-github@mceachen.org"]
   s.homepage    = "https://github.com/mceachen/exif_tooler"
-  s.summary     = %q{Simple ExifTool wrapper}
-  s.description = %q{Simple ExifTool wrapper}
+  s.summary     = %q{Multiget ExifTool wrapper for ruby}
+  s.description = %q{Multiget ExifTool wrapper for ruby}
 
-  s.rubyforge_project = "exiftooler"
+  s.rubyforge_project = "exiftoolr"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -1,62 +1,71 @@
 # Ruby wrapper for ExifTool
 
 This gem is the simplest thing that could possibly work that
-reads the output of ```exiftool``` and renders it into a ruby hash,
-with proper symbol keys and properly typed values.
+reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
+and renders it into a ruby hash, with correctly typed values and symbolized keys.
 
-GPS latitude and longitude are rendered as signed floats,
-where north and east are positive, and west and south are negative.
+## Want constitutes "correct"?
 
-Values like shutter speed and exposure time are rendered as Rationals,
-which lets the caller show them as fractions (1/250) or as comparable.
+* GPS latitude and longitude are rendered as signed floats,
+  where north and east are positive, and west and south are negative.
+* Values like shutter speed and exposure time are rendered as Rationals,
+  which lets the caller show them as fractions (1/250) or as comparable.
+* String values like "interop" and "serial number" are kept as strings
+  (which preserves zero prefixes)
 
-## Why not mini_exiftool?
+## Installation
 
-* The values parsed out of mini_exiftool aren't properly numeric
-  (things like interop version are "0100", not Integer(100)).
-* The GPS values weren't comparable (or easily switched to simple signed floats)
-* The library makes the world halt if you don't have exiftool installed
-* #to_hash returns CamelCasedKeywords rather than symbols, which is an API change,
-  so this isn't just a pull request.
-* 44 lines of ruby is better than 339.
+You'll want to [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html), then
 
-## Setup
+```
+gem install exiftoolr
+```
 
-You'll want to [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html).
+or add to your Gemfile:
+
+```
+gem 'exiftoolr'
+```
 
 ## Usage
 
 ```ruby
-e = ExifTooler.new("path/to/iPhone 4S.jpg")
+require 'exiftoolr'
+e = Exiftoolr.new("path/to/iPhone 4S.jpg")
 e.to_hash
-#=>{:make => "Apple", :gps_longitude => -122.47566667, …
+# => {:make => "Apple", :gps_longitude => -122.47566667, …
 e.to_display_hash
-#=>{"Make" => "Apple", "GPS Longitude" => -122.47566667, …
-e.symbol_display_hash
-#=>{:make => "Make", :gps_longitude => "GPS Longitude"}
+# => {"Make" => "Apple", "GPS Longitude" => -122.47566667, …
 ```
 
-## When things go wrong
+### Multiple file support
 
-* ```ExifTooler::NoSuchFile``` is raised if the provided filename doesn't exist.
-* ```ExifTooler::ExifToolNotInstalled``` is raised if ```exiftool``` isn't in your ```PATH```.
+Supply an array to the Exiftoolr initializer, then use ```.result_for```:
+
+```ruby
+require 'exiftoolr'
+e = Exiftoolr.new(Dir["**/*.jpg"])
+result = e.result_for("path/to/iPhone 4S.jpg")
+result.to_hash
+# => {:make => "Apple", :gps_longitude => -122.47566667, …
+
+e.files_with_results
+# => ["/full/path/to/iPhone 4S.jpg", "/full/path/to/Droid X.jpg", …
+```
+
+### When things go wrong
+
+* ```Exiftoolr::NoSuchFile``` is raised if the provided filename doesn't exist.
+* ```Exiftoolr::ExiftoolNotInstalled``` is raised if ```exiftool``` isn't in your ```PATH```.
 * If ExifTool has a problem reading EXIF data, no exception is raised, but ```#errors?``` will return true:
 
 ```ruby
-ExifTooler.new("Gemfile").errors?
+Exiftoolr.new("Gemfile").errors?
 #=> true
 ```
 
-
 ## Change history
 
-### 0.0.1
+### 0.0.4
 
-First whack. Read-only support.
-
-### 0.0.2
-
-Added ```.exiftool_installed?```
-
-
-
+Added support for multiple file fetching (which is *much* faster for large directories)
