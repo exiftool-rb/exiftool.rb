@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Exiftoolr::VERSION
   s.authors     = ["Matthew McEachen"]
   s.email       = ["matthew-github@mceachen.org"]
-  s.homepage    = "https://github.com/mceachen/exif_tooler"
+  s.homepage    = "https://github.com/mceachen/exiftoolr"
   s.summary     = %q{Multiget ExifTool wrapper for ruby}
   s.description = %q{Multiget ExifTool wrapper for ruby}
 

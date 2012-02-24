@@ -73,3 +73,7 @@ Exiftoolr.new("Gemfile").errors?
 ### 0.0.4
 
 Added support for multiple file fetching (which is *much* faster for large directories)
+
+### 0.0.5
+
+Fixed homepage URL in gemspec
