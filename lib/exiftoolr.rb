@@ -27,7 +27,8 @@ class Exiftoolr
     raise ExiftoolNotInstalled if json == ""
     @file2result = { }
     JSON.parse(json).each do |raw|
-      @file2result[r.source_file] = Result.new(raw)
+      result = Result.new(raw)
+      @file2result[result.source_file] = result
     end
   end
 
