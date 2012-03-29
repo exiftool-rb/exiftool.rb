@@ -45,17 +45,19 @@ class TestExiftoolr < Test::Unit::TestCase
     File.open(yaml_file, 'w') { |out| YAML.dump(exif, out) } if DUMP_RESULTS
     e = File.open(yaml_file) { |f| YAML::load(f) }
     exif.keys.each do |k|
-      next if ignorable_keys.include? k
+      next if ignorable_key?(k)
       assert_equal e[k], exif[k], "Key '#{k}' was incorrect for #{filename}"
     end
   end
 
-  def ignorable_keys
+  TRANSLATED_KEY = /.*\-ml-\w\w-\w\w$/
+
+  def ignorable_key? key
     @ignorable_keys ||= begin
       ignorable = [:file_modify_date, :directory, :source_file, :exif_tool_version]
       ignorable += [:modify_date, :create_date] if Exiftoolr.exiftool_version <= 8.2
       ignorable
-    end
+    end.include?(key) || key.to_s =~ TRANSLATED_KEY
   end
 
   def test_multi_matches

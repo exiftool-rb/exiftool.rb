@@ -10,9 +10,6 @@
 :wb_shift_ab: 0
 :lens35efl: "17.0 - 40.0 mm (35 mm equivalent: 26.6 - 62.5 mm)"
 :thumbnail_image_valid_area: 0 159 7 112
-:"profile_description_ml-zh-cn": !binary |
-  55u45py6IFJHQiDmj4/ov7Dmlofku7Y=
-
 :current_iptc_digest: b443520a10119da99c2550175e6d0efb
 :model: Canon EOS 20D
 :af_point_selection_method: Normal
@@ -21,16 +18,12 @@
 :user_comment: ""
 :color_space: sRGB
 :focus_range: Not Known
-:"profile_description_ml-ja-jp": !binary |
-  44Kr44Oh44OpIFJHQiDjg5fjg63jg5XjgqHjgqTjg6s=
-
 :zoom_target_width: 0
 :device_model: ""
 :flash_guide_number: 0
 :focal_plane_x_size: 23.04 mm
 :saturation: Normal
 :quality: Fine
-:"profile_description_ml-it-it": Profilo RGB Fotocamera
 :focal_type: Zoom
 :iso: 400
 :sequence_number: 0
@@ -47,9 +40,6 @@
 :sensor_left_border: 84
 :sensor_red_level: 0
 :wb_rggb_levels_custom1: 1096 1023 1023 2793
-:"profile_description_ml-ko-kr": !binary |
-  7Lm066mU6528IFJHQiDtlITroZztjIzsnbw=
-
 :photo_effect: "Off"
 :af_area_x_positions: 8 -555 571 -931 8 947 -555 571 8
 :profile_version: 2.2.0
@@ -105,7 +95,6 @@
 :x_resolution: 72
 :cmm_flags: Not Embedded, Independent
 :focus_mode: One-shot AF
-:"profile_description_ml-fi-fi": Kameran RGB-profiili
 :blue_matrix_column: 0.15662 0.08336 0.71953
 :canon_image_size: Large
 :original_decision_data_offset: 3968887
@@ -146,7 +135,6 @@
 :filter_effect: None
 :sensor_right_border: 3587
 :canon_exposure_mode: Depth-of-field AE
-:"profile_description_ml-es-es": "Perfil RGB para C\xC3\xA1mara"
 :profile_description_ml: Camera RGB Profile
 :resolution_unit: inches
 :region_area_w: 
@@ -183,7 +171,6 @@
 :file_permissions: rw-r--r--
 :lens: 17.0 - 40.0 mm
 :add_original_decision_data: "On"
-:"profile_description_ml-nl-nl": RGB-profiel Camera
 :profile_class: Input Device Profile
 :flash: Off, Did not fire
 :digital_gain: 0
@@ -234,8 +221,7 @@
 :thumbnail_offset: 4036
 :sharpness_frequency: n/a
 :wb_shift_gm: 0
-:"profile_description_ml-da-dk": RGB-beskrivelse til Kamera
-:region_name: 
+:region_name:
 - Matthew McEachen
 - Karen McEachen
 - Ruth McEachen
@@ -250,7 +236,6 @@
 :bulb_duration: 0
 :color_temp_fluorescent: 3961
 :bracket_shot_number: 0
-:"profile_description_ml-pt-br": "Perfil RGB de C\xC3\xA2mera"
 :picture_style: None
 :bits_per_sample: 8
 :region_type: 
@@ -263,9 +248,6 @@
 :sharpness: 0
 :file_number: 326-2647
 :modify_date: 2012-02-15 22:58:07 -08:00
-:"profile_description_ml-zh-tw": !binary |
-  5pW45L2N55u45qmfIFJHQiDoibLlvanmj4/ov7A=
-
 :self_timer: "Off"
 :encoding_process: Baseline DCT, Huffman coding
 :color_temp_auto: 4599
@@ -291,12 +273,10 @@
 :long_focal: 40 mm
 :file_modify_date: 2012-02-19 21:49:48 -08:00
 :flash_sync_speed_av: Auto
-:"profile_description_ml-sv-se": "RGB-profil f\xC3\xB6r Kamera"
 :profile_connection_space: "XYZ "
 :wb_rggb_levels_daylight: 1933 1023 1023 1607
 :black_mask_right_border: 0
 :camera_type: EOS Mid-range
-:"profile_description_ml-de-de": "RGB-Profil f\xC3\xBCr Kameras"
 :record_mode: JPEG
 :interop_index: R98 - DCF basic file (sRGB)
 :profile_date_time: 2003-07-01 00:00:00 -07:00
@@ -304,12 +284,10 @@
 :focal_plane_x_resolution: 3959.322034
 :flashpix_version: "0100"
 :canon_image_height: 2336
-:"profile_description_ml-no-no": RGB-kameraprofil
 :profile_description: Camera RGB Profile
 :wb_rggb_levels_tungsten: 1382 1023 1023 2574
 :black_mask_top_border: 0
 :exposure_program: Not Defined
-:"profile_description_ml-fr-fu": "Profil RVB de l\xE2\x80\x99appareil-photo"
 :blue_balance: 1.683744
 :ettlii: Evaluative
 :image_width: 3504

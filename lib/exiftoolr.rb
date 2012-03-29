@@ -25,11 +25,12 @@ class Exiftoolr
 
   def initialize(filenames, exiftool_opts = "")
     @file2result = {}
+    filenames = [filenames] if filenames.is_a?(String)
     unless filenames.empty?
       escaped_filenames = filenames.collect do |f|
         Shellwords.escape(self.class.expand_path(f.to_s))
       end.join(" ")
-      cmd = "exiftool #{exiftool_opts} -j −coordFormat \"%.8f\" -dateFormat \"%Y-%m-%d %H:%M:%S\" #{escaped_filenames} 2> /dev/null"
+      cmd = "exiftool #{exiftool_opts} -j -coordFormat \"%.8f\" -dateFormat \"%Y-%m-%d %H:%M:%S\" #{escaped_filenames} 2> /dev/null"
       json = `#{cmd}`
       raise ExiftoolNotInstalled if json == ""
       JSON.parse(json).each do |raw|
