@@ -76,7 +76,7 @@ Exiftoolr.new("Gemfile").errors?
 
 * Added warning values for EXIF headers that are corrupt
 * Made initialize gracefully accept an empty array, or an array of Pathname instances
-* Added support for ruby 1.9 and exiftool v 8.15 (Ubuntu Natty)
+* Added support for ruby 1.9.3 and exiftool v8.15 (Ubuntu Natty) and v8.85 (current stable version)
 
 ### 0.0.5
 
