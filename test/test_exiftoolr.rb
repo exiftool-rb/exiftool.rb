@@ -46,7 +46,13 @@ class TestExiftoolr < Test::Unit::TestCase
     e = File.open(yaml_file) { |f| YAML::load(f) }
     exif.keys.each do |k|
       next if ignorable_key?(k)
-      assert_equal e[k], exif[k], "Key '#{k}' was incorrect for #{filename}"
+      expected = e[k]
+      actual = exif[k]
+      if actual.is_a?(String)
+        expected.downcase!
+        actual.downcase!
+      end
+      assert_equal expected, actual, "Key '#{k}' was incorrect for #{filename}"
     end
   end
 
