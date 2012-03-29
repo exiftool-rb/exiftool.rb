@@ -166,9 +166,7 @@
 :aperture: 9.0
 :easy_mode: Manual
 :nd_filter: n/a
-:exposure_level_increments: !ruby/object:Rational 
-  denominator: 3
-  numerator: 1
+:exposure_level_increments: "1/3 Stop"
 :auto_exposure_bracketing: "Off"
 :af_area_height: 78
 :flash_firing: Fires

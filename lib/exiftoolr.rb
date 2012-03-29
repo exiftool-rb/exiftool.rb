@@ -5,9 +5,9 @@ require 'json'
 require 'shellwords'
 
 class Exiftoolr
-  class NoSuchFile < StandardError; end
-  class NotAFile < StandardError; end
-  class ExiftoolNotInstalled < StandardError; end
+  class NoSuchFile < StandardError ; end
+  class NotAFile < StandardError ; end
+  class ExiftoolNotInstalled < StandardError ; end
 
   def self.exiftool_installed?
     `exiftool -ver 2> /dev/null`.to_f > 0
@@ -20,15 +20,18 @@ class Exiftoolr
   end
 
   def initialize(filenames, exiftool_opts = "")
-    escaped_filenames = filenames.to_a.collect do |f|
-      Shellwords.escape(self.class.expand_path(f))
-    end.join(" ")
-    json = `exiftool #{exiftool_opts} -j −coordFormat "%.8f" -dateFormat "%Y-%m-%d %H:%M:%S" #{escaped_filenames} 2> /dev/null`
-    raise ExiftoolNotInstalled if json == ""
-    @file2result = { }
-    JSON.parse(json).each do |raw|
-      result = Result.new(raw)
-      @file2result[result.source_file] = result
+    @file2result = {}
+    unless filenames.empty?
+      escaped_filenames = filenames.collect do |f|
+        Shellwords.escape(self.class.expand_path(f.to_s))
+      end.join(" ")
+      cmd = "exiftool #{exiftool_opts} -j −coordFormat \"%.8f\" -dateFormat \"%Y-%m-%d %H:%M:%S\" #{escaped_filenames} 2> /dev/null"
+      json = `#{cmd}`
+      raise ExiftoolNotInstalled if json == ""
+      JSON.parse(json).each do |raw|
+        result = Result.new(raw)
+        @file2result[result.source_file] = result
+      end
     end
   end
 
@@ -37,7 +40,7 @@ class Exiftoolr
   end
 
   def files_with_results
-    @file2result.values.collect{|r|r.source_file unless r.errors?}.compact
+    @file2result.values.collect { |r| r.source_file unless r.errors? }.compact
   end
 
   def to_hash

@@ -70,10 +70,15 @@ Exiftoolr.new("Gemfile").errors?
 
 ## Change history
 
-### 0.0.4
+### 0.0.7
 
-Added support for multiple file fetching (which is *much* faster for large directories)
+* Add warning values for EXIF headers that are corrupt
+* Make initialize gracefully accept an empty array, or an array of Pathname instances
 
 ### 0.0.5
 
 Fixed homepage URL in gemspec
+
+### 0.0.4
+
+Added support for multiple file fetching (which is *much* faster for large directories)
