@@ -1,5 +1,7 @@
 # Ruby wrapper for ExifTool
 
+[![Build Status](https://secure.travis-ci.org/mceachen/exiftoolr.png?branch=master)](http://travis-ci.org/mceachen/exiftoolr)
+
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with correctly typed values and symbolized keys.
