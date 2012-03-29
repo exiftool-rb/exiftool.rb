@@ -53,7 +53,7 @@ class TestExiftoolr < Test::Unit::TestCase
   def ignorable_keys
     @ignorable_keys ||= begin
       ignorable = [:file_modify_date, :directory, :source_file, :exif_tool_version]
-      ignorable << :modify_date if Exiftoolr.exiftool_version <= 8.2
+      ignorable += [:modify_date, :create_date] if Exiftoolr.exiftool_version <= 8.2
       ignorable
     end
   end
