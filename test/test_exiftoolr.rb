@@ -45,8 +45,16 @@ class TestExiftoolr < Test::Unit::TestCase
     File.open(yaml_file, 'w') { |out| YAML.dump(exif, out) } if DUMP_RESULTS
     e = File.open(yaml_file) { |f| YAML::load(f) }
     exif.keys.each do |k|
-      next if [:file_modify_date, :directory, :source_file, :exif_tool_version].include? k
+      next if ignorable_keys.include? k
       assert_equal e[k], exif[k], "Key '#{k}' was incorrect for #{filename}"
+    end
+  end
+
+  def ignorable_keys
+    @ignorable_keys ||= begin
+      ignorable = [:file_modify_date, :directory, :source_file, :exif_tool_version]
+      ignorable << :modify_date if Exiftoolr.exiftool_version <= 8.2
+      ignorable
     end
   end
 
@@ -59,7 +67,7 @@ class TestExiftoolr < Test::Unit::TestCase
   def test_error_filtering
     filenames = Dir["**/*.*"].to_a
     e = Exiftoolr.new(filenames)
-    expected_files = Dir["**/*.jpg"].to_a.collect{|f|File.expand_path(f)}.sort
+    expected_files = Dir["**/*.jpg"].to_a.collect { |f| File.expand_path(f) }.sort
     assert_equal expected_files, e.files_with_results.sort
     filenames.each { |f| validate_result(e.result_for(f), f) }
   end

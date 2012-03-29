@@ -10,7 +10,11 @@ class Exiftoolr
   class ExiftoolNotInstalled < StandardError ; end
 
   def self.exiftool_installed?
-    `exiftool -ver 2> /dev/null`.to_f > 0
+    exiftool_version > 0
+  end
+
+  def self.exiftool_version
+    @@exiftool_version ||= `exiftool -ver 2> /dev/null`.to_f
   end
 
   def self.expand_path(filename)
