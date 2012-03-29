@@ -11,7 +11,7 @@ and renders it into a ruby hash, with correctly typed values and symbolized keys
 * GPS latitude and longitude are rendered as signed floats,
   where north and east are positive, and west and south are negative.
 * Values like shutter speed and exposure time are rendered as Rationals,
-  which lets the caller show them as fractions (1/250) or as comparable.
+  which lets the caller show them as fractions (1/250) or as comparable numeric instances.
 * String values like "interop" and "serial number" are kept as strings
   (which preserves zero prefixes)
 
