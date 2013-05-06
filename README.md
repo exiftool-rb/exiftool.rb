@@ -6,7 +6,7 @@ This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with correctly typed values and symbolized keys.
 
-## Want constitutes "correct"?
+## What constitutes "correct"?
 
 * GPS latitude and longitude are rendered as signed floats,
   where north and east are positive, and west and south are negative.
