@@ -16,6 +16,10 @@ and renders it into a ruby hash, with correctly typed values and symbolized keys
   which lets the caller show them as fractions (1/250) or as comparable numeric instances.
 * String values like "interop" and "serial number" are kept as strings
   (which preserves zero prefixes)
+* Timestamps are attempted to be interpreted with correct timezones and sub-second resolution, if
+  the header contains that data.
+  Please note that EXIF headers don't always include a timezone offset, so we just adopt the system
+  timezone, which may, of course, be wrong.
 
 ## Installation
 

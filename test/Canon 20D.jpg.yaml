@@ -4,9 +4,9 @@
 :file_name: Canon 20D.jpg
 :directory: /Users/mrm/Dropbox/code/exiftoolr/test
 :file_size: 2.9 MB
-:file_modify_date: 2012-02-22 21:22:17.000000000 -08:00
-:file_access_date: 2013-07-14 11:51:21.000000000 -07:00
-:file_inode_change_date: 2013-02-16 11:21:59.000000000 -08:00
+:file_modify_date: 2012-02-23 05:22:17.000000000 +00:00
+:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
+:file_inode_change_date: 2013-02-16 19:21:59.000000000 +00:00
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -17,7 +17,7 @@
 :x_resolution: 72
 :y_resolution: 72
 :resolution_unit: inches
-:modify_date: 2004-09-19 12:25:20.000000000 -07:00
+:modify_date: 2004-09-19 12:25:20.000000000 +00:00
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 250
@@ -26,8 +26,8 @@
 :exposure_program: Program AE
 :iso: 200
 :exif_version: '0221'
-:date_time_original: 2004-09-19 12:25:20.000000000 -07:00
-:create_date: 2004-09-19 12:25:20.000000000 -07:00
+:date_time_original: 2004-09-19 12:25:20.000000000 +00:00
+:create_date: 2004-09-19 12:25:20.000000000 +00:00
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 250

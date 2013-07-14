@@ -4,9 +4,9 @@
 :file_name: faces.jpg
 :directory: /Users/mrm/Dropbox/code/exiftoolr/test
 :file_size: 3.8 MB
-:file_modify_date: 2013-07-13 23:00:41.000000000 -07:00
-:file_access_date: 2013-07-14 11:51:21.000000000 -07:00
-:file_inode_change_date: 2013-07-13 23:01:42.000000000 -07:00
+:file_modify_date: 2013-07-14 06:00:41.000000000 +00:00
+:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
+:file_inode_change_date: 2013-07-14 06:01:42.000000000 +00:00
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -18,7 +18,7 @@
 :y_resolution: 72
 :resolution_unit: inches
 :software: Picasa
-:modify_date: 2012-02-15 22:58:07.000000000 -08:00
+:modify_date: 2012-02-15 22:58:07.000000000 +00:00
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 4000
@@ -27,8 +27,8 @@
 :exposure_program: Not Defined
 :iso: 400
 :exif_version: '0221'
-:date_time_original: 2005-11-26 14:20:34.000000000 -08:00
-:create_date: 2005-11-26 14:20:34.000000000 -08:00
+:date_time_original: 2005-11-26 14:20:34.000000000 +00:00
+:create_date: 2005-11-26 14:20:34.000000000 +00:00
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 4000
@@ -247,7 +247,7 @@
 :profile_class: Input Device Profile
 :color_space_data: 'RGB '
 :profile_connection_space: 'XYZ '
-:profile_date_time: 2003-07-01 00:00:00.000000000 -07:00
+:profile_date_time: 2003-07-01 00:00:00.000000000 +00:00
 :profile_file_signature: acsp
 :primary_platform: Apple Computer Inc.
 :cmm_flags: Not Embedded, Independent
