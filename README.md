@@ -74,6 +74,11 @@ Exiftoolr.new("Gemfile").errors?
 
 ## Change history
 
+### 0.0.10
+
+* Better timestamp parsing—now both sub-second and timezone offsets are handled correctly
+* Switched to minitest-spec
+
 ### 0.0.9
 
 * Explicitly added MIT licensing to the gemspec.

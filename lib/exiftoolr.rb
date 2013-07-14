@@ -1,8 +1,6 @@
-require "exiftoolr/version"
-require "exiftoolr/result"
-
 require 'json'
 require 'shellwords'
+require 'exiftoolr/result'
 
 class Exiftoolr
   class NoSuchFile < StandardError ; end
@@ -23,14 +21,16 @@ class Exiftoolr
     File.expand_path(filename)
   end
 
-  def initialize(filenames, exiftool_opts = "")
+  def initialize(filenames, exiftool_opts = '')
     @file2result = {}
     filenames = [filenames] if filenames.is_a?(String)
     unless filenames.empty?
       escaped_filenames = filenames.collect do |f|
         Shellwords.escape(self.class.expand_path(f.to_s))
       end.join(" ")
-      cmd = "exiftool #{exiftool_opts} -j -coordFormat \"%.8f\" -dateFormat \"%Y-%m-%d %H:%M:%S\" #{escaped_filenames} 2> /dev/null"
+      # I'd like to use -dateformat, but it doesn't support timezone offsets properly,
+      # nor sub-second timestamps.
+      cmd = "exiftool #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
       json = `#{cmd}`
       raise ExiftoolNotInstalled if json == ""
       JSON.parse(json).each do |raw|
@@ -67,7 +67,7 @@ class Exiftoolr
   private
 
   def first
-    raise InvalidArgument, "use #result_for when multiple filenames are used" if @file2result.size > 1
+    raise InvalidArgument, 'use #result_for when multiple filenames are used' if @file2result.size > 1
     @file2result.values.first
   end
 end

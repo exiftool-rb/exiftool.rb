@@ -1,0 +1,211 @@
+---
+:source_file: /Users/mrm/Dropbox/code/exiftoolr/test/IMG_2452.jpg
+:exif_tool_version: 9.31
+:file_name: IMG_2452.jpg
+:directory: /Users/mrm/Dropbox/code/exiftoolr/test
+:file_size: 2.8 MB
+:file_modify_date: 2013-07-14 10:51:04.000000000 -07:00
+:file_access_date: 2013-07-14 11:51:21.000000000 -07:00
+:file_inode_change_date: 2013-07-14 10:51:04.000000000 -07:00
+:file_permissions: rw-r--r--
+:file_type: JPEG
+:mime_type: image/jpeg
+:exif_byte_order: Big-endian (Motorola, MM)
+:image_description: '                               '
+:make: Canon
+:model: Canon PowerShot SD980 IS
+:orientation: Horizontal (normal)
+:x_resolution: 72
+:y_resolution: 72
+:resolution_unit: inches
+:software: QuickTime 7.6.6
+:modify_date: 2011-07-06 20:41:11.000000000 -07:00
+:host_computer: Mac OS X 10.6.8
+:y_cb_cr_positioning: Co-sited
+:exposure_time: !ruby/object:Rational
+  denominator: 800
+  numerator: 1
+:f_number: 2.8
+:iso: 160
+:exif_version: '0220'
+:date_time_original: 2011-07-06 09:46:45.000000000 -07:00
+:create_date: 2011-07-06 09:46:45.000000000 -07:00
+:components_configuration: Y, Cb, Cr, -
+:compressed_bits_per_pixel: 3
+:shutter_speed_value: !ruby/object:Rational
+  denominator: 807
+  numerator: 1
+:aperture_value: 2.8
+:max_aperture_value: 2.8
+:flash: Auto, Did not fire
+:focal_length: 4.3 mm
+:warning: '[minor] Adjusted MakerNotes base by 50'
+:macro_mode: Normal
+:self_timer: 'Off'
+:quality: Fine
+:canon_flash_mode: Red-eye reduction (Auto)
+:continuous_drive: Single
+:focus_mode: Single
+:record_mode: JPEG
+:canon_image_size: Widescreen
+:easy_mode: Full auto
+:digital_zoom: None
+:contrast: Normal
+:saturation: Normal
+:sharpness: 0
+:camera_iso: Auto
+:metering_mode: Evaluative
+:focus_range: Auto
+:af_point: Face Detect
+:canon_exposure_mode: Easy
+:lens_type: Unknown (-1)
+:max_focal_length: 21.5 mm
+:min_focal_length: 4.3 mm
+:focal_units: 1000/mm
+:max_aperture: 2.8
+:min_aperture: 8
+:flash_bits: (none)
+:focus_continuous: Continuous
+:ae_setting: Normal AE
+:image_stabilization: 'On'
+:zoom_source_width: 4000
+:zoom_target_width: 4000
+:spot_metering_mode: Center
+:manual_flash_output: n/a
+:focal_type: Zoom
+:focal_plane_x_size: 6.35 mm
+:focal_plane_y_size: 3.56 mm
+:auto_iso: 148
+:base_iso: 100
+:measured_ev: 13.25
+:target_aperture: 2.8
+:target_exposure_time: !ruby/object:Rational
+  denominator: 807
+  numerator: 1
+:exposure_compensation: 0
+:white_balance: Auto
+:slow_shutter: 'Off'
+:sequence_number: 0
+:optical_zoom_code: 0
+:flash_guide_number: 0
+:flash_exposure_comp: 0
+:auto_exposure_bracketing: 'Off'
+:aeb_bracket_value: 0
+:control_mode: Camera Local Control
+:focus_distance_upper: 65.53 m
+:focus_distance_lower: 0 m
+:bulb_duration: 0
+:camera_type: Compact
+:auto_rotate: Rotate 270 CW
+:nd_filter: 'Off'
+:self_timer2: 0
+:flash_output: 0
+:canon_image_type: IMG:PowerShot SD980 IS JPEG
+:canon_firmware_version: Firmware Version 1.01
+:file_number: 132-2452
+:owner_name: ''
+:rotation: 270
+:camera_temperature: 29 C
+:canon_model_id: PowerShot SD980 IS / Digital IXUS 200 IS / IXY Digital 930 IS
+:af_area_mode: Multi-point AF or AI AF
+:num_af_points: 9
+:valid_af_points: 9
+:canon_image_width: 4000
+:canon_image_height: 2248
+:af_image_width: 1000
+:af_image_height: 100
+:af_area_widths: 135 135 135 135 135 135 135 135 135
+:af_area_heights: 18 18 18 18 18 18 18 18 18
+:af_area_x_positions: -135 0 135 -135 0 135 -135 0 135
+:af_area_y_positions: -18 -18 -18 0 0 0 18 18 18
+:af_points_in_focus: 4
+:primary_af_point: 4
+:thumbnail_image_valid_area: 0 159 15 104
+:date_stamp_mode: 'Off'
+:my_color_mode: 'Off'
+:firmware_revision: 1.01 rev 3.00
+:categories: (none)
+:intelligent_contrast: 'Off'
+:image_unique_id: a3154f6d7ed923fe22415586cb3f8922
+:vrd_offset: 0
+:user_comment: ''
+:flashpix_version: '0100'
+:color_space: sRGB
+:exif_image_width: 4000
+:exif_image_height: 2248
+:focal_plane_x_resolution: 16393.44262
+:focal_plane_y_resolution: 12284.15301
+:focal_plane_resolution_unit: inches
+:sensing_method: One-chip color area
+:file_source: Digital Camera
+:custom_rendered: Normal
+:exposure_mode: Auto
+:digital_zoom_ratio: 1
+:scene_capture_type: Standard
+:compression: JPEG (old-style)
+:thumbnail_offset: 3480
+:thumbnail_length: 4627
+:comment: |
+  AppleMark
+:image_width: 2248
+:image_height: 4000
+:encoding_process: Baseline DCT, Huffman coding
+:bits_per_sample: 8
+:color_components: 3
+:y_cb_cr_sub_sampling: YCbCr4:2:2 (2 1)
+:profile_cmm_type: Lino
+:profile_version: 2.1.0
+:profile_class: Display Device Profile
+:color_space_data: 'RGB '
+:profile_connection_space: 'XYZ '
+:profile_date_time: 1998-02-09 06:49:00.000000000 -08:00
+:profile_file_signature: acsp
+:primary_platform: Microsoft Corporation
+:cmm_flags: Not Embedded, Independent
+:device_manufacturer: 'IEC '
+:device_model: sRGB
+:device_attributes: Reflective, Glossy, Positive, Color
+:rendering_intent: Perceptual
+:connection_space_illuminant: 0.9642 1 0.82491
+:profile_creator: 'HP  '
+:profile_id: 0
+:profile_copyright: Copyright (c) 1998 Hewlett-Packard Company
+:profile_description: sRGB IEC61966-2.1
+:media_white_point: 0.95045 1 1.08905
+:media_black_point: 0 0 0
+:red_matrix_column: 0.43607 0.22249 0.01392
+:green_matrix_column: 0.38515 0.71687 0.09708
+:blue_matrix_column: 0.14307 0.06061 0.7141
+:device_mfg_desc: IEC http://www.iec.ch
+:device_model_desc: IEC 61966-2.1 Default RGB colour space - sRGB
+:viewing_cond_desc: Reference Viewing Condition in IEC61966-2.1
+:viewing_cond_illuminant: 19.6445 20.3718 16.8089
+:viewing_cond_surround: 3.92889 4.07439 3.36179
+:viewing_cond_illuminant_type: D50
+:luminance: 76.03647 80 87.12462
+:measurement_observer: CIE 1931
+:measurement_backing: 0 0 0
+:measurement_geometry: Unknown (0)
+:measurement_flare: 0.999%
+:measurement_illuminant: D65
+:technology: Cathode Ray Tube Display
+:red_trc: (Binary data 2060 bytes)
+:green_trc: (Binary data 2060 bytes)
+:blue_trc: (Binary data 2060 bytes)
+:aperture: 2.8
+:drive_mode: Single-frame Shooting
+:image_size: 2248x4000
+:lens: 4.3 - 21.5 mm
+:lens_id: Unknown 4-21mm
+:scale_factor35efl: 5.6
+:shooting_mode: Full auto
+:shutter_speed: !ruby/object:Rational
+  denominator: 800
+  numerator: 1
+:thumbnail_image: (Binary data 4627 bytes)
+:circle_of_confusion: 0.005 mm
+:fov: 73.7 deg
+:focal_length35efl: '4.3 mm (35 mm equivalent: 24.0 mm)'
+:hyperfocal_distance: 1.23 m
+:lens35efl: '4.3 - 21.5 mm (35 mm equivalent: 24.0 - 120.1 mm)'
+:light_value: 11.9

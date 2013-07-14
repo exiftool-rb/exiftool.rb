@@ -1,26 +1,30 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "exiftoolr/version"
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'exiftoolr/version'
 
-Gem::Specification.new do |s|
-  s.name        = "exiftoolr"
-  s.version     = Exiftoolr::VERSION
-  s.authors     = ["Matthew McEachen"]
-  s.email       = ["matthew-github@mceachen.org"]
-  s.homepage    = "https://github.com/mceachen/exiftoolr"
-  s.summary     = %q{Multiget ExifTool wrapper for ruby}
-  s.description = %q{Multiget ExifTool wrapper for ruby}
-  s.license       = 'MIT'
+Gem::Specification.new do |spec|
+  spec.name        = 'exiftoolr'
+  spec.version     = Exiftoolr::VERSION
+  spec.authors     = ['Matthew McEachen']
+  spec.email       = %w(matthew-github@mceachen.org)
+  spec.homepage    = 'https://github.com/mceachen/exiftoolr'
+  spec.summary     = %q{Multiget ExifTool wrapper for ruby}
+  spec.description = %q{Multiget ExifTool wrapper for ruby}
+  spec.license     = 'MIT'
 
-  s.rubyforge_project = "exiftoolr"
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.require_paths = ["lib"]
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'
 
-  s.requirements << "ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)"
-
-  s.add_dependency "json"
-  s.add_development_dependency "rake"
+  spec.add_dependency 'json'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'yard'
+  spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'minitest-great_expectations'
+  spec.add_development_dependency 'minitest-reporters' unless ENV['CI']
 end
