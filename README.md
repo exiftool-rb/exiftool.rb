@@ -8,7 +8,7 @@ This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with correctly typed values and symbolized keys.
 
-## What constitutes "correct"?
+## What constitutes "correct values"?
 
 * GPS latitude and longitude are rendered as signed floats,
   where north and east are positive, and west and south are negative.
@@ -20,22 +20,6 @@ and renders it into a ruby hash, with correctly typed values and symbolized keys
   the header contains that data.
   Please note that EXIF headers don't always include a timezone offset, so we just adopt the system
   timezone, which may, of course, be wrong.
-
-## Installation
-
-You'll want to [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html), then
-
-```
-gem install exiftoolr
-```
-
-or add to your Gemfile:
-
-```
-gem 'exiftoolr'
-```
-
-and run ```bundle```.
 
 ## Usage
 
@@ -49,6 +33,11 @@ e.to_display_hash
 ```
 
 ### Multiple file support
+
+This gem supports Exiftool's multiget, which lets you fetch metadata for many files at once.
+
+This can be dramatically more efficient (like, 60x faster) than spinning up the ```exiftool```
+process for each file.
 
 Supply an array to the Exiftoolr initializer, then use ```.result_for```:
 
@@ -75,6 +64,17 @@ e.files_with_results
 Exiftoolr.new("Gemfile").errors?
 #=> true
 ```
+
+
+## Installation
+
+First [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html).
+
+Then, add this your Gemfile:
+
+    gem 'exiftoolr'
+
+and then run ```bundle```.
 
 ## Change history
 
