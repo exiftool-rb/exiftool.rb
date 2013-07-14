@@ -18,8 +18,8 @@ class Exiftoolr
   end
 
   def self.expand_path(filename)
-    raise NoSuchFile, filename unless File.exist?(filename)
-    raise NotAFile, filename unless File.file?(filename)
+    raise(NoSuchFile, filename) unless File.exist?(filename)
+    raise(NotAFile, filename) unless File.file?(filename)
     File.expand_path(filename)
   end
 
