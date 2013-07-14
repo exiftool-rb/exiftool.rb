@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/mceachen/exiftoolr"
   s.summary     = %q{Multiget ExifTool wrapper for ruby}
   s.description = %q{Multiget ExifTool wrapper for ruby}
+  s.license       = 'MIT'
 
   s.rubyforge_project = "exiftoolr"
 

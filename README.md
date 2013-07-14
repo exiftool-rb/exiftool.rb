@@ -74,6 +74,10 @@ Exiftoolr.new("Gemfile").errors?
 
 ## Change history
 
+### 0.0.9
+
+* Explicitly added MIT licensing to the gemspec.
+
 ### 0.0.8
 
 * Extracted methods in parsing to make the code complexity lower. FOUR DOT OH GPA
