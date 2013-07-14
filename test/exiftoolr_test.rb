@@ -60,14 +60,16 @@ describe Exiftoolr do
   TRANSLATED_KEY = /.*\-ml-\w\w-\w\w$/
 
   def ignorable_key?(key)
-    key.to_s =~ TRANSLATED_KEY || ignorable_keys.include?(key)
+    key.to_s.ends_with? '35efl' ||
+      key.to_s =~ TRANSLATED_KEY ||
+      ignorable_keys.include?(key)
   end
 
   def ignorable_keys
     @ignorable_keys ||= begin
       ignorable = [:file_permissions, :file_access_date, :file_modify_date, :directory, :source_file, :exif_tool_version]
       if Exiftoolr.exiftool_version < 9
-        ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter, :scale_factor35efl, :fov]
+        ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter, :fov]
       end
       ignorable
     end
