@@ -57,12 +57,13 @@ describe Exiftoolr do
     end
   end
 
-  TRANSLATED_KEY = /.*\-ml-\w\w-\w\w$/
+  IGNORABLE_PATTERNS = [
+    /.*\-ml-\w\w-\w\w$/, # < translatable
+    /35efl$/ # < 35mm Effective focal length, whose calculation was changed between v8 and v9.
+  ]
 
   def ignorable_key?(key)
-    key.to_s.ends_with? '35efl' ||
-      key.to_s =~ TRANSLATED_KEY ||
-      ignorable_keys.include?(key)
+    IGNORABLE_PATTERNS.any? { |ea| key.to_s =~ ea } || ignorable_keys.include?(key)
   end
 
   def ignorable_keys
