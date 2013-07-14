@@ -1,6 +1,8 @@
 # Ruby wrapper for ExifTool
 
 [![Build Status](https://secure.travis-ci.org/mceachen/exiftoolr.png?branch=master)](http://travis-ci.org/mceachen/exiftoolr)
+[![Gem Version](https://badge.fury.io/rb/exiftoolr.png)](http://rubygems.org/gems/exiftoolr)
+[![Code Climate](https://codeclimate.com/github/mceachen/exiftoolr.png)](https://codeclimate.com/github/mceachen/exiftoolr)
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
@@ -71,6 +73,10 @@ Exiftoolr.new("Gemfile").errors?
 ```
 
 ## Change history
+
+### 0.0.8
+
+* Extracted methods in parsing to make the code complexity lower. FOUR DOT OH GPA
 
 ### 0.0.7
 
