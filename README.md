@@ -8,6 +8,8 @@ This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with correctly typed values and symbolized keys.
 
+Rubies 1.9 and later are supported.
+
 ## What constitutes "correct values"?
 
 * GPS latitude and longitude are rendered as signed floats,
@@ -78,10 +80,11 @@ and then run ```bundle```.
 
 ## Change history
 
-### 0.0.10
+### 0.1.0
 
 * Better timestamp parsing—now both sub-second and timezone offsets are handled correctly
 * Switched to minitest-spec
+* Ruby 1.8.7 is no longer supported, hence the minor version uptick.
 
 ### 0.0.9
 

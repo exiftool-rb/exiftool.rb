@@ -49,7 +49,7 @@ describe Exiftoolr do
       expected = e[k]
       next if expected.nil? # older version of exiftool
       actual = exif[k]
-      if actual.is_a?(String)
+      if expected.is_a?(String)
         expected.downcase!
         actual.downcase!
       end
@@ -66,7 +66,9 @@ describe Exiftoolr do
   def ignorable_keys
     @ignorable_keys ||= begin
       ignorable = [:file_permissions, :file_access_date, :file_modify_date, :directory, :source_file, :exif_tool_version]
-      ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter, :scale_factor35efl] if Exiftoolr.exiftool_version < 9
+      if Exiftoolr.exiftool_version < 9
+        ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter, :scale_factor35efl, :fov]
+      end
       ignorable
     end
   end

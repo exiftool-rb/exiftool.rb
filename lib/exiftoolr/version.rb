@@ -1,3 +1,3 @@
 class Exiftoolr
-  VERSION = Gem::Version.new('0.0.10')
+  VERSION = Gem::Version.new('0.1.0')
 end
