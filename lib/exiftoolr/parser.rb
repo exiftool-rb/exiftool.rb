@@ -38,11 +38,19 @@ class Exiftoolr
 
     def for_date
       if raw_value.is_a?(String) && display_key =~ /\bdate\b/i
-        try_parse { Time.strptime(raw_value, "%Y:%m:%d %H:%M:%S%z") } ||
-          try_parse { Time.strptime(raw_value, "%Y:%m:%d %H:%M:%S") } ||
-          try_parse { Time.strptime(raw_value, "%Y:%m:%d %H:%M:%S.%L%z") } ||
-          try_parse { Time.strptime(raw_value, "%Y:%m:%d %H:%M:%S.%L") } ||
+        try_parse { strptime(raw_value, "%Y:%m:%d %H:%M:%S%z") } ||
+          try_parse { strptime(raw_value, "%Y:%m:%d %H:%M:%S") } ||
+          try_parse { strptime(raw_value, "%Y:%m:%d %H:%M:%S.%L%z") } ||
+          try_parse { strptime(raw_value, "%Y:%m:%d %H:%M:%S.%L") } ||
           try_parse { Time.parse(raw_value) }
+      end
+    end
+
+    def strptime(date, format)
+      if Time.respond_to? :strptime
+        Time.strptime(date, format)
+      else
+        DateTime.strptime(date, format)
       end
     end
 

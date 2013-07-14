@@ -47,6 +47,7 @@ describe Exiftoolr do
     exif.keys.each do |k|
       next if ignorable_key?(k)
       expected = e[k]
+      next if expected.nil? # older version of exiftool
       actual = exif[k]
       if actual.is_a?(String)
         expected.downcase!
