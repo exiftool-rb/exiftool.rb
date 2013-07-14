@@ -57,23 +57,31 @@ describe Exiftoolr do
     end
   end
 
+  # These are expected to be different on travis, due to different paths, filesystems, or
+  # exiftool version differences.
+  # fov and hyperfocal_distance, for example, are different between v8 and v9.
+  IGNORABLE_KEYS = [
+    :circle_of_confusion,
+    :create_date,
+    :date_time_original,
+    :directory,
+    :exif_tool_version,
+    :file_access_date,
+    :file_modify_date,
+    :file_permissions,
+    :fov,
+    :hyperfocal_distance,
+    :modify_date,
+    :nd_filter,
+    :source_file
+  ]
+
   IGNORABLE_PATTERNS = [
     /.*\-ml-\w\w-\w\w$/, # < translatable
-    /circle_of_confusion|hyperfocal_distance/, # < these calculations changed between v8 and v9
     /35efl$/ # < 35mm Effective focal length, whose calculation was changed between v8 and v9.
   ]
 
   def ignorable_key?(key)
-    IGNORABLE_PATTERNS.any? { |ea| key.to_s =~ ea } || ignorable_keys.include?(key)
-  end
-
-  def ignorable_keys
-    @ignorable_keys ||= begin
-      ignorable = [:file_permissions, :file_access_date, :file_modify_date, :directory, :source_file, :exif_tool_version]
-      if Exiftoolr.exiftool_version < 9
-        ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter, :fov]
-      end
-      ignorable
-    end
+    IGNORABLE_KEYS.include?(key) || IGNORABLE_PATTERNS.any? { |ea| key.to_s =~ ea }
   end
 end
