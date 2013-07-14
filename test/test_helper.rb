@@ -10,3 +10,5 @@ unless ENV['CI']
   require 'minitest/reporters'
   MiniTest::Reporters.use!
 end
+
+puts "Exiftoolr.exiftool_version = #{Exiftoolr.exiftool_version}"
