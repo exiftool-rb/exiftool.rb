@@ -64,7 +64,7 @@ describe Exiftoolr do
 
   def ignorable_keys
     @ignorable_keys ||= begin
-      ignorable = [:file_access_date, :file_modify_date, :directory, :source_file, :exif_tool_version]
+      ignorable = [:file_permissions, :file_access_date, :file_modify_date, :directory, :source_file, :exif_tool_version]
       ignorable += [:modify_date, :create_date, :date_time_original, :nd_filter] if Exiftoolr.exiftool_version <= 8.2
       ignorable
     end
