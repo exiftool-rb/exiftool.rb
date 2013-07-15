@@ -1,4 +1,4 @@
-require 'Exiftool/parser'
+require 'exiftool/parser'
 
 class Exiftool
   class Result

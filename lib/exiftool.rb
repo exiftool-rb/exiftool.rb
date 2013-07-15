@@ -1,6 +1,6 @@
 require 'json'
 require 'shellwords'
-require 'Exiftool/result'
+require 'exiftool/result'
 
 class Exiftool
   class NoSuchFile < StandardError ; end

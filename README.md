@@ -80,7 +80,7 @@ and then run ```bundle```.
 
 ## Change history
 
-### 1.0.0
+### 0.2.0
 
 * Renamed from exiftoolr to exiftool
 
