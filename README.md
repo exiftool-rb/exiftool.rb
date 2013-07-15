@@ -27,7 +27,7 @@ Rubies 1.9 and later are supported.
 ## Usage
 
 ```ruby
-require 'Exiftool'
+require 'exiftool'
 e = Exiftool.new("path/to/iPhone 4S.jpg")
 e.to_hash
 # => {:make => "Apple", :gps_longitude => -122.47566667, …
