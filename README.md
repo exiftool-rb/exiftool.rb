@@ -26,6 +26,7 @@ Rubies 1.9 and later are supported.
 * No ```method_missing``` madness
 * Excellent test coverage
 * Clean, readable code
+* MIT license
 
 ## Usage
 
