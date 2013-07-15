@@ -71,10 +71,9 @@ Exiftool.new("Gemfile").errors?
 ## Installation
 
 First [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html).
-
-If you're on MacOS with [homebrew](http://mxcl.github.io/homebrew/), ```brew install exiftool```.
-
-If you're on debian or Ubuntu, ```sudo apt-get install libimage-exiftool-perl```. Otherwise, RTFM.
+* MacOS with [homebrew](http://mxcl.github.io/homebrew/)? ```brew install exiftool```
+* Debian or Ubuntu? ```sudo apt-get install libimage-exiftool-perl```
+* Something else? RTFM!
 
 Then, add this your Gemfile:
 
