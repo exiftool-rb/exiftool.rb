@@ -1,8 +1,7 @@
 require 'time'
-require 'date'
 require 'rational'
 
-class Exiftoolr
+class Exiftool
   class Parser
 
     WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/]

@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/great_expectations'
 require 'yaml'
-require 'exiftoolr'
+require 'Exiftool'
 
 # We need a predictable timezone offset so non-tz-offset timestamps are comparable:
 ENV['TZ'] = 'UTC'
@@ -11,4 +11,4 @@ unless ENV['CI']
   MiniTest::Reporters.use!
 end
 
-puts "Exiftoolr.exiftool_version = #{Exiftoolr.exiftool_version}"
+puts "Exiftool.exiftool_version = #{Exiftool.exiftool_version}"

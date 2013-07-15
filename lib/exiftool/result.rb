@@ -1,6 +1,6 @@
-require 'exiftoolr/parser'
+require 'Exiftool/parser'
 
-class Exiftoolr
+class Exiftool
   class Result
     attr_reader :to_hash, :to_display_hash, :symbol_display_hash
 

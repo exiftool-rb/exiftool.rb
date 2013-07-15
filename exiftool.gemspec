@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'exiftoolr/version'
+require 'exiftool/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'exiftoolr'
-  spec.version     = Exiftoolr::VERSION
+  spec.name        = 'exiftool'
+  spec.version     = Exiftool::VERSION
   spec.authors     = ['Matthew McEachen']
   spec.email       = %w(matthew-github@mceachen.org)
   spec.homepage    = 'https://github.com/mceachen/exiftoolr'

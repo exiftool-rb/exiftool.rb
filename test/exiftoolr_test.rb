@@ -1,31 +1,31 @@
 require 'test_helper'
 
-describe Exiftoolr do
+describe Exiftool do
 
   DUMP_RESULTS = false
 
   it 'raises NoSuchFile for missing files' do
-    proc { Exiftoolr.new('no/such/file') }.must_raise Exiftoolr::NoSuchFile
+    proc { Exiftool.new('no/such/file') }.must_raise Exiftool::NoSuchFile
   end
 
   it 'raises NotAFile for directories' do
-    proc { Exiftoolr.new('lib') }.must_raise Exiftoolr::NotAFile
+    proc { Exiftool.new('lib') }.must_raise Exiftool::NotAFile
   end
 
   it 'no-ops with no files' do
-    e = Exiftoolr.new([])
+    e = Exiftool.new([])
     e.errors?.must_be_false
   end
 
   it 'has errors with files without EXIF headers' do
-    e = Exiftoolr.new("Gemfile")
+    e = Exiftool.new("Gemfile")
     e.errors?.must_be_true
   end
 
   describe 'single-get' do
     it 'responds with known correct responses' do
       Dir['test/*.jpg'].each do |filename|
-        e = Exiftoolr.new(filename)
+        e = Exiftool.new(filename)
         validate_result(e, filename)
       end
     end
@@ -34,7 +34,7 @@ describe Exiftoolr do
   describe 'multi-get' do
     def test_multi_matches
       filenames = Dir['**/*.jpg'].to_a
-      e = Exiftoolr.new(filenames)
+      e = Exiftool.new(filenames)
       filenames.each { |f| validate_result(e.result_for(f), f) }
     end
   end

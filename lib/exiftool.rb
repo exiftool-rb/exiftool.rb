@@ -1,8 +1,8 @@
 require 'json'
 require 'shellwords'
-require 'exiftoolr/result'
+require 'Exiftool/result'
 
-class Exiftoolr
+class Exiftool
   class NoSuchFile < StandardError ; end
   class NotAFile < StandardError ; end
   class ExiftoolNotInstalled < StandardError ; end
