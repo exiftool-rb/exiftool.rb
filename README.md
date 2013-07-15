@@ -45,7 +45,7 @@ process for each file.
 Supply an array to the Exiftool initializer, then use ```.result_for```:
 
 ```ruby
-require 'Exiftool'
+require 'exiftool'
 e = Exiftool.new(Dir["**/*.jpg"])
 result = e.result_for("path/to/iPhone 4S.jpg")
 result.to_hash
