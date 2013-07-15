@@ -12,6 +12,7 @@ Rubies 1.9 and later are supported.
 
 ## Features
 
+* Multiget support
 * GPS latitude and longitude values are parsed as signed floats,
   where north and east are positive, and west and south are negative.
 * Values like shutter speed and exposure time are rendered as Rationals,
@@ -22,7 +23,9 @@ Rubies 1.9 and later are supported.
   the header contains that data.
   Please note that EXIF headers don't always include a timezone offset, so we just adopt the system
   timezone, which may, of course, be wrong.
-* No method_missing madness
+* No ```method_missing``` madness
+* Excellent test coverage
+* Clean, readable code
 
 ## Usage
 
@@ -35,7 +38,7 @@ e.to_display_hash
 # => {"Make" => "Apple", "GPS Longitude" => -122.47566667, …
 ```
 
-### Multiple file support
+### Multiget support
 
 This gem supports Exiftool's multiget, which lets you fetch metadata for many files at once.
 
