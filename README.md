@@ -74,18 +74,35 @@ Exiftool.new("Gemfile").errors?
 
 ## Installation
 
-Install ExifTool.
+### Step 1: Install ExifTool
+
+The easiest way is to use the "vendored" exiftool in the
+[exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem. Just add
+
+    gem 'exiftool_vendored'
+
+to your Gemfile, run ```bundle```, and you're done. (Note that it depends on the ```exiftool``` gem,
+so really, you're done! Skip step 2!)
+
+If you want to install exiftool on your system yourself:
+
 * MacOS with [homebrew](http://mxcl.github.io/homebrew/)? ```brew install exiftool```
 * Debian or Ubuntu? ```sudo apt-get install libimage-exiftool-perl```
 * Something else? [RTFM](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html)!
 
-Then, add this your Gemfile:
+### Step 2: Add the gem
+
+If you didn't use ```exiftool_vendored```, then add this your Gemfile:
 
     gem 'exiftool'
 
 and then run ```bundle```.
 
 ## Change history
+
+### 0.3.0
+
+* Support for explicitly setting the path to exiftool with ```Exiftool.command```
 
 ### 0.2.0
 
