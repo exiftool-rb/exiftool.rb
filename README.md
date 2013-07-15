@@ -72,6 +72,10 @@ Exiftool.new("Gemfile").errors?
 
 First [install ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html).
 
+If you're on MacOS with [homebrew](http://mxcl.github.io/homebrew/), ```brew install exiftool```.
+
+If you're on debian or Ubuntu, ```sudo apt-get install libimage-exiftool-perl```. Otherwise, RTFM.
+
 Then, add this your Gemfile:
 
     gem 'exiftool'
