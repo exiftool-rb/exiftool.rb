@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/great_expectations'
 require 'yaml'
-require 'Exiftool'
+require 'exiftool'
 
 # We need a predictable timezone offset so non-tz-offset timestamps are comparable:
 ENV['TZ'] = 'UTC'
