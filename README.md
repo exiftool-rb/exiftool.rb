@@ -103,6 +103,8 @@ and then run ```bundle```.
 ### 0.3.0
 
 * Support for explicitly setting the path to exiftool with ```Exiftool.command```
+* Removed the test directory from the gem contents, as it included the test images and made the gem
+  ginormous.
 
 ### 0.2.0
 

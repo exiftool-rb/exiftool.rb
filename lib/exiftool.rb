@@ -7,12 +7,20 @@ class Exiftool
   class NotAFile < StandardError ; end
   class ExiftoolNotInstalled < StandardError ; end
 
+  def self.command=(path_to_exiftool)
+    @@command = path_to_exiftool
+  end
+
+  def self.command
+    @@command || 'exiftool'
+  end
+
   def self.exiftool_installed?
     exiftool_version > 0
   end
 
   def self.exiftool_version
-    @@exiftool_version ||= `exiftool -ver 2> /dev/null`.to_f
+    @@exiftool_version ||= `#{command} -ver 2> /dev/null`.to_f
   end
 
   def self.expand_path(filename)
@@ -30,7 +38,7 @@ class Exiftool
       end.join(" ")
       # I'd like to use -dateformat, but it doesn't support timezone offsets properly,
       # nor sub-second timestamps.
-      cmd = "exiftool #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
+      cmd = "#{self.class.command} #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
       json = `#{cmd}`
       raise ExiftoolNotInstalled if json == ""
       JSON.parse(json).each do |raw|

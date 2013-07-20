@@ -13,10 +13,8 @@ Gem::Specification.new do |spec|
   spec.description = %q{Multiget ExifTool wrapper for ruby}
   spec.license     = 'MIT'
 
-  spec.files         = `git ls-files`.split("\n")
-  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.files         = `git ls-files -- lib/*`.split("\n")
+  spec.require_paths = %w(lib)
 
   spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'
 
