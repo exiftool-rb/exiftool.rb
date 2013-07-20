@@ -98,6 +98,10 @@ If you didn't use ```exiftool_vendored```, then add this your Gemfile:
 
 and then run ```bundle```.
 
+If you have exiftool installed outside of ruby's ```PATH```, add an initializer that points the gem
+to the tool, like this: ```Exiftool.command = '/home/ruby/Image-ExifTool-9.33/exiftool'```. You don't need to do
+this if you've installed added the exiftool directory to the PATH of the shell that runs ruby.
+
 ## Change history
 
 ### 0.3.0
