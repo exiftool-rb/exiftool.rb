@@ -8,11 +8,11 @@ class Exiftool
   class ExiftoolNotInstalled < StandardError ; end
 
   def self.command=(path_to_exiftool)
-    @@command = path_to_exiftool
+    @command = path_to_exiftool
   end
 
   def self.command
-    @@command || 'exiftool'
+    @command || 'exiftool'
   end
 
   def self.exiftool_installed?
@@ -20,7 +20,7 @@ class Exiftool
   end
 
   def self.exiftool_version
-    @@exiftool_version ||= `#{command} -ver 2> /dev/null`.to_f
+    @exiftool_version ||= `#{command} -ver 2> /dev/null`.to_f
   end
 
   def self.expand_path(filename)

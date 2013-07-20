@@ -44,7 +44,7 @@ describe Exiftool do
     exif = result.to_hash
     File.open(yaml_file, 'w') { |out| YAML.dump(exif, out) } if DUMP_RESULTS
     e = File.open(yaml_file) { |f| YAML::load(f) }
-    exif.keys.each do |k|
+    bad_keys = exif.keys.select do |k|
       next if ignorable_key?(k)
       expected = e[k]
       next if expected.nil? # older version of exiftool
@@ -53,8 +53,9 @@ describe Exiftool do
         expected.downcase!
         actual.downcase!
       end
-      puts "Key '#{k}' was incorrect for #{filename}" if expected != actual
+      expected != actual
     end
+    fail "#{filename}[#{bad_keys.join(',')}] didn't match" unless bad_keys.empty?
   end
 
   # These are expected to be different on travis, due to different paths, filesystems, or
@@ -67,6 +68,7 @@ describe Exiftool do
     :directory,
     :exif_tool_version,
     :file_access_date,
+    :file_inode_change_date,
     :file_modify_date,
     :file_permissions,
     :fov,
