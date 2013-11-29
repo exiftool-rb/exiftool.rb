@@ -19,8 +19,9 @@ class Exiftool
     exiftool_version > 0
   end
 
+  # This is a string, not a float, to handle versions like "9.40" properly.
   def self.exiftool_version
-    @exiftool_version ||= `#{command} -ver 2> /dev/null`.to_f
+    @exiftool_version ||= `#{command} -ver 2> /dev/null`.chomp
   end
 
   def self.expand_path(filename)

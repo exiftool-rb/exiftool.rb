@@ -104,6 +104,11 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 0.3.1
+
+* ```.exiftool_version``` is now a string rather than a float,
+  which didn't work so well with version numbers like "9.40"
+
 ### 0.3.0
 
 * Support for explicitly setting the path to exiftool with ```Exiftool.command```

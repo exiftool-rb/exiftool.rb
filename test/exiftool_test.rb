@@ -4,6 +4,10 @@ describe Exiftool do
 
   DUMP_RESULTS = false
 
+  it 'returns a sensible version' do
+    Exiftool.exiftool_version.must_match /\A\d+\.\d+\z/
+  end
+
   it 'raises NoSuchFile for missing files' do
     proc { Exiftool.new('no/such/file') }.must_raise Exiftool::NoSuchFile
   end

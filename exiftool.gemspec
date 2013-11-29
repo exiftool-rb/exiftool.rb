@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.description = %q{Multiget ExifTool wrapper for ruby}
   spec.license     = 'MIT'
 
-  spec.files         = `git ls-files -- lib/*`.split("\n")
+  # If we include test/*, the size of the gem bloats by 14MB.
+  spec.files         = `git ls-files -- lib/*`.split($/)
   spec.require_paths = %w(lib)
 
   spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'
