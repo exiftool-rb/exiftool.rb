@@ -16,14 +16,14 @@ describe Exiftool::Parser do
     p.value.must_equal 'Off'
   end
 
-  it 'parses dates without timezones' do
+  it 'leaves dates without timezones as strings' do
     p = Exiftool::Parser.new('CreateDate', '2004:09:19 12:25:20')
-    p.value.must_equal Time.parse('2004-09-19 12:25:20')
+    p.value.must_equal '2004:09:19 12:25:20'
   end
 
   it 'parses sub-second times' do
-    p = Exiftool::Parser.new('SubSecDateTimeOriginal', '2011:09:25 20:08:09.00')
-    p.value.must_equal Time.parse('2011-09-25 20:08:09')
+    p = Exiftool::Parser.new('SubSecDateTimeOriginal', '2011:09:25 20:08:09.234-08:00')
+    p.value.must_equal Time.parse('2011-09-25 20:08:09.234-08:00')
   end
 
   it 'parses dates with timezones' do

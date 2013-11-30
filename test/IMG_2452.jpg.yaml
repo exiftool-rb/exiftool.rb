@@ -1,17 +1,17 @@
 ---
-:source_file: /Users/mrm/Dropbox/code/exiftoolr/test/IMG_2452.jpg
-:exif_tool_version: 9.31
+:source_file: /Users/mrm/Dropbox/code/exiftool/test/IMG_2452.jpg
+:exif_tool_version: 9.41
 :file_name: IMG_2452.jpg
-:directory: /Users/mrm/Dropbox/code/exiftoolr/test
+:directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 2.8 MB
-:file_modify_date: 2013-07-14 17:51:04.000000000 +00:00
-:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
-:file_inode_change_date: 2013-07-14 17:51:04.000000000 +00:00
+:file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Big-endian (Motorola, MM)
-:image_description: '                               '
+:image_description: ! '                               '
 :make: Canon
 :model: Canon PowerShot SD980 IS
 :orientation: Horizontal (normal)
@@ -19,7 +19,7 @@
 :y_resolution: 72
 :resolution_unit: inches
 :software: QuickTime 7.6.6
-:modify_date: 2011-07-06 20:41:11.000000000 +00:00
+:modify_date: 2011:07:06 20:41:11
 :host_computer: Mac OS X 10.6.8
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
@@ -28,8 +28,8 @@
 :f_number: 2.8
 :iso: 160
 :exif_version: '0220'
-:date_time_original: 2011-07-06 09:46:45.000000000 +00:00
-:create_date: 2011-07-06 09:46:45.000000000 +00:00
+:date_time_original: 2011:07:06 09:46:45
+:create_date: 2011:07:06 09:46:45
 :components_configuration: Y, Cb, Cr, -
 :compressed_bits_per_pixel: 3
 :shutter_speed_value: !ruby/object:Rational
@@ -39,7 +39,7 @@
 :max_aperture_value: 2.8
 :flash: Auto, Did not fire
 :focal_length: 4.3 mm
-:warning: '[minor] Adjusted MakerNotes base by 50'
+:warning: ! '[minor] Adjusted MakerNotes base by 50'
 :macro_mode: Normal
 :self_timer: 'Off'
 :quality: Fine
@@ -145,8 +145,9 @@
 :compression: JPEG (old-style)
 :thumbnail_offset: 3480
 :thumbnail_length: 4627
-:comment: |
-  AppleMark
+:comment: ! 'AppleMark
+
+'
 :image_width: 2248
 :image_height: 4000
 :encoding_process: Baseline DCT, Huffman coding
@@ -156,18 +157,18 @@
 :profile_cmm_type: Lino
 :profile_version: 2.1.0
 :profile_class: Display Device Profile
-:color_space_data: 'RGB '
-:profile_connection_space: 'XYZ '
-:profile_date_time: 1998-02-09 06:49:00.000000000 +00:00
+:color_space_data: ! 'RGB '
+:profile_connection_space: ! 'XYZ '
+:profile_date_time: 1998:02:09 06:49:00
 :profile_file_signature: acsp
 :primary_platform: Microsoft Corporation
 :cmm_flags: Not Embedded, Independent
-:device_manufacturer: 'IEC '
+:device_manufacturer: ! 'IEC '
 :device_model: sRGB
 :device_attributes: Reflective, Glossy, Positive, Color
 :rendering_intent: Perceptual
 :connection_space_illuminant: 0.9642 1 0.82491
-:profile_creator: 'HP  '
+:profile_creator: ! 'HP  '
 :profile_id: 0
 :profile_copyright: Copyright (c) 1998 Hewlett-Packard Company
 :profile_description: sRGB IEC61966-2.1
@@ -205,7 +206,7 @@
 :thumbnail_image: (Binary data 4627 bytes)
 :circle_of_confusion: 0.005 mm
 :fov: 73.7 deg
-:focal_length35efl: '4.3 mm (35 mm equivalent: 24.0 mm)'
+:focal_length35efl: ! '4.3 mm (35 mm equivalent: 24.0 mm)'
 :hyperfocal_distance: 1.23 m
-:lens35efl: '4.3 - 21.5 mm (35 mm equivalent: 24.0 - 120.1 mm)'
+:lens35efl: ! '4.3 - 21.5 mm (35 mm equivalent: 24.0 - 120.1 mm)'
 :light_value: 11.9

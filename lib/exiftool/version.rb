@@ -1,3 +1,3 @@
 class Exiftool
-  VERSION = Gem::Version.new('0.3.1')
+  VERSION = Gem::Version.new('0.4.0')
 end

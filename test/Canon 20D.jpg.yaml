@@ -1,12 +1,12 @@
 ---
-:source_file: /Users/mrm/Dropbox/code/exiftoolr/test/Canon 20D.jpg
-:exif_tool_version: 9.31
+:source_file: /Users/mrm/Dropbox/code/exiftool/test/Canon 20D.jpg
+:exif_tool_version: 9.41
 :file_name: Canon 20D.jpg
-:directory: /Users/mrm/Dropbox/code/exiftoolr/test
+:directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 2.9 MB
-:file_modify_date: 2012-02-23 05:22:17.000000000 +00:00
-:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
-:file_inode_change_date: 2013-02-16 19:21:59.000000000 +00:00
+:file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -17,7 +17,7 @@
 :x_resolution: 72
 :y_resolution: 72
 :resolution_unit: inches
-:modify_date: 2004-09-19 12:25:20.000000000 +00:00
+:modify_date: 2004:09:19 12:25:20
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 250
@@ -26,8 +26,8 @@
 :exposure_program: Program AE
 :iso: 200
 :exif_version: '0221'
-:date_time_original: 2004-09-19 12:25:20.000000000 +00:00
-:create_date: 2004-09-19 12:25:20.000000000 +00:00
+:date_time_original: 2004:09:19 12:25:20
+:create_date: 2004:09:19 12:25:20
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 250
@@ -218,8 +218,8 @@
 :blue_balance: 1.638424
 :circle_of_confusion: 0.030 mm
 :fov: 23.7 deg
-:focal_length35efl: '85.0 mm (35 mm equivalent: 85.6 mm)'
+:focal_length35efl: ! '85.0 mm (35 mm equivalent: 85.6 mm)'
 :hyperfocal_distance: 26.91 m
-:lens35efl: '17.0 - 85.0 mm (35 mm equivalent: 17.1 - 85.6 mm)'
+:lens35efl: ! '17.0 - 85.0 mm (35 mm equivalent: 17.1 - 85.6 mm)'
 :light_value: 13.3
 :red_balance: 1.943842

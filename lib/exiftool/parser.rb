@@ -39,10 +39,7 @@ class Exiftool
     def for_date
       if raw_value.is_a?(String) && display_key =~ /\bdate\b/i
         try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S%z') } ||
-          try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S') } ||
-          try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S.%L%z') } ||
-          try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S.%L') } ||
-          try_parse { Time.parse(raw_value) }
+          try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S.%L%z') }
       end
     end
 

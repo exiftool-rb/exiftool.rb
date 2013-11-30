@@ -2,15 +2,16 @@ require 'exiftool/parser'
 
 class Exiftool
   class Result
-    attr_reader :to_hash, :to_display_hash, :symbol_display_hash
+    attr_reader :raw_hash, :to_hash, :to_display_hash, :symbol_display_hash
 
     def initialize(raw_hash)
-      @raw_hash = raw_hash
+      @raw_hash = {}
       @to_hash = {}
       @to_display_hash = {}
       @symbol_display_hash = {}
-      @raw_hash.each do |key, raw_value|
+      raw_hash.each do |key, raw_value|
         p = Parser.new(key, raw_value)
+        @raw_hash[p.sym_key] = raw_value
         @to_hash[p.sym_key] = p.value
         @to_display_hash[p.display_key] = p.value
         @symbol_display_hash[p.sym_key] = p.display_key

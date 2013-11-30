@@ -1,4 +1,7 @@
 *.gem
+/.idea
+projectFilesBackup
 .bundle
 Gemfile.lock
 pkg/*
+/.ruby-version

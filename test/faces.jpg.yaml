@@ -1,12 +1,12 @@
 ---
-:source_file: /Users/mrm/Dropbox/code/exiftoolr/test/faces.jpg
-:exif_tool_version: 9.31
+:source_file: /Users/mrm/Dropbox/code/exiftool/test/faces.jpg
+:exif_tool_version: 9.41
 :file_name: faces.jpg
-:directory: /Users/mrm/Dropbox/code/exiftoolr/test
+:directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 3.8 MB
-:file_modify_date: 2013-07-14 06:00:41.000000000 +00:00
-:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
-:file_inode_change_date: 2013-07-14 06:01:42.000000000 +00:00
+:file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -18,7 +18,7 @@
 :y_resolution: 72
 :resolution_unit: inches
 :software: Picasa
-:modify_date: 2012-02-15 22:58:07.000000000 +00:00
+:modify_date: 2012:02:15 22:58:07
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 4000
@@ -27,8 +27,8 @@
 :exposure_program: Not Defined
 :iso: 400
 :exif_version: '0221'
-:date_time_original: 2005-11-26 14:20:34.000000000 +00:00
-:create_date: 2005-11-26 14:20:34.000000000 +00:00
+:date_time_original: 2005:11:26 14:20:34
+:create_date: 2005:11:26 14:20:34
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 4000
@@ -245,9 +245,9 @@
 :profile_cmm_type: appl
 :profile_version: 2.2.0
 :profile_class: Input Device Profile
-:color_space_data: 'RGB '
-:profile_connection_space: 'XYZ '
-:profile_date_time: 2003-07-01 00:00:00.000000000 +00:00
+:color_space_data: ! 'RGB '
+:profile_connection_space: ! 'XYZ '
+:profile_date_time: 2003:07:01 00:00:00
 :profile_file_signature: acsp
 :primary_platform: Apple Computer Inc.
 :cmm_flags: Not Embedded, Independent
@@ -311,8 +311,8 @@
 :blue_balance: 1.683744
 :circle_of_confusion: 0.019 mm
 :fov: 66.9 deg
-:focal_length35efl: '17.0 mm (35 mm equivalent: 27.2 mm)'
+:focal_length35efl: ! '17.0 mm (35 mm equivalent: 27.2 mm)'
 :hyperfocal_distance: 3.85 m
-:lens35efl: '17.0 - 40.0 mm (35 mm equivalent: 27.2 - 64.1 mm)'
+:lens35efl: ! '17.0 - 40.0 mm (35 mm equivalent: 27.2 - 64.1 mm)'
 :light_value: 14.0
 :red_balance: 1.795074

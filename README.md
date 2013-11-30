@@ -21,8 +21,7 @@ Rubies 1.9 and later are supported.
   (which preserves zero prefixes)
 * Timestamps are attempted to be interpreted with correct timezones and sub-second resolution, if
   the header contains that data.
-  Please note that EXIF headers don't always include a timezone offset, so we just adopt the system
-  timezone, which may, of course, be wrong.
+  If the timestamp doesn't include a timezone offset, we leave it as a string, rather than be incorrect.
 * No ```method_missing``` madness
 * Excellent test coverage
 * Clean, readable code
@@ -103,6 +102,11 @@ to the tool, like this: ```Exiftool.command = '/home/ruby/Image-ExifTool-9.33/ex
 this if you've installed added the exiftool directory to the PATH of the shell that runs ruby.
 
 ## Change history
+
+### 0.4.0
+
+* Added ```#raw_hash``` to ```Exiftool::Result``` to support columns that can have parsing issues,
+  like dates that don't include timezone offsets.
 
 ### 0.3.1
 

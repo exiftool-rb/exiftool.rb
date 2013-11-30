@@ -67,8 +67,6 @@ describe Exiftool do
   # fov and hyperfocal_distance, for example, are different between v8 and v9.
   IGNORABLE_KEYS = [
     :circle_of_confusion,
-    :create_date,
-    :date_time_original,
     :directory,
     :exif_tool_version,
     :file_access_date,
@@ -77,7 +75,6 @@ describe Exiftool do
     :file_permissions,
     :fov,
     :hyperfocal_distance,
-    :modify_date,
     :nd_filter,
     :source_file
   ]

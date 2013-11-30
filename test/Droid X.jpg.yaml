@@ -1,12 +1,12 @@
 ---
-:source_file: /Users/mrm/Dropbox/code/exiftoolr/test/Droid X.jpg
-:exif_tool_version: 9.31
+:source_file: /Users/mrm/Dropbox/code/exiftool/test/Droid X.jpg
+:exif_tool_version: 9.41
 :file_name: Droid X.jpg
-:directory: /Users/mrm/Dropbox/code/exiftoolr/test
+:directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 2023 kB
-:file_modify_date: 2012-02-23 05:22:17.000000000 +00:00
-:file_access_date: 2013-07-14 20:25:41.000000000 +00:00
-:file_inode_change_date: 2013-02-16 19:21:58.000000000 +00:00
+:file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
 :file_permissions: rwxr-xr-x
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -18,7 +18,7 @@
 :y_resolution: 300
 :resolution_unit: inches
 :software: 2.2
-:modify_date: 2010-12-08 01:15:37.000000000 +00:00
+:modify_date: 2010:12:08 01:15:37
 :y_cb_cr_positioning: Centered
 :exposure_time: !ruby/object:Rational
   denominator: 15
@@ -27,8 +27,8 @@
 :exposure_program: Program AE
 :iso: 637
 :exif_version: '0220'
-:date_time_original: 2010-12-08 01:15:37.000000000 +00:00
-:create_date: 2010-12-08 01:15:37.000000000 +00:00
+:date_time_original: 2010:12:08 01:15:37
+:create_date: 2010:12:08 01:15:37
 :components_configuration: Cb, Y, Cr, Y
 :compressed_bits_per_pixel: 4
 :shutter_speed_value: !ruby/object:Rational
@@ -84,6 +84,6 @@
 :thumbnail_image: (Binary data 32586 bytes)
 :circle_of_confusion: 0.004 mm
 :fov: 50.7 deg
-:focal_length35efl: '5.0 mm (35 mm equivalent: 38.0 mm)'
+:focal_length35efl: ! '5.0 mm (35 mm equivalent: 38.0 mm)'
 :hyperfocal_distance: 2.24 m
 :light_value: 4.2
