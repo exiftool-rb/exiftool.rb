@@ -52,22 +52,13 @@ describe Exiftool do
   end
 
   def validate_result(result, filename)
-    yaml_file = "#{filename}.yaml"
-    exif = result.to_hash
-    File.open(yaml_file, 'w') { |out| YAML.dump(exif, out) } if DUMP_RESULTS
-    e = File.open(yaml_file) { |f| YAML::load(f) }
-    bad_keys = exif.keys.select do |k|
-      next if ignorable_key?(k)
-      expected = e[k]
-      next if expected.nil? # older version of exiftool
-      actual = exif[k]
-      if expected.is_a?(String)
-        expected.downcase!
-        actual.downcase!
-      end
-      expected != actual
-    end
-    fail "#{filename}[#{bad_keys.join(',')}] didn't match" unless bad_keys.empty?
+    basename = File.basename(filename)
+    yaml_file = "test/expected/#{basename}.yaml"
+    actual = result.to_hash.delete_if { |k, v| ignorable_key?(k) }
+    File.open(yaml_file, 'w') { |out| YAML.dump(actual, out) } if DUMP_RESULTS
+    expected = File.open(yaml_file) { |f| YAML::load(f) }
+    expected.delete_if { |k, v| ignorable_key?(k) }
+    expected.must_equal_hash(actual)
   end
 
   # These are expected to be different on travis, due to different paths, filesystems, or
