@@ -21,7 +21,9 @@ Rubies 1.9 and later are supported.
   (which preserves zero prefixes)
 * Timestamps are attempted to be interpreted with correct timezones and sub-second resolution, if
   the header contains that data.
-  If the timestamp doesn't include a timezone offset, we leave it as a string, rather than be incorrect.
+  If the timestamp doesn't include a timezone offset, we leave it as a string, rather than inferring
+  the current system timezone which might not be applicable to the image. We add a decimal yyyymmdd
+  key for these problematic fields.
 * No ```method_missing``` madness
 * Excellent test coverage
 * Clean, readable code
@@ -42,8 +44,8 @@ e.to_display_hash
 
 This gem supports Exiftool's multiget, which lets you fetch metadata for many files at once.
 
-This can be dramatically more efficient (like, 60x faster) than spinning up the ```exiftool```
-process for each file.
+This can be dramatically more efficient than spinning up the ```exiftool```
+process for each file due to the cost of spinning up perl.
 
 Supply an array to the Exiftool initializer, then use ```.result_for```:
 
@@ -55,9 +57,30 @@ result.to_hash
 # => {:make => "Apple", :gps_longitude => -122.47566667, …
 result[:gps_longitude]
 # => -122.47566667
+```
+
+Or iterate through files_with_results:
 
 e.files_with_results
 # => ["path/to/iPhone 4S.jpg", "path/to/Droid X.jpg", …
+```
+
+### Dates without timezones
+
+It seems that most exif dates don't include timezone offsets, without which forces us to assume the
+current timezone is applicable to the image, which isn't necessarily correct.
+
+To be correct, we punt and return the exiftool-formatted string ```%Y:%m:%d %H:%M:%S```, and also
+add a ```_ymd``` key (assuming that the day will at least be correct, which of course, also isn't
+necessarily true, but hey, it's something.
+
+```ruby
+require 'exiftool'
+e = Exiftool.new("test/IMG_2452.jpg")
+e[:date_time_original]
+=> "2011:07:06 09:46:45"
+e[:date_time_original_ymd]
+=> 20110706
 ```
 
 ### When things go wrong
@@ -102,6 +125,10 @@ to the tool, like this: ```Exiftool.command = '/home/ruby/Image-ExifTool-9.33/ex
 this if you've installed added the exiftool directory to the PATH of the shell that runs ruby.
 
 ## Change history
+
+### 0.5.0
+
+* Introduced YMD parsing for all date columns, even if they don't specify timezone offsets.
 
 ### 0.4.0
 

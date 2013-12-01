@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'exiftool/version'
@@ -13,8 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = %q{Multiget ExifTool wrapper for ruby}
   spec.license     = 'MIT'
 
-  # If we include test/*, the size of the gem bloats by 14MB.
-  spec.files         = `git ls-files -- lib/*`.split($/)
+  spec.files         = `git ls-files -- lib`.split($/)
   spec.require_paths = %w(lib)
 
   spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'

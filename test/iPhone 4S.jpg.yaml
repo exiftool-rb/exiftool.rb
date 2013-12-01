@@ -5,8 +5,11 @@
 :directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 1954 kB
 :file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
-:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_modify_date_ymd: 20130715
+:file_access_date: 2013-12-01 01:05:18.000000000 +00:00
+:file_access_date_ymd: 20131201
 :file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_inode_change_date_ymd: 20130715
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -19,6 +22,7 @@
 :resolution_unit: inches
 :software: 5.0.1
 :modify_date: 2011:11:23 09:39:52
+:modify_date_ymd: 20111123
 :y_cb_cr_positioning: Centered
 :exposure_time: !ruby/object:Rational
   denominator: 6135
@@ -28,7 +32,9 @@
 :iso: 64
 :exif_version: '0221'
 :date_time_original: 2011:11:23 09:39:52
+:date_time_original_ymd: 20111123
 :create_date: 2011:11:23 09:39:52
+:create_date_ymd: 20111123
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 6135

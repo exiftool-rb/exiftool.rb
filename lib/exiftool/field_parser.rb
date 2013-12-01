@@ -2,7 +2,7 @@ require 'time'
 require 'rational'
 
 class Exiftool
-  class Parser
+  class FieldParser
 
     WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/]
     FRACTION_RE = /^(\d+)\/(\d+)$/
@@ -25,6 +25,15 @@ class Exiftool
       "Warning: Parsing '#{raw_value}' for attribute '#{key}' raised #{e.message}"
     end
 
+    YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/
+
+    def ymd_value
+      if datish?
+        ymd = raw_value.scan(YMD_RE).first
+        ymd.join.to_i if ymd
+      end
+    end
+
     private
 
     def for_lat_long
@@ -36,8 +45,12 @@ class Exiftool
       end
     end
 
+    def datish?
+      raw_value.is_a?(String) && display_key =~ /\bdate\b/i
+    end
+
     def for_date
-      if raw_value.is_a?(String) && display_key =~ /\bdate\b/i
+      if datish?
         try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S%z') } ||
           try_parse { Time.strptime(raw_value, '%Y:%m:%d %H:%M:%S.%L%z') }
       end

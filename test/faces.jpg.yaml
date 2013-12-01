@@ -5,8 +5,11 @@
 :directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 3.8 MB
 :file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
-:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_modify_date_ymd: 20130715
+:file_access_date: 2013-12-01 01:05:18.000000000 +00:00
+:file_access_date_ymd: 20131201
 :file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_inode_change_date_ymd: 20130715
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -19,6 +22,7 @@
 :resolution_unit: inches
 :software: Picasa
 :modify_date: 2012:02:15 22:58:07
+:modify_date_ymd: 20120215
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 4000
@@ -28,7 +32,9 @@
 :iso: 400
 :exif_version: '0221'
 :date_time_original: 2005:11:26 14:20:34
+:date_time_original_ymd: 20051126
 :create_date: 2005:11:26 14:20:34
+:create_date_ymd: 20051126
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 4000
@@ -248,6 +254,7 @@
 :color_space_data: ! 'RGB '
 :profile_connection_space: ! 'XYZ '
 :profile_date_time: 2003:07:01 00:00:00
+:profile_date_time_ymd: 20030701
 :profile_file_signature: acsp
 :primary_platform: Apple Computer Inc.
 :cmm_flags: Not Embedded, Independent

@@ -30,8 +30,16 @@ describe Exiftool do
     it 'responds with known correct responses' do
       Dir['test/*.jpg'].each do |filename|
         e = Exiftool.new(filename)
+        e[:source_file].must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
       end
+    end
+
+    it 'fails if there are multiple files provided and Exiftool is treated as a result' do
+      e = Exiftool.new(Dir['test/*.jpg'])
+      proc { e.to_hash[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
+      proc { e[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
+      proc { e.raw[:aperture] }.must_raise Exiftool::NoDefaultResultWithMultiget
     end
   end
 

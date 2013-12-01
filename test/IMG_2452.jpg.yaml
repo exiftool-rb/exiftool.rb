@@ -5,8 +5,11 @@
 :directory: /Users/mrm/Dropbox/code/exiftool/test
 :file_size: 2.8 MB
 :file_modify_date: 2013-07-15 00:17:07.000000000 +00:00
-:file_access_date: 2013-11-30 07:57:12.000000000 +00:00
+:file_modify_date_ymd: 20130715
+:file_access_date: 2013-12-01 01:05:18.000000000 +00:00
+:file_access_date_ymd: 20131201
 :file_inode_change_date: 2013-07-15 00:17:07.000000000 +00:00
+:file_inode_change_date_ymd: 20130715
 :file_permissions: rw-r--r--
 :file_type: JPEG
 :mime_type: image/jpeg
@@ -20,6 +23,7 @@
 :resolution_unit: inches
 :software: QuickTime 7.6.6
 :modify_date: 2011:07:06 20:41:11
+:modify_date_ymd: 20110706
 :host_computer: Mac OS X 10.6.8
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
@@ -29,7 +33,9 @@
 :iso: 160
 :exif_version: '0220'
 :date_time_original: 2011:07:06 09:46:45
+:date_time_original_ymd: 20110706
 :create_date: 2011:07:06 09:46:45
+:create_date_ymd: 20110706
 :components_configuration: Y, Cb, Cr, -
 :compressed_bits_per_pixel: 3
 :shutter_speed_value: !ruby/object:Rational
@@ -160,6 +166,7 @@
 :color_space_data: ! 'RGB '
 :profile_connection_space: ! 'XYZ '
 :profile_date_time: 1998:02:09 06:49:00
+:profile_date_time_ymd: 19980209
 :profile_file_signature: acsp
 :primary_platform: Microsoft Corporation
 :cmm_flags: Not Embedded, Independent
