@@ -81,6 +81,7 @@ describe Exiftool do
     :file_permissions,
     :fov,
     :hyperfocal_distance,
+    :intelligent_contrast,
     :long_focal,
     :max_focal_length,
     :min_focal_length,
