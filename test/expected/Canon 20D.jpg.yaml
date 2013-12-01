@@ -1,9 +1,6 @@
 ---
 :file_name: Canon 20D.jpg
 :file_size: 2.9 MB
-:file_modify_date_civil: 2013-07-15
-:file_access_date_civil: 2013-12-01
-:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
@@ -25,6 +22,7 @@
 :exif_version: '0221'
 :date_time_original: 2004:09:19 12:25:20
 :date_time_original_civil: 2004-09-19
+:create_date: 2004:09:19 12:25:20
 :create_date_civil: 2004-09-19
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational

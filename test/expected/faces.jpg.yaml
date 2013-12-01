@@ -1,9 +1,6 @@
 ---
 :file_name: faces.jpg
 :file_size: 3.8 MB
-:file_modify_date_civil: 2013-07-15
-:file_access_date_civil: 2013-12-01
-:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
@@ -26,6 +23,7 @@
 :exif_version: '0221'
 :date_time_original: 2005:11:26 14:20:34
 :date_time_original_civil: 2005-11-26
+:create_date: 2005:11:26 14:20:34
 :create_date_civil: 2005-11-26
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational

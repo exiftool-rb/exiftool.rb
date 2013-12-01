@@ -1,9 +1,6 @@
 ---
 :file_name: Droid X.jpg
 :file_size: 2023 kB
-:file_modify_date_civil: 2013-07-15
-:file_access_date_civil: 2013-12-01
-:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
@@ -26,6 +23,7 @@
 :exif_version: '0220'
 :date_time_original: 2010:12:08 01:15:37
 :date_time_original_civil: 2010-12-08
+:create_date: 2010:12:08 01:15:37
 :create_date_civil: 2010-12-08
 :components_configuration: Cb, Y, Cr, Y
 :compressed_bits_per_pixel: 4

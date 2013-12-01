@@ -1,9 +1,6 @@
 ---
 :file_name: IMG_2452.jpg
 :file_size: 2.8 MB
-:file_modify_date_civil: 2013-07-15
-:file_access_date_civil: 2013-12-01
-:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Big-endian (Motorola, MM)
@@ -27,6 +24,7 @@
 :exif_version: '0220'
 :date_time_original: 2011:07:06 09:46:45
 :date_time_original_civil: 2011-07-06
+:create_date: 2011:07:06 09:46:45
 :create_date_civil: 2011-07-06
 :components_configuration: Y, Cb, Cr, -
 :compressed_bits_per_pixel: 3
