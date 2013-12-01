@@ -61,6 +61,7 @@ result[:gps_longitude]
 
 Or iterate through files_with_results:
 
+```ruby
 e.files_with_results
 # => ["path/to/iPhone 4S.jpg", "path/to/Droid X.jpg", …
 ```
