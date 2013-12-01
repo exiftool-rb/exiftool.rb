@@ -71,7 +71,8 @@ e.files_with_results
 It seems that most exif dates don't include timezone offsets, without which forces us to assume the
 current timezone is applicable to the image, which isn't necessarily correct.
 
-To be correct, we punt and return the exiftool-formatted string ```%Y:%m:%d %H:%M:%S```.
+To be correct, we punt and return the exiftool-formatted string, which will be something like
+```%Y:%m:%d %H:%M:%S```.
 
 If the clock was set correctly on your camera, the date will be the correct calendar day
 (as far as you were concerned when you took the photo), so we also
