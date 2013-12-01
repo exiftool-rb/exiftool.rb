@@ -75,17 +75,16 @@ To be correct, we punt and return the exiftool-formatted string, which will be s
 ```%Y:%m:%d %H:%M:%S```.
 
 If the clock was set correctly on your camera, the date will be the correct calendar day
-(as far as you were concerned when you took the photo), so we also
-add a ```_ymd``` key associated to ```"YYYYMMDD".to_i```:
-
+as far as you were concerned when you took the photo. Given that, we
+add a ```_civil``` key associated to just the calendar date of the field, which should be safe-ish.
 
 ```ruby
 require 'exiftool'
 e = Exiftool.new("test/IMG_2452.jpg")
 e[:date_time_original]
 => "2011:07:06 09:46:45"
-e[:date_time_original_ymd]
-=> 20110706
+e[:date_time_original_civil]
+=> #<Date: 2011-07-06 ((2455749j,0s,0n),+0s,2299161j)>
 ```
 
 ### When things go wrong

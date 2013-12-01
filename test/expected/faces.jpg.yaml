@@ -1,6 +1,9 @@
 ---
 :file_name: faces.jpg
 :file_size: 3.8 MB
+:file_modify_date_civil: 2013-07-15
+:file_access_date_civil: 2013-12-01
+:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
@@ -11,6 +14,8 @@
 :y_resolution: 72
 :resolution_unit: inches
 :software: Picasa
+:modify_date: 2012:02:15 22:58:07
+:modify_date_civil: 2012-02-15
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 4000
@@ -19,6 +24,9 @@
 :exposure_program: Not Defined
 :iso: 400
 :exif_version: '0221'
+:date_time_original: 2005:11:26 14:20:34
+:date_time_original_civil: 2005-11-26
+:create_date_civil: 2005-11-26
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 4000
@@ -43,8 +51,6 @@
 :focus_range: Not Known
 :canon_exposure_mode: Depth-of-field AE
 :lens_type: Unknown (-1)
-:max_focal_length: 40 mm
-:min_focal_length: 17 mm
 :focal_units: 1/mm
 :flash_activity: 0
 :flash_bits: (none)
@@ -237,7 +243,7 @@
 :color_space_data: ! 'RGB '
 :profile_connection_space: ! 'XYZ '
 :profile_date_time: 2003:07:01 00:00:00
-:profile_date_time_ymd: 20030701
+:profile_date_time_civil: 2003-07-01
 :profile_file_signature: acsp
 :primary_platform: Apple Computer Inc.
 :cmm_flags: Not Embedded, Independent

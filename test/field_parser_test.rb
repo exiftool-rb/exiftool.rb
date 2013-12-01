@@ -23,12 +23,12 @@ describe Exiftool::FieldParser do
 
   it 'extracts YMD from timestamps' do
     p = Exiftool::FieldParser.new('DateTimeOriginal', '2004:09:19 12:25:20')
-    p.ymd_value.must_equal 20040919
+    p.civil_date.must_equal Date.civil(2004, 9, 19)
   end
 
   it 'returns nil for YMD for date flags' do
     p = Exiftool::FieldParser.new('DateStampMode', 'Off')
-    p.ymd_value.must_be_nil
+    p.civil_date.must_be_nil
   end
 
   it 'parses sub-second times' do

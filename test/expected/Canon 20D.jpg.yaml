@@ -1,6 +1,9 @@
 ---
 :file_name: Canon 20D.jpg
 :file_size: 2.9 MB
+:file_modify_date_civil: 2013-07-15
+:file_access_date_civil: 2013-12-01
+:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
@@ -10,6 +13,8 @@
 :x_resolution: 72
 :y_resolution: 72
 :resolution_unit: inches
+:modify_date: 2004:09:19 12:25:20
+:modify_date_civil: 2004-09-19
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
   denominator: 250
@@ -18,6 +23,9 @@
 :exposure_program: Program AE
 :iso: 200
 :exif_version: '0221'
+:date_time_original: 2004:09:19 12:25:20
+:date_time_original_civil: 2004-09-19
+:create_date_civil: 2004-09-19
 :components_configuration: Y, Cb, Cr, -
 :shutter_speed_value: !ruby/object:Rational
   denominator: 250
@@ -42,8 +50,6 @@
 :focus_range: Not Known
 :canon_exposure_mode: Program AE
 :lens_type: Unknown (-1)
-:max_focal_length: 85 mm
-:min_focal_length: 17 mm
 :focal_units: 1/mm
 :max_aperture: 5.6
 :min_aperture: 32

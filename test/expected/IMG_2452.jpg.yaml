@@ -1,6 +1,9 @@
 ---
 :file_name: IMG_2452.jpg
 :file_size: 2.8 MB
+:file_modify_date_civil: 2013-07-15
+:file_access_date_civil: 2013-12-01
+:file_inode_change_date_civil: 2013-07-15
 :file_type: JPEG
 :mime_type: image/jpeg
 :exif_byte_order: Big-endian (Motorola, MM)
@@ -12,6 +15,8 @@
 :y_resolution: 72
 :resolution_unit: inches
 :software: QuickTime 7.6.6
+:modify_date: 2011:07:06 20:41:11
+:modify_date_civil: 2011-07-06
 :host_computer: Mac OS X 10.6.8
 :y_cb_cr_positioning: Co-sited
 :exposure_time: !ruby/object:Rational
@@ -20,6 +25,9 @@
 :f_number: 2.8
 :iso: 160
 :exif_version: '0220'
+:date_time_original: 2011:07:06 09:46:45
+:date_time_original_civil: 2011-07-06
+:create_date_civil: 2011-07-06
 :components_configuration: Y, Cb, Cr, -
 :compressed_bits_per_pixel: 3
 :shutter_speed_value: !ruby/object:Rational
@@ -49,8 +57,6 @@
 :af_point: Face Detect
 :canon_exposure_mode: Easy
 :lens_type: Unknown (-1)
-:max_focal_length: 21.5 mm
-:min_focal_length: 4.3 mm
 :focal_units: 1000/mm
 :max_aperture: 2.8
 :min_aperture: 8
@@ -114,7 +120,6 @@
 :my_color_mode: 'Off'
 :firmware_revision: 1.01 rev 3.00
 :categories: (none)
-:intelligent_contrast: 'Off'
 :image_unique_id: a3154f6d7ed923fe22415586cb3f8922
 :vrd_offset: 0
 :user_comment: ''
@@ -149,7 +154,7 @@
 :color_space_data: ! 'RGB '
 :profile_connection_space: ! 'XYZ '
 :profile_date_time: 1998:02:09 06:49:00
-:profile_date_time_ymd: 19980209
+:profile_date_time_civil: 1998-02-09
 :profile_file_signature: acsp
 :primary_platform: Microsoft Corporation
 :cmm_flags: Not Embedded, Independent

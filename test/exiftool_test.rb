@@ -68,8 +68,6 @@ describe Exiftool do
     :circle_of_confusion,
     :create_date,
     :create_date_ymd,
-    :date_time_original,
-    :date_time_original_ymd,
     :directory,
     :exif_tool_version,
     :file_access_date,
@@ -85,8 +83,6 @@ describe Exiftool do
     :long_focal,
     :max_focal_length,
     :min_focal_length,
-    :modify_date,
-    :modify_date_ymd,
     :nd_filter,
     :short_focal,
     :source_file

@@ -27,10 +27,10 @@ class Exiftool
 
     YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/
 
-    def ymd_value
+    def civil_date
       if datish?
         ymd = raw_value.scan(YMD_RE).first
-        ymd.join.to_i if ymd
+        Date.civil(*ymd.map{|ea|ea.to_i}) if ymd
       end
     end
 
