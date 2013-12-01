@@ -1,0 +1,67 @@
+---
+:file_name: iPhone 4S.jpg
+:file_size: 1954 kB
+:file_type: JPEG
+:mime_type: image/jpeg
+:exif_byte_order: Big-endian (Motorola, MM)
+:make: Apple
+:model: iPhone 4S
+:orientation: Horizontal (normal)
+:x_resolution: 72
+:y_resolution: 72
+:resolution_unit: inches
+:software: 5.0.1
+:y_cb_cr_positioning: Centered
+:exposure_time: !ruby/object:Rational
+  denominator: 6135
+  numerator: 1
+:f_number: 2.4
+:exposure_program: Program AE
+:iso: 64
+:exif_version: '0221'
+:components_configuration: Y, Cb, Cr, -
+:shutter_speed_value: !ruby/object:Rational
+  denominator: 6135
+  numerator: 1
+:aperture_value: 2.4
+:brightness_value: 11.27442702
+:metering_mode: Multi-segment
+:flash: Auto, Did not fire
+:focal_length: 4.3 mm
+:subject_area: 1631 1223 881 881
+:flashpix_version: '0100'
+:color_space: sRGB
+:exif_image_width: 3264
+:exif_image_height: 2448
+:sensing_method: One-chip color area
+:exposure_mode: Auto
+:white_balance: Auto
+:focal_length_in35mm_format: 35 mm
+:scene_capture_type: Standard
+:sharpness: Normal
+:gps_latitude_ref: North
+:gps_longitude_ref: West
+:gps_altitude_ref: Above Sea Level
+:gps_time_stamp: '19:03:32'
+:gps_img_direction_ref: True North
+:gps_img_direction: 121.9838275
+:compression: JPEG (old-style)
+:thumbnail_offset: 914
+:thumbnail_length: 5987
+:image_width: 3264
+:image_height: 2448
+:encoding_process: Baseline DCT, Huffman coding
+:bits_per_sample: 8
+:color_components: 3
+:y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
+:aperture: 2.4
+:gps_altitude: 14.2 m Above Sea Level
+:gps_latitude: 37.50233333
+:gps_longitude: -122.47566667
+:gps_position: 37.50233333 N, 122.47566667 W
+:image_size: 3264x2448
+:shutter_speed: !ruby/object:Rational
+  denominator: 6135
+  numerator: 1
+:thumbnail_image: (Binary data 5987 bytes)
+:light_value: 15.8

@@ -1,0 +1,74 @@
+---
+:file_name: Droid X.jpg
+:file_size: 2023 kB
+:file_type: JPEG
+:mime_type: image/jpeg
+:exif_byte_order: Little-endian (Intel, II)
+:make: Motorola
+:model: DROIDX 6d460001fff80000015d7d330e01c011
+:orientation: Rotate 90 CW
+:x_resolution: 300
+:y_resolution: 300
+:resolution_unit: inches
+:software: 2.2
+:y_cb_cr_positioning: Centered
+:exposure_time: !ruby/object:Rational
+  denominator: 15
+  numerator: 1
+:f_number: 2.8
+:exposure_program: Program AE
+:iso: 637
+:exif_version: '0220'
+:components_configuration: Cb, Y, Cr, Y
+:compressed_bits_per_pixel: 4
+:shutter_speed_value: !ruby/object:Rational
+  denominator: 15
+  numerator: 1
+:aperture_value: 2.8
+:brightness_value: -0.8203125
+:exposure_compensation: 0
+:max_aperture_value: 2.8
+:subject_distance: 0 m
+:metering_mode: Center-weighted average
+:light_source: Standard Light A
+:flash: Auto, Did not fire
+:focal_length: 5.0 mm
+:user_comment: ''
+:flashpix_version: '0100'
+:color_space: sRGB
+:exif_image_width: 3264
+:exif_image_height: 1840
+:interop_index: R98 - DCF basic file (sRGB)
+:interop_version: '0100'
+:exposure_index: 637
+:sensing_method: One-chip color area
+:file_source: Digital Camera
+:scene_type: Directly photographed
+:custom_rendered: Custom
+:exposure_mode: Auto
+:white_balance: Auto
+:digital_zoom_ratio: 0
+:focal_length_in35mm_format: 38 mm
+:scene_capture_type: Standard
+:gain_control: High gain up
+:contrast: Normal
+:saturation: Normal
+:sharpness: Normal
+:subject_distance_range: Unknown
+:image_unique_id: ''
+:compression: JPEG (old-style)
+:thumbnail_offset: 2150
+:thumbnail_length: 32586
+:image_width: 3264
+:image_height: 1840
+:encoding_process: Baseline DCT, Huffman coding
+:bits_per_sample: 8
+:color_components: 3
+:y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
+:aperture: 2.8
+:image_size: 3264x1840
+:shutter_speed: !ruby/object:Rational
+  denominator: 15
+  numerator: 1
+:thumbnail_image: (Binary data 32586 bytes)
+:light_value: 4.2
