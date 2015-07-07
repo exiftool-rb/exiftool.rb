@@ -33,6 +33,11 @@ describe Exiftool do
         e[:source_file].must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
       end
+      Dir['test/*.tif'].each do |filename|
+        e = Exiftool.new(filename)
+        e[:source_file].must_equal Exiftool.expand_path(filename)
+        validate_result(e, filename)
+      end
     end
 
     it 'fails if there are multiple files provided and Exiftool is treated as a result' do
