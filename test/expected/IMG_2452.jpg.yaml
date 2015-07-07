@@ -54,7 +54,7 @@
 :focus_range: Auto
 :af_point: Face Detect
 :canon_exposure_mode: Easy
-:lens_type: Unknown (-1)
+:lens_type: n/a
 :focal_units: 1000/mm
 :max_aperture: 2.8
 :min_aperture: 8
@@ -100,7 +100,7 @@
 :rotation: 270
 :camera_temperature: 29 C
 :canon_model_id: PowerShot SD980 IS / Digital IXUS 200 IS / IXY Digital 930 IS
-:af_area_mode: Multi-point AF or AI AF
+:af_area_mode: Auto
 :num_af_points: 9
 :valid_af_points: 9
 :canon_image_width: 4000
@@ -179,13 +179,13 @@
 :luminance: 76.03647 80 87.12462
 :measurement_observer: CIE 1931
 :measurement_backing: 0 0 0
-:measurement_geometry: Unknown (0)
+:measurement_geometry: Unknown
 :measurement_flare: 0.999%
 :measurement_illuminant: D65
 :technology: Cathode Ray Tube Display
-:red_trc: (Binary data 2060 bytes)
-:green_trc: (Binary data 2060 bytes)
-:blue_trc: (Binary data 2060 bytes)
+:red_trc: (Binary data 2060 bytes, use -b option to extract)
+:green_trc: (Binary data 2060 bytes, use -b option to extract)
+:blue_trc: (Binary data 2060 bytes, use -b option to extract)
 :aperture: 2.8
 :drive_mode: Single-frame Shooting
 :image_size: 2248x4000
@@ -195,5 +195,8 @@
 :shutter_speed: !ruby/object:Rational
   denominator: 800
   numerator: 1
-:thumbnail_image: (Binary data 4627 bytes)
+:thumbnail_image: (Binary data 4627 bytes, use -b option to extract)
 :light_value: 11.9
+:file_type_extension: jpg
+:megapixels: 9.0
+:dof: inf (1.18 m - inf)

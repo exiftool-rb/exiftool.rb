@@ -47,7 +47,7 @@
 :metering_mode: Evaluative
 :focus_range: Not Known
 :canon_exposure_mode: Program AE
-:lens_type: Unknown (-1)
+:lens_type: n/a
 :focal_units: 1/mm
 :max_aperture: 5.6
 :min_aperture: 32
@@ -205,8 +205,10 @@
 :shutter_speed: !ruby/object:Rational
   denominator: 250
   numerator: 1
-:thumbnail_image: (Binary data 11259 bytes)
+:thumbnail_image: (Binary data 11259 bytes, use -b option to extract)
 :wb_rggb_levels: 1973 1015 1015 1663
 :blue_balance: 1.638424
 :light_value: 13.3
 :red_balance: 1.943842
+:megapixels: 8.2
+:file_type_extension: jpg

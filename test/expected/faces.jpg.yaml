@@ -48,7 +48,7 @@
 :metering_mode: Center-weighted average
 :focus_range: Not Known
 :canon_exposure_mode: Depth-of-field AE
-:lens_type: Unknown (-1)
+:lens_type: n/a
 :focal_units: 1/mm
 :flash_activity: 0
 :flash_bits: (none)
@@ -258,9 +258,9 @@
 :media_white_point: 0.95047 1 1.0891
 :chromatic_adaptation: 1.04788 0.02292 -0.0502 0.02957 0.99049 -0.01706 -0.00923 0.01508
   0.75165
-:red_trc: (Binary data 14 bytes)
-:green_trc: (Binary data 14 bytes)
-:blue_trc: (Binary data 14 bytes)
+:red_trc: (Binary data 14 bytes, use -b option to extract)
+:green_trc: (Binary data 14 bytes, use -b option to extract)
+:blue_trc: (Binary data 14 bytes, use -b option to extract)
 :profile_description: Camera RGB Profile
 :profile_copyright: Copyright 2003 Apple Computer Inc., all rights reserved.
 :profile_description_ml: Camera RGB Profile
@@ -299,8 +299,10 @@
 :shutter_speed: !ruby/object:Rational
   denominator: 4000
   numerator: 1
-:thumbnail_image: (Binary data 12170 bytes)
+:thumbnail_image: (Binary data 12170 bytes, use -b option to extract)
 :wb_rggb_levels: 1822 1015 1015 1709
 :blue_balance: 1.683744
 :light_value: 14.0
 :red_balance: 1.795074
+:megapixels: 8.2
+:file_type_extension: jpg
