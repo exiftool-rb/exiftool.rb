@@ -46,7 +46,7 @@ class Exiftool
     end
 
     def datish?
-      raw_value.is_a?(String) && display_key =~ /\bdate\b/i
+      raw_value.is_a?(String) && !(raw_value =~ /\A(\d{4}):((\d{2}):(0{2})|(0{2}):(\d{2}))\b/) && display_key =~ /\bdate\b/i
     end
 
     def for_date
