@@ -93,11 +93,14 @@ describe Exiftool do
     :hyperfocal_distance,
     :lens_type,
     :long_focal,
+    :maker_note_unknown_binary,
     :measurement_geometry,
     :megapixels,
     :nd_filter,
     :red_trc,
-    :short_focal
+    :short_focal,
+    :strip_offsets,
+    :warning
   ])
 
   IGNORABLE_PATTERNS = [
