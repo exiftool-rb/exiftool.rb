@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Exiftool by mceachen</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/mceachen/exiftool">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/mceachen/exiftool/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/mceachen/exiftool/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Exiftool</h1>
+          <p>Ruby exiftool wrapper that is simple, correct, and supports multiget</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/mceachen">mceachen</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="ruby-wrapper-for-exiftool" class="anchor" href="#ruby-wrapper-for-exiftool" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby wrapper for ExifTool</h1>
+
+<p><a href="http://travis-ci.org/mceachen/exiftool"><img src="https://secure.travis-ci.org/mceachen/exiftool.png?branch=master" alt="Build Status"></a>
+<a href="http://rubygems.org/gems/exiftool"><img src="https://badge.fury.io/rb/exiftool.png" alt="Gem Version"></a>
+<a href="https://codeclimate.com/github/mceachen/exiftool"><img src="https://codeclimate.com/github/mceachen/exiftool.png" alt="Code Climate"></a></p>
+
+<p>This gem is the simplest thing that could possibly work that
+reads the output of <a href="http://www.sno.phy.queensu.ca/%7Ephil/exiftool">exiftool</a>
+and renders it into a ruby hash, with <em>correctly typed values</em> and symbolized keys.</p>
+
+<p>Rubies 2.x and later are supported.</p>
+
+<p>The latest Exiftool is recommended, but you'll get that automatically by using the
+<a href="https://github.com/mceachen/exiftool_vendored">exiftool_vendored</a> gem!</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Multiget support</li>
+<li>GPS latitude and longitude values are parsed as signed floats,
+where north and east are positive, and west and south are negative.</li>
+<li>Values like shutter speed and exposure time are rendered as Rationals,
+which lets the caller show them as fractions (1/250) or as comparable numeric instances.</li>
+<li>String values like "interop" and "serial number" are kept as strings
+(which preserves zero prefixes)</li>
+<li>Timestamps are attempted to be interpreted with correct timezones and sub-second resolution, if
+the header contains that data.
+If the timestamp doesn't include a timezone offset, we leave it as a string, rather than inferring
+the current system timezone which might not be applicable to the image. We add a decimal yyyymmdd
+key for these problematic fields.</li>
+<li>No <code>method_missing</code> madness</li>
+<li>Excellent test coverage</li>
+<li>Clean, readable code</li>
+<li>MIT license</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>exiftool<span class="pl-pds">'</span></span>
+e <span class="pl-k">=</span> <span class="pl-c1">Exiftool</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>path/to/iPhone 4S.jpg<span class="pl-pds">"</span></span>)
+e.to_hash
+<span class="pl-c"># =&gt; {:make =&gt; "Apple", :gps_longitude =&gt; -122.47566667, …</span>
+e.to_display_hash
+<span class="pl-c"># =&gt; {"Make" =&gt; "Apple", "GPS Longitude" =&gt; -122.47566667, …</span></pre></div>
+
+<h3>
+<a id="multiget-support" class="anchor" href="#multiget-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiget support</h3>
+
+<p>This gem supports Exiftool's multiget, which lets you fetch metadata for many files at once.</p>
+
+<p>This can be dramatically more efficient than spinning up the <code>exiftool</code>
+process for each file due to the cost of spinning up perl.</p>
+
+<p>Supply an array to the Exiftool initializer, then use <code>.result_for</code>:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>exiftool<span class="pl-pds">'</span></span>
+e <span class="pl-k">=</span> <span class="pl-c1">Exiftool</span>.<span class="pl-k">new</span>(<span class="pl-c1">Dir</span>[<span class="pl-s"><span class="pl-pds">"</span>**/*.jpg<span class="pl-pds">"</span></span>])
+result <span class="pl-k">=</span> e.result_for(<span class="pl-s"><span class="pl-pds">"</span>path/to/iPhone 4S.jpg<span class="pl-pds">"</span></span>)
+result.to_hash
+<span class="pl-c"># =&gt; {:make =&gt; "Apple", :gps_longitude =&gt; -122.47566667, …</span>
+result[<span class="pl-c1">:gps_longitude</span>]
+<span class="pl-c"># =&gt; -122.47566667</span></pre></div>
+
+<p>Or iterate through files_with_results:</p>
+
+<div class="highlight highlight-ruby"><pre>e.files_with_results
+<span class="pl-c"># =&gt; ["path/to/iPhone 4S.jpg", "path/to/Droid X.jpg", …</span></pre></div>
+
+<h3>
+<a id="dates-without-timezones" class="anchor" href="#dates-without-timezones" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dates without timezones</h3>
+
+<p>It seems that most exif dates don't include timezone offsets, without which forces us to assume the
+current timezone is applicable to the image, which isn't necessarily correct.</p>
+
+<p>To be correct, we punt and return the exiftool-formatted string, which will be something like
+<code>%Y:%m:%d %H:%M:%S</code>.</p>
+
+<p>If the clock was set correctly on your camera, the date will be the correct calendar day
+as far as you were concerned when you took the photo. Given that, we
+add a <code>_civil</code> key associated to just the calendar date of the field, which should be safe-ish.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>exiftool<span class="pl-pds">'</span></span>
+e <span class="pl-k">=</span> <span class="pl-c1">Exiftool</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>test/IMG_2452.jpg<span class="pl-pds">"</span></span>)
+e[<span class="pl-c1">:date_time_original</span>]
+=&gt; <span class="pl-s"><span class="pl-pds">"</span>2011:07:06 09:46:45<span class="pl-pds">"</span></span>
+e[<span class="pl-c1">:date_time_original_civil</span>]
+=&gt; <span class="pl-c">#&lt;Date: 2011-07-06 ((2455749j,0s,0n),+0s,2299161j)&gt;</span></pre></div>
+
+<h3>
+<a id="when-things-go-wrong" class="anchor" href="#when-things-go-wrong" aria-hidden="true"><span class="octicon octicon-link"></span></a>When things go wrong</h3>
+
+<ul>
+<li>
+<code>Exiftool::NoSuchFile</code> is raised if the provided filename doesn't exist.</li>
+<li>
+<code>Exiftool::ExiftoolNotInstalled</code> is raised if <code>exiftool</code> isn't in your <code>PATH</code>.</li>
+<li>If ExifTool has a problem reading EXIF data, no exception is raised, but <code>#errors?</code> will return true:</li>
+</ul>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c1">Exiftool</span>.<span class="pl-k">new</span>(<span class="pl-s"><span class="pl-pds">"</span>Gemfile<span class="pl-pds">"</span></span>).errors?
+<span class="pl-c">#=&gt; true</span></pre></div>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="step-1-install-exiftool" class="anchor" href="#step-1-install-exiftool" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Install ExifTool</h3>
+
+<p>The easiest way is to use the "vendored" exiftool in the
+<a href="https://github.com/mceachen/exiftool_vendored">exiftool_vendored</a> gem. Just add</p>
+
+<pre><code>gem 'exiftool_vendored'
+</code></pre>
+
+<p>to your Gemfile, run <code>bundle</code>, and you're done. (Note that it depends on the <code>exiftool</code> gem,
+so really, you're done! Skip step 2!)</p>
+
+<p>If you want to install exiftool on your system yourself:</p>
+
+<ul>
+<li>MacOS with <a href="http://mxcl.github.io/homebrew/">homebrew</a>? <code>brew install exiftool</code>
+</li>
+<li>Debian or Ubuntu? <code>sudo apt-get install libimage-exiftool-perl</code>
+</li>
+<li>Something else? <a href="http://www.sno.phy.queensu.ca/%7Ephil/exiftool/install.html">RTFM</a>!</li>
+</ul>
+
+<h3>
+<a id="step-2-add-the-gem" class="anchor" href="#step-2-add-the-gem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Add the gem</h3>
+
+<p>If you didn't use <code>exiftool_vendored</code>, then add this your Gemfile:</p>
+
+<pre><code>gem 'exiftool'
+</code></pre>
+
+<p>and then run <code>bundle</code>.</p>
+
+<p>If you have exiftool installed outside of ruby's <code>PATH</code>, add an initializer that points the gem
+to the tool, like this: <code>Exiftool.command = '/home/ruby/Image-ExifTool-9.33/exiftool'</code>. You don't need to do
+this if you've installed added the exiftool directory to the PATH of the shell that runs ruby.</p>
+
+<h2>
+<a id="change-history" class="anchor" href="#change-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change history</h2>
+
+<h3>
+<a id="070" class="anchor" href="#070" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.7.0</h3>
+
+<ul>
+<li>Added zero-date parsing to address <a href="https://github.com/mceachen/exiftool/issues/2">issue #2</a>.
+Thanks for the pull request, <a href="https://github.com/morozgrafix">Sergey Morozov</a>!</li>
+<li>Updated Travis configuration (RIP 1.9.x).</li>
+</ul>
+
+<h3>
+<a id="050" class="anchor" href="#050" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.5.0</h3>
+
+<ul>
+<li>Introduced YMD parsing for all date columns, even if they don't specify timezone offsets.</li>
+</ul>
+
+<h3>
+<a id="040" class="anchor" href="#040" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.4.0</h3>
+
+<ul>
+<li>Added <code>#raw_hash</code> to <code>Exiftool::Result</code> to support columns that can have parsing issues,
+like dates that don't include timezone offsets.</li>
+</ul>
+
+<h3>
+<a id="031" class="anchor" href="#031" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.3.1</h3>
+
+<ul>
+<li>
+<code>.exiftool_version</code> is now a string rather than a float,
+which didn't work so well with version numbers like "9.40"</li>
+</ul>
+
+<h3>
+<a id="030" class="anchor" href="#030" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.3.0</h3>
+
+<ul>
+<li>Support for explicitly setting the path to exiftool with <code>Exiftool.command</code>
+</li>
+<li>Removed the test directory from the gem contents, as it included the test images and made the gem
+ginormous.</li>
+</ul>
+
+<h3>
+<a id="020" class="anchor" href="#020" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.2.0</h3>
+
+<ul>
+<li>Renamed from exiftoolr to exiftool</li>
+</ul>
+
+<h3>
+<a id="010" class="anchor" href="#010" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.1.0</h3>
+
+<ul>
+<li>Better timestamp parsing—now both sub-second and timezone offsets are handled correctly</li>
+<li>Switched to minitest-spec</li>
+<li>Ruby 1.8.7 is no longer supported, hence the minor version uptick.</li>
+</ul>
+
+<h3>
+<a id="009" class="anchor" href="#009" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.0.9</h3>
+
+<ul>
+<li>Explicitly added MIT licensing to the gemspec.</li>
+</ul>
+
+<h3>
+<a id="008" class="anchor" href="#008" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.0.8</h3>
+
+<ul>
+<li>Extracted methods in parsing to make the code complexity lower. FOUR DOT OH GPA</li>
+</ul>
+
+<h3>
+<a id="007" class="anchor" href="#007" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.0.7</h3>
+
+<ul>
+<li>Added warning values for EXIF headers that are corrupt</li>
+<li>Made initialize gracefully accept an empty array, or an array of Pathname instances</li>
+<li>Added support for ruby 1.9.3 and exiftool v8.15 (Ubuntu Natty) and v8.85 (current stable version)</li>
+</ul>
+
+<h3>
+<a id="005" class="anchor" href="#005" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.0.5</h3>
+
+<p>Fixed homepage URL in gemspec</p>
+
+<h3>
+<a id="004" class="anchor" href="#004" aria-hidden="true"><span class="octicon octicon-link"></span></a>0.0.4</h3>
+
+<p>Added support for multiple file fetching (which is <em>much</em> faster for large directories)</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
