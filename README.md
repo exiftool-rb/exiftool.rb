@@ -130,6 +130,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 0.6.0
+
+*
+
 ### 0.5.0
 
 * Introduced YMD parsing for all date columns, even if they don't specify timezone offsets.

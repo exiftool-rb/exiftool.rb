@@ -26,6 +26,16 @@ describe Exiftool::FieldParser do
     p.civil_date.must_equal Date.civil(2004, 9, 19)
   end
 
+  it 'ignores "zero-date" YMD timestamps' do
+    p = Exiftool::FieldParser.new('DateTimeOriginal', '0000:00:00 00:00:00')
+    p.civil_date.must_be_nil
+  end
+
+  it 'ignores "zero-date" YMD dates' do
+    p = Exiftool::FieldParser.new('DateTimeOriginal', '0000:00:00')
+    p.civil_date.must_be_nil
+  end
+
   it 'returns nil for YMD for date flags' do
     p = Exiftool::FieldParser.new('DateStampMode', 'Off')
     p.civil_date.must_be_nil
