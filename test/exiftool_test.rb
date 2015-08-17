@@ -85,13 +85,17 @@ describe Exiftool do
     :thumbnail_image
   ] + (newer_exiftool? ? [] : [
     :af_area_mode, # This can be "Auto" or "Multi-point AF or AI AF" depending on exiftool version
+    :blue_trc,
     :dof,
     :file_type_extension,
     :fov,
+    :green_trc,
     :hyperfocal_distance,
+    :lens_type,
     :long_focal,
     :megapixels,
     :nd_filter,
+    :red_trc,
     :short_focal
   ])
 
