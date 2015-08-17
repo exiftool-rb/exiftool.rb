@@ -6,9 +6,12 @@
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
-and renders it into a ruby hash, with correctly typed values and symbolized keys.
+and renders it into a ruby hash, with *correctly typed values* and symbolized keys.
 
 Rubies 2.x and later are supported.
+
+The latest Exiftool is recommended, but you'll get that automatically by using the
+[exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem!
 
 ## Features
 
@@ -130,9 +133,11 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
-### 0.6.0
+### 0.7.0
 
-*
+* Added zero-date parsing to address [issue #2](https://github.com/mceachen/exiftool/issues/2).
+  Thanks for the pull request, [Sergey Morozov](https://github.com/morozgrafix)!
+* Updated Travis configuration (RIP 1.9.x).
 
 ### 0.5.0
 
