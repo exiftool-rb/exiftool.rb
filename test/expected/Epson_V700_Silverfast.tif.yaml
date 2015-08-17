@@ -1,13 +1,6 @@
 ---
 :file_name: Epson_V700_Silverfast.tif
 :file_size: 15 MB
-:file_modify_date: 2015-07-06 13:08:18 -0700
-:file_modify_date_civil: #<Date: 2015-07-06 ((2457210j,0s,0n),+0s,2299161j)>
-:file_access_date: 2015-07-07 10:21:02 -0700
-:file_access_date_civil: #<Date: 2015-07-07 ((2457211j,0s,0n),+0s,2299161j)>
-:file_inode_change_date: 2015-07-06 13:08:18 -0700
-:file_inode_change_date_civil: #<Date: 2015-07-06 ((2457210j,0s,0n),+0s,2299161j)>
-:file_permissions: rwx------
 :file_type: TIFF
 :file_type_extension: tif
 :mime_type: image/tiff
@@ -27,17 +20,17 @@
 :planar_configuration: Chunky
 :resolution_unit: inches
 :software: SilverFast 8.5.0 r5 (May 22 2015)  bed2701 22.05.
+:artist: Sergey Morozov
 :xmp_toolkit: XMP Core 4.4.0-Exiv2
+:copyright: "©2015 Sergey Morozov - morozgrafix"
 :current_iptc_digest: 2154f0eb6905421bd65f27cc0115f5f7
-:date_created: "0000:00:00"
-:maker_note_unknown_binary: (Binary data 130 bytes, use -b option to extract)
+:date_created: '0000:00:00'
+:create_date: 0000:00:00 00:00:00
+:maker_note_unknown_binary: "(Binary data 130 bytes, use -b option to extract)"
 :exif_image_width: 4683
 :exif_image_height: 3066
 :subfile_type: Reduced-resolution image
-:strip_offsets: (Binary data 7238 bytes, use -b option to extract)
-:strip_byte_counts: (Binary data 4949 bytes, use -b option to extract)
+:strip_offsets: "(Binary data 7238 bytes, use -b option to extract)"
+:strip_byte_counts: "(Binary data 4949 bytes, use -b option to extract)"
 :image_size: 4683x3066
 :megapixels: 14.4
-:artist: Sergey Morozov
-:copyright: ©2015 Sergey Morozov - morozgrafix
-:create_date: "0000:00:00 00:00:00"

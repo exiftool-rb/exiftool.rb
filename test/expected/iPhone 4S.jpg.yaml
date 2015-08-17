@@ -2,6 +2,7 @@
 :file_name: iPhone 4S.jpg
 :file_size: 1954 kB
 :file_type: JPEG
+:file_type_extension: jpg
 :mime_type: image/jpeg
 :exif_byte_order: Big-endian (Motorola, MM)
 :make: Apple
@@ -66,10 +67,10 @@
 :gps_longitude: -122.47566667
 :gps_position: 37.50233333 N, 122.47566667 W
 :image_size: 3264x2448
+:megapixels: 8.0
 :shutter_speed: !ruby/object:Rational
   denominator: 6135
   numerator: 1
-:thumbnail_image: (Binary data 5987 bytes, use -b option to extract)
 :light_value: 15.8
-:megapixels: 8.0
-:file_type_extension: jpg
+:fov: 54.4 deg
+:hyperfocal_distance: 2.08 m

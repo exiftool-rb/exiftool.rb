@@ -2,6 +2,7 @@
 :file_name: Droid X.jpg
 :file_size: 2023 kB
 :file_type: JPEG
+:file_type_extension: jpg
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
 :make: Motorola
@@ -73,10 +74,10 @@
 :y_cb_cr_sub_sampling: YCbCr4:2:0 (2 2)
 :aperture: 2.8
 :image_size: 3264x1840
+:megapixels: 6.0
 :shutter_speed: !ruby/object:Rational
   denominator: 15
   numerator: 1
-:thumbnail_image: (Binary data 32586 bytes, use -b option to extract)
 :light_value: 4.2
-:megapixels: 6.0
-:file_type_extension: jpg
+:fov: 50.7 deg
+:hyperfocal_distance: 2.24 m

@@ -12,3 +12,8 @@ unless ENV['CI']
 end
 
 puts "Exiftool.exiftool_version = #{Exiftool.exiftool_version}"
+
+def newer_exiftool?
+  Exiftool.exiftool_version.to_f >= 9.99
+end
+

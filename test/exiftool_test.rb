@@ -2,8 +2,6 @@ require 'test_helper'
 
 describe Exiftool do
 
-  DUMP_RESULTS = false
-
   it 'returns a sensible version' do
     Exiftool.exiftool_version.must_match /\A\d+\.\d+\z/
   end
@@ -60,7 +58,7 @@ describe Exiftool do
     basename = File.basename(filename)
     yaml_file = "test/expected/#{basename}.yaml"
     actual = result.to_hash.delete_if { |k, v| ignorable_key?(k) }
-    File.open(yaml_file, 'w') { |out| YAML.dump(actual, out) } if DUMP_RESULTS
+    File.open(yaml_file, 'w') { |out| YAML.dump(actual, out) } if ENV['DUMP_RESULTS']
     expected = File.open(yaml_file) { |f| YAML::load(f) }
     expected.delete_if { |k, v| ignorable_key?(k) }
     expected.must_equal_hash(actual)
@@ -80,16 +78,22 @@ describe Exiftool do
     :file_modify_date,
     :file_modify_date_civil,
     :file_permissions,
-    :fov,
-    :hyperfocal_distance,
     :intelligent_contrast,
-    :long_focal,
     :max_focal_length,
     :min_focal_length,
+    :source_file,
+    :thumbnail_image
+  ] + (newer_exiftool? ? [] : [
+    :af_area_mode, # This can be "Auto" or "Multi-point AF or AI AF" depending on exiftool version
+    :dof,
+    :file_type_extension,
+    :fov,
+    :hyperfocal_distance,
+    :long_focal,
+    :megapixels,
     :nd_filter,
-    :short_focal,
-    :source_file
-  ]
+    :short_focal
+  ])
 
   IGNORABLE_PATTERNS = [
     /.*\-ml-\w\w-\w\w$/, # < translatable

@@ -3,13 +3,12 @@
 [![Build Status](https://secure.travis-ci.org/mceachen/exiftool.png?branch=master)](http://travis-ci.org/mceachen/exiftool)
 [![Gem Version](https://badge.fury.io/rb/exiftool.png)](http://rubygems.org/gems/exiftool)
 [![Code Climate](https://codeclimate.com/github/mceachen/exiftool.png)](https://codeclimate.com/github/mceachen/exiftool)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mceachen/exiftool/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with correctly typed values and symbolized keys.
 
-Rubies 1.9 and later are supported.
+Rubies 2.x and later are supported.
 
 ## Features
 

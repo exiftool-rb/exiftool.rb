@@ -2,6 +2,7 @@
 :file_name: faces.jpg
 :file_size: 3.8 MB
 :file_type: JPEG
+:file_type_extension: jpg
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
 :make: Canon
@@ -51,7 +52,7 @@
 :lens_type: n/a
 :focal_units: 1/mm
 :flash_activity: 0
-:flash_bits: (none)
+:flash_bits: "(none)"
 :focus_continuous: Single
 :zoom_source_width: 0
 :zoom_target_width: 0
@@ -73,7 +74,7 @@
 :sequence_number: 0
 :optical_zoom_code: n/a
 :flash_guide_number: 0
-:flash_exposure_comp: +2/3
+:flash_exposure_comp: "+2/3"
 :auto_exposure_bracketing: 'Off'
 :aeb_bracket_value: 0
 :control_mode: Camera Local Control
@@ -81,6 +82,7 @@
 :bulb_duration: 0
 :camera_type: EOS Mid-range
 :auto_rotate: None
+:nd_filter: n/a
 :self_timer2: 0
 :canon_image_type: Canon EOS 20D
 :canon_firmware_version: Firmware 2.0.3
@@ -238,8 +240,8 @@
 :profile_cmm_type: appl
 :profile_version: 2.2.0
 :profile_class: Input Device Profile
-:color_space_data: ! 'RGB '
-:profile_connection_space: ! 'XYZ '
+:color_space_data: 'RGB '
+:profile_connection_space: 'XYZ '
 :profile_date_time: 2003:07:01 00:00:00
 :profile_date_time_civil: 2003-07-01
 :profile_file_signature: acsp
@@ -258,9 +260,9 @@
 :media_white_point: 0.95047 1 1.0891
 :chromatic_adaptation: 1.04788 0.02292 -0.0502 0.02957 0.99049 -0.01706 -0.00923 0.01508
   0.75165
-:red_trc: (Binary data 14 bytes, use -b option to extract)
-:green_trc: (Binary data 14 bytes, use -b option to extract)
-:blue_trc: (Binary data 14 bytes, use -b option to extract)
+:red_trc: "(Binary data 14 bytes, use -b option to extract)"
+:green_trc: "(Binary data 14 bytes, use -b option to extract)"
+:blue_trc: "(Binary data 14 bytes, use -b option to extract)"
 :profile_description: Camera RGB Profile
 :profile_copyright: Copyright 2003 Apple Computer Inc., all rights reserved.
 :profile_description_ml: Camera RGB Profile
@@ -274,10 +276,10 @@
 :profile_description_ml-no-no: RGB-kameraprofil
 :profile_description_ml-pt-br: Perfil RGB de Câmera
 :profile_description_ml-sv-se: RGB-profil för Kamera
-:profile_description_ml-ja-jp: カメラ RGB プロファイル
-:profile_description_ml-ko-kr: 카메라 RGB 프로파일
-:profile_description_ml-zh-tw: 數位相機 RGB 色彩描述
-:profile_description_ml-zh-cn: 相机 RGB 描述文件
+:profile_description_ml-ja-jp: "カメラ RGB プロファイル"
+:profile_description_ml-ko-kr: "카메라 RGB 프로파일"
+:profile_description_ml-zh-tw: "數位相機 RGB 色彩描述"
+:profile_description_ml-zh-cn: "相机 RGB 描述文件"
 :current_iptc_digest: b443520a10119da99c2550175e6d0efb
 :envelope_record_version: 4
 :coded_character_set: UTF8
@@ -294,15 +296,15 @@
 :image_size: 3504x2336
 :lens: 17.0 - 40.0 mm
 :lens_id: Unknown 17-40mm
+:megapixels: 8.2
 :warning: Invalid original decision data
 :shooting_mode: Depth-of-field AE
 :shutter_speed: !ruby/object:Rational
   denominator: 4000
   numerator: 1
-:thumbnail_image: (Binary data 12170 bytes, use -b option to extract)
 :wb_rggb_levels: 1822 1015 1015 1709
 :blue_balance: 1.683744
+:fov: 66.9 deg
+:hyperfocal_distance: 3.85 m
 :light_value: 14.0
 :red_balance: 1.795074
-:megapixels: 8.2
-:file_type_extension: jpg

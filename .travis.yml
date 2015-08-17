@@ -3,6 +3,5 @@ script: bundle exec rake
 before_install:
   - sudo apt-get install libimage-exiftool-perl
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - jruby-19mode
+  - 2.2.2
+  - jruby

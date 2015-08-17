@@ -2,9 +2,10 @@
 :file_name: IMG_2452.jpg
 :file_size: 2.8 MB
 :file_type: JPEG
+:file_type_extension: jpg
 :mime_type: image/jpeg
 :exif_byte_order: Big-endian (Motorola, MM)
-:image_description: ! '                               '
+:image_description: "                               "
 :make: Canon
 :model: Canon PowerShot SD980 IS
 :orientation: Horizontal (normal)
@@ -35,7 +36,7 @@
 :max_aperture_value: 2.8
 :flash: Auto, Did not fire
 :focal_length: 4.3 mm
-:warning: ! '[minor] Adjusted MakerNotes base by 50'
+:warning: "[minor] Adjusted MakerNotes base by 50"
 :macro_mode: Normal
 :self_timer: 'Off'
 :quality: Fine
@@ -58,7 +59,7 @@
 :focal_units: 1000/mm
 :max_aperture: 2.8
 :min_aperture: 8
-:flash_bits: (none)
+:flash_bits: "(none)"
 :focus_continuous: Continuous
 :ae_setting: Normal AE
 :image_stabilization: 'On'
@@ -91,6 +92,7 @@
 :bulb_duration: 0
 :camera_type: Compact
 :auto_rotate: Rotate 270 CW
+:nd_filter: 'Off'
 :self_timer2: 0
 :flash_output: 0
 :canon_image_type: IMG:PowerShot SD980 IS JPEG
@@ -109,15 +111,15 @@
 :af_image_height: 100
 :af_area_widths: 135 135 135 135 135 135 135 135 135
 :af_area_heights: 18 18 18 18 18 18 18 18 18
-:af_area_x_positions: -135 0 135 -135 0 135 -135 0 135
-:af_area_y_positions: -18 -18 -18 0 0 0 18 18 18
+:af_area_x_positions: "-135 0 135 -135 0 135 -135 0 135"
+:af_area_y_positions: "-18 -18 -18 0 0 0 18 18 18"
 :af_points_in_focus: 4
 :primary_af_point: 4
 :thumbnail_image_valid_area: 0 159 15 104
 :date_stamp_mode: 'Off'
 :my_color_mode: 'Off'
 :firmware_revision: 1.01 rev 3.00
-:categories: (none)
+:categories: "(none)"
 :image_unique_id: a3154f6d7ed923fe22415586cb3f8922
 :vrd_offset: 0
 :user_comment: ''
@@ -137,9 +139,8 @@
 :compression: JPEG (old-style)
 :thumbnail_offset: 3480
 :thumbnail_length: 4627
-:comment: ! 'AppleMark
-
-'
+:comment: |
+  AppleMark
 :image_width: 2248
 :image_height: 4000
 :encoding_process: Baseline DCT, Huffman coding
@@ -149,19 +150,19 @@
 :profile_cmm_type: Lino
 :profile_version: 2.1.0
 :profile_class: Display Device Profile
-:color_space_data: ! 'RGB '
-:profile_connection_space: ! 'XYZ '
+:color_space_data: 'RGB '
+:profile_connection_space: 'XYZ '
 :profile_date_time: 1998:02:09 06:49:00
 :profile_date_time_civil: 1998-02-09
 :profile_file_signature: acsp
 :primary_platform: Microsoft Corporation
 :cmm_flags: Not Embedded, Independent
-:device_manufacturer: ! 'IEC '
+:device_manufacturer: 'IEC '
 :device_model: sRGB
 :device_attributes: Reflective, Glossy, Positive, Color
 :rendering_intent: Perceptual
 :connection_space_illuminant: 0.9642 1 0.82491
-:profile_creator: ! 'HP  '
+:profile_creator: 'HP  '
 :profile_id: 0
 :profile_copyright: Copyright (c) 1998 Hewlett-Packard Company
 :profile_description: sRGB IEC61966-2.1
@@ -183,20 +184,20 @@
 :measurement_flare: 0.999%
 :measurement_illuminant: D65
 :technology: Cathode Ray Tube Display
-:red_trc: (Binary data 2060 bytes, use -b option to extract)
-:green_trc: (Binary data 2060 bytes, use -b option to extract)
-:blue_trc: (Binary data 2060 bytes, use -b option to extract)
+:red_trc: "(Binary data 2060 bytes, use -b option to extract)"
+:green_trc: "(Binary data 2060 bytes, use -b option to extract)"
+:blue_trc: "(Binary data 2060 bytes, use -b option to extract)"
 :aperture: 2.8
 :drive_mode: Single-frame Shooting
 :image_size: 2248x4000
 :lens: 4.3 - 21.5 mm
 :lens_id: Unknown 4-21mm
+:megapixels: 9.0
 :shooting_mode: Full auto
 :shutter_speed: !ruby/object:Rational
   denominator: 800
   numerator: 1
-:thumbnail_image: (Binary data 4627 bytes, use -b option to extract)
-:light_value: 11.9
-:file_type_extension: jpg
-:megapixels: 9.0
 :dof: inf (1.18 m - inf)
+:fov: 73.7 deg
+:hyperfocal_distance: 1.23 m
+:light_value: 11.9

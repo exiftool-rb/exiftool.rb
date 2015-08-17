@@ -2,6 +2,7 @@
 :file_name: Canon 20D.jpg
 :file_size: 2.9 MB
 :file_type: JPEG
+:file_type_extension: jpg
 :mime_type: image/jpeg
 :exif_byte_order: Little-endian (Intel, II)
 :make: Canon
@@ -41,9 +42,9 @@
 :canon_image_size: Large
 :easy_mode: Manual
 :digital_zoom: None
-:contrast: '+1'
-:saturation: '+1'
-:sharpness: '+1'
+:contrast: "+1"
+:saturation: "+1"
+:sharpness: "+1"
 :metering_mode: Evaluative
 :focus_range: Not Known
 :canon_exposure_mode: Program AE
@@ -52,7 +53,7 @@
 :max_aperture: 5.6
 :min_aperture: 32
 :flash_activity: 0
-:flash_bits: (none)
+:flash_bits: "(none)"
 :focus_continuous: Single
 :zoom_source_width: 0
 :zoom_target_width: 0
@@ -82,6 +83,7 @@
 :bulb_duration: 0
 :camera_type: EOS Mid-range
 :auto_rotate: None
+:nd_filter: n/a
 :self_timer2: 0
 :canon_image_type: Canon EOS 20D
 :canon_firmware_version: Firmware 1.0.2
@@ -201,14 +203,14 @@
 :image_size: 3504x2336
 :lens: 17.0 - 85.0 mm
 :lens_id: Unknown 17-85mm
+:megapixels: 8.2
 :shooting_mode: Program AE
 :shutter_speed: !ruby/object:Rational
   denominator: 250
   numerator: 1
-:thumbnail_image: (Binary data 11259 bytes, use -b option to extract)
 :wb_rggb_levels: 1973 1015 1015 1663
 :blue_balance: 1.638424
+:fov: 23.7 deg
+:hyperfocal_distance: 26.91 m
 :light_value: 13.3
 :red_balance: 1.943842
-:megapixels: 8.2
-:file_type_extension: jpg
