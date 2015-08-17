@@ -99,9 +99,12 @@ describe Exiftool do
     :nd_filter,
     :red_trc,
     :short_focal,
+    :strip_byte_counts,
     :strip_offsets,
     :warning
   ])
+
+  puts "Ignoring #{IGNORABLE_KEYS.size} keys."
 
   IGNORABLE_PATTERNS = [
     /.*\-ml-\w\w-\w\w$/, # < translatable
