@@ -71,6 +71,6 @@
 :shutter_speed: !ruby/object:Rational
   denominator: 6135
   numerator: 1
-:light_value: 15.8
 :fov: 54.4 deg
 :hyperfocal_distance: 2.08 m
+:light_value: 15.8

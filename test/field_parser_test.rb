@@ -41,6 +41,16 @@ describe Exiftool::FieldParser do
     p.value.must_equal Time.parse('2013-07-14 10:50:33-07:00')
   end
 
+  it 'parses date-times with only zeroes' do
+    p = Exiftool::FieldParser.new('MediaCreateDate', '0000:00:00 00:00:00')
+    p.value.must_equal '0000:00:00 00:00:00'
+  end
+
+  it 'parses dates with only zeroes' do
+    p = Exiftool::FieldParser.new('ModifyDate', '0000:00:00')
+    p.value.must_equal '0000:00:00'
+  end
+
   it 'parses fractions properly' do
     p = Exiftool::FieldParser.new('ShutterSpeedValue', '1/6135')
     p.value.must_equal Rational(1, 6135)
