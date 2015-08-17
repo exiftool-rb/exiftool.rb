@@ -1,7 +1,10 @@
 language: ruby
 script: bundle exec rake
-before_install:
-  - sudo apt-get install libimage-exiftool-perl
+sudo: false
+addons:
+  apt:
+    packages:
+    - libimage-exiftool-perl
 rvm:
   - 2.2.2
   - jruby
