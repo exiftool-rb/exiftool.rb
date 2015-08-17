@@ -93,6 +93,7 @@ describe Exiftool do
     :hyperfocal_distance,
     :lens_type,
     :long_focal,
+    :measurement_geometry,
     :megapixels,
     :nd_filter,
     :red_trc,
