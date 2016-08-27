@@ -3,7 +3,7 @@ require 'test_helper'
 describe Exiftool do
 
   it 'returns a sensible version' do
-    Exiftool.exiftool_version.must_match /\A\d+\.\d+\z/
+    Exiftool.exiftool_version.must_match(/\A\d+\.\d+\z/)
   end
 
   it 'raises NoSuchFile for missing files' do
