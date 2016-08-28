@@ -3,7 +3,7 @@ require 'test_helper'
 describe Exiftool do
 
   it 'returns a sensible version' do
-    Exiftool.exiftool_version.must_match /\A\d+\.\d+\z/
+    Exiftool.exiftool_version.must_match(/\A\d+\.\d+\z/)
   end
 
   it 'raises NoSuchFile for missing files' do
@@ -82,7 +82,8 @@ describe Exiftool do
     :max_focal_length,
     :min_focal_length,
     :source_file,
-    :thumbnail_image
+    :thumbnail_image,
+    :preview_tiff
   ] + (newer_exiftool? ? [] : [
     :af_area_mode, # This can be "Auto" or "Multi-point AF or AI AF" depending on exiftool version
     :blue_trc,
