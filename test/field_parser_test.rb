@@ -73,7 +73,7 @@ describe Exiftool::FieldParser do
 
   it 'parses S GPS coords' do
     p = Exiftool::FieldParser.new('GPSLatitude', '37.50233333 S')
-    p.value.must_be_close_to(-37.50233333)
+    p.value.must_be_close_to -37.50233333
   end
 
   it 'parses E GPS coords' do
@@ -83,6 +83,6 @@ describe Exiftool::FieldParser do
 
   it 'parses W GPS coords' do
     p = Exiftool::FieldParser.new('GPSLongitude', '122.47566667 W')
-    p.value.must_be_close_to(-122.47566667)
+    p.value.must_be_close_to -122.47566667
   end
 end

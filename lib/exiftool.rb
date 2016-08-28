@@ -14,7 +14,7 @@ class Exiftool
   end
 
   def self.command
-    @command ||= 'exiftool'
+    @command || 'exiftool'
   end
 
   def self.exiftool_installed?
