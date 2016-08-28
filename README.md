@@ -8,7 +8,7 @@ This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with *correctly typed values* and symbolized keys.
 
-Rubies 2.x and later are supported.
+Ruby 2.2, 2.3, and jruby is supported.
 
 The latest Exiftool is recommended, but you'll get that automatically by using the
 [exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem!
@@ -132,6 +132,10 @@ to the tool, like this: ```Exiftool.command = '/home/ruby/Image-ExifTool-9.33/ex
 this if you've installed added the exiftool directory to the PATH of the shell that runs ruby.
 
 ## Change history
+
+### 0.8.0
+
+* Updates from 
 
 ### 0.7.0
 
