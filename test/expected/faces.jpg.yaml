@@ -276,10 +276,10 @@
 :profile_description_ml-no-no: RGB-kameraprofil
 :profile_description_ml-pt-br: Perfil RGB de Câmera
 :profile_description_ml-sv-se: RGB-profil för Kamera
-:profile_description_ml-ja-jp: "カメラ RGB プロファイル"
-:profile_description_ml-ko-kr: "카메라 RGB 프로파일"
-:profile_description_ml-zh-tw: "數位相機 RGB 色彩描述"
-:profile_description_ml-zh-cn: "相机 RGB 描述文件"
+:profile_description_ml-ja-jp: カメラ RGB プロファイル
+:profile_description_ml-ko-kr: 카메라 RGB 프로파일
+:profile_description_ml-zh-tw: 數位相機 RGB 色彩描述
+:profile_description_ml-zh-cn: 相机 RGB 描述文件
 :current_iptc_digest: b443520a10119da99c2550175e6d0efb
 :envelope_record_version: 4
 :coded_character_set: UTF8

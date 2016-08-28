@@ -139,8 +139,9 @@
 :compression: JPEG (old-style)
 :thumbnail_offset: 3480
 :thumbnail_length: 4627
-:comment: |
-  AppleMark
+:comment: 'AppleMark
+
+'
 :image_width: 2248
 :image_height: 4000
 :encoding_process: Baseline DCT, Huffman coding

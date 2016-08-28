@@ -1,27 +1,24 @@
 ---
 :file_name: utf8.jpg
 :file_size: 24 kB
-:file_modify_date: 2016-08-27 20:05:32 -0700,
-:file_access_date: 2016-08-27 20:09:31 -0700,
-:file_inode_change_date: 2016-08-27 20:05:33 -0700,
 :file_type: JPEG
 :file_type_extension: jpg
 :mime_type: image/jpeg
 :current_iptc_digest: a8abc43c704ca7e2a216751e88466608
 :coded_character_set: UTF8
-:envelope_record_version: 4,
+:envelope_record_version: 4
 :copyright_notice: Public Domain Image by Joe deSousa https://www.flickr.com/photos/mustangjoe/14630821615
-:application_record_version: 4,
+:application_record_version: 4
 :city: Kyoto 京都市
 :xmp_toolkit: Image::ExifTool 10.25
 :description: Temple of the Golden Pavilion 金閣寺
 :country: Japan 日本国
 :state: Kyoto Prefecture 京都府
-:image_width: 240,
-:image_height: 134,
+:image_width: 240
+:image_height: 134
 :encoding_process: Baseline DCT, Huffman coding
-:bits_per_sample: 8,
-:color_components: 3,
+:bits_per_sample: 8
+:color_components: 3
 :y_cb_cr_sub_sampling: YCbCr4:4:4 (1 1)
 :image_size: 240x134
 :megapixels: 0.032
