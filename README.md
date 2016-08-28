@@ -135,7 +135,8 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 0.8.0
 
-* Updates from 
+* Updates from [Sergey Morozov](https://github.com/morozgrafix) to support newer rubies, and
+  validate UTF field parsing was handled correctly
 
 ### 0.7.0
 
