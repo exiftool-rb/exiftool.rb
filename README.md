@@ -133,7 +133,7 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
-### 1.0.0
+### 1.0.1
 
 * Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/mceachen/exiftool/issues/7),
   which allows for `-n` (force numeric values)
