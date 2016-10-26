@@ -85,4 +85,9 @@ describe Exiftool::FieldParser do
     p = Exiftool::FieldParser.new('GPSLongitude', '122.47566667 W')
     p.value.must_be_close_to(-122.47566667)
   end
+
+  it 'parses numerical only GPS coordinates' do
+    p = Exiftool::FieldParser.new('GPSLongitude', -122.475666666667)
+    p.value.must_be_close_to(-122.475666666667)
+  end
 end
