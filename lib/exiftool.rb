@@ -38,7 +38,7 @@ class Exiftool
 
   def initialize(filenames, exiftool_opts = '')
     @file2result = {}
-    filenames = [filenames] if filenames.is_a?(String)
+    filenames = [filenames] if (filenames.is_a?(String) || filenames.is_a?(Pathname))
     unless filenames.empty?
       escaped_filenames = filenames.map do |f|
         Shellwords.escape(self.class.expand_path(f.to_s))

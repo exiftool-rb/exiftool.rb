@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'pathname'
 
 describe Exiftool do
 
@@ -22,6 +23,11 @@ describe Exiftool do
   it 'has errors with files without EXIF headers' do
     e = Exiftool.new('Gemfile')
     e.errors?.must_be_true
+  end
+
+  it 'supports a singular Pathname as a constructor arg' do
+    e = Exiftool.new(Pathname.new('test/utf8.jpg'))
+    validate_result(e, 'test/utf8.jpg')
   end
 
   describe 'single-get' do

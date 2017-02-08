@@ -5,3 +5,5 @@ projectFilesBackup
 Gemfile.lock
 pkg/*
 /.ruby-version
+.history
+*.log

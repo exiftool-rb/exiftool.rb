@@ -133,6 +133,13 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.1.0
+
+* Support `Pathname` instances as constructor args. 
+  Addresses [issue #8](https://github.com/mceachen/exiftool/issues/8)
+
+* Dropped official support for jruby due to CI failures. 
+
 ### 1.0.1
 
 * Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/mceachen/exiftool/issues/7),
