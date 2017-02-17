@@ -1,14 +1,14 @@
 # Ruby wrapper for ExifTool
 
-[![Build Status](https://secure.travis-ci.org/mceachen/exiftool.png?branch=master)](http://travis-ci.org/mceachen/exiftool)
-[![Gem Version](https://badge.fury.io/rb/exiftool.png)](http://rubygems.org/gems/exiftool)
-[![Code Climate](https://codeclimate.com/github/mceachen/exiftool.png)](https://codeclimate.com/github/mceachen/exiftool)
+[![Build Status](https://secure.travis-ci.org/mceachen/exiftool.svg?branch=master)](http://travis-ci.org/mceachen/exiftool)
+[![Gem Version](https://badge.fury.io/rb/exiftool.svg)](http://rubygems.org/gems/exiftool)
+[![Code Climate](https://codeclimate.com/github/mceachen/exiftool.svg)](https://codeclimate.com/github/mceachen/exiftool)
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with *correctly typed values* and symbolized keys.
 
-Ruby 2.2 and 2.3 are supported.
+Ruby 2.2 through 2.4 are supported.
 
 The latest Exiftool is recommended, but you'll get that automatically by using the
 [exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem!
