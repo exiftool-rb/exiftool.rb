@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version     = Exiftool::VERSION
   spec.authors     = ['Matthew McEachen']
   spec.email       = %w(matthew-github@mceachen.org)
-  spec.homepage    = 'https://github.com/mceachen/exiftoolr'
+  spec.homepage    = 'https://github.com/mceachen/exiftool'
   spec.summary     = %q{Multiget ExifTool wrapper for ruby}
   spec.description = %q{Multiget ExifTool wrapper for ruby}
   spec.license     = 'MIT'
