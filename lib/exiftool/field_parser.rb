@@ -35,7 +35,10 @@ class Exiftool
     def civil_date
       if date? && !zero_date?
         ymd = raw_value.scan(YMD_RE).first
-        Date.civil(*ymd.map { |ea| ea.to_i }) if ymd
+        if (ymd) then
+            ymd_a = ymd.map { |ea| ea.to_i }
+            Date.civil(*ymd_a) if Date.valid_civil?(*ymd_a)
+        end
       end
     end
 
