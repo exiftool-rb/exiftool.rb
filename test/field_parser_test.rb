@@ -36,6 +36,12 @@ describe Exiftool::FieldParser do
     p.civil_date.must_be_nil
   end
 
+  it 'skips invalid dates' do
+    p = Exiftool::FieldParser.new('GPSDateTime', '0111:00:30 20:31:58Z')
+    p.value.must_equal('0111:00:30 20:31:58Z')
+    p.civil_date.must_be_nil
+  end
+
   it 'returns nil for YMD for date flags' do
     p = Exiftool::FieldParser.new('DateStampMode', 'Off')
     p.civil_date.must_be_nil
