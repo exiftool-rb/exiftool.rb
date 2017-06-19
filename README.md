@@ -133,26 +133,32 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.0
+
+* Add check for valid civil date. Addresses [issue
+  #10](https://github.com/mceachen/exiftool.rb/issues/10)). Thanks for the
+  assist, [Victor Bogado da Silva Lins](https://github.com/bogado)!
+
 ### 1.1.0
 
 * Support `Pathname` instances as constructor args. 
-  Addresses [issue #8](https://github.com/mceachen/exiftool/issues/8)
+  Addresses [issue #8](https://github.com/mceachen/exiftool.rb/issues/8)
 
 * Dropped official support for jruby due to CI failures. 
 
 ### 1.0.1
 
-* Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/mceachen/exiftool/issues/7),
+* Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/mceachen/exiftool.rb/issues/7),
   which allows for `-n` (force numeric values)
 
 ### 0.8.0
 
-* Updates from [Sergey Morozov](https://github.com/morozgrafix) to support newer rubies, and
-  validate UTF field parsing was handled correctly
+* Updates from [Sergey Morozov](https://github.com/morozgrafix) to support newer
+  rubies, and validate UTF field parsing was handled correctly
 
 ### 0.7.0
 
-* Added zero-date parsing to address [issue #2](https://github.com/mceachen/exiftool/issues/2).
+* Added zero-date parsing to address [issue #2](https://github.com/mceachen/exiftool.rb/issues/2).
   Thanks for the pull request, [Sergey Morozov](https://github.com/morozgrafix)!
 * Updated Travis configuration (RIP 1.9.x).
 
@@ -172,9 +178,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 0.3.0
 
-* Support for explicitly setting the path to exiftool with ```Exiftool.command```
-* Removed the test directory from the gem contents, as it included the test images and made the gem
-  ginormous.
+* Support for explicitly setting the path to exiftool with
+  ```Exiftool.command```
+* Removed the test directory from the gem contents, as it included the test
+  images and made the gem ginormous.
 
 ### 0.2.0
 
@@ -182,7 +189,8 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 0.1.0
 
-* Better timestamp parsing—now both sub-second and timezone offsets are handled correctly
+* Better timestamp parsing—now both sub-second and timezone offsets are handled
+  correctly
 * Switched to minitest-spec
 * Ruby 1.8.7 is no longer supported, hence the minor version uptick.
 
@@ -197,8 +205,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 ### 0.0.7
 
 * Added warning values for EXIF headers that are corrupt
-* Made initialize gracefully accept an empty array, or an array of Pathname instances
-* Added support for ruby 1.9.3 and exiftool v8.15 (Ubuntu Natty) and v8.85 (current stable version)
+* Made initialize gracefully accept an empty array, or an array of Pathname
+  instances
+* Added support for ruby 1.9.3 and exiftool v8.15 (Ubuntu Natty) and v8.85
+  (current stable version)
 
 ### 0.0.5
 
