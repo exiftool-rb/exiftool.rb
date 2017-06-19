@@ -1,6 +1,5 @@
 # Ruby wrapper for ExifTool
 
-https://travis-ci.org/mceachen/exiftool.rb.svg?branch=master
 [![Build Status](https://secure.travis-ci.org/mceachen/exiftool.rb.svg?branch=master)](http://travis-ci.org/mceachen/exiftool.rb)
 [![Gem Version](https://badge.fury.io/rb/exiftool.svg)](http://rubygems.org/gems/exiftool)
 [![Code Climate](https://codeclimate.com/github/mceachen/exiftool.rb.svg)](https://codeclimate.com/github/mceachen/exiftool.rb)
