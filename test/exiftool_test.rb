@@ -7,6 +7,10 @@ describe Exiftool do
     Exiftool.exiftool_version.must_match(/\A\d+\.\d+\z/)
   end
 
+  it 'returns true for exiftool installed' do
+    Exiftool.exiftool_installed?.must_be_true
+  end
+
   it 'raises NoSuchFile for missing files' do
     proc { Exiftool.new('no/such/file') }.must_raise Exiftool::NoSuchFile
   end

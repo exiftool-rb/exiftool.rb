@@ -18,7 +18,7 @@ class Exiftool
   end
 
   def self.exiftool_installed?
-    exiftool_version > 0
+    exiftool_version.to_f > 0
   end
 
   # This is a string, not a float, to handle versions like "9.40" properly.
