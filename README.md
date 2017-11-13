@@ -133,6 +133,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.1
+
+* Fixed `exiftool_installed?`, referenced by [issue #11](https://github.com/mceachen/exiftool.rb/issues/11).
+
 ### 1.2.0
 
 * Add check for valid civil date. Addresses [issue
