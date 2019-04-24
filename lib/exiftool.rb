@@ -17,6 +17,10 @@ class Exiftool
     @command ||= 'exiftool'
   end
 
+  def self.win_platform
+    @win_platform ||= Gem.win_platform?
+  end
+
   def self.exiftool_installed?
     exiftool_version.to_f > 0
   end
@@ -41,11 +45,19 @@ class Exiftool
     filenames = [filenames] if (filenames.is_a?(String) || filenames.is_a?(Pathname))
     unless filenames.empty?
       escaped_filenames = filenames.map do |f|
-        Shellwords.escape(self.class.expand_path(f.to_s))
+        if self.class.win_platform
+          '"' + self.class.expand_path(f.to_s) + '"'
+        else
+          Shellwords.escape(self.class.expand_path(f.to_s))  
+        end
       end.join(' ')
       # I'd like to use -dateformat, but it doesn't support timezone offsets properly,
       # nor sub-second timestamps.
-      cmd = "#{self.class.command} #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
+      if self.class.win_platform
+        cmd = "#{self.class.command} #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames}"
+      else
+        cmd = "#{self.class.command} #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
+      end
       json = `#{cmd}`.chomp
       raise ExiftoolNotInstalled if json == ''
       JSON.parse(json).each do |raw|
