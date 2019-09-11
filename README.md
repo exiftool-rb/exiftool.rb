@@ -1,8 +1,11 @@
 # Ruby wrapper for ExifTool
 
-[![Build Status](https://secure.travis-ci.org/mceachen/exiftool.rb.svg?branch=master)](http://travis-ci.org/mceachen/exiftool.rb)
+[![Build Status](https://secure.travis-ci.org/exiftool-rb/exiftool.rb.svg?branch=master)](http://travis-ci.org/exiftool-rb/exiftool.rb)
 [![Gem Version](https://badge.fury.io/rb/exiftool.svg)](http://rubygems.org/gems/exiftool)
-[![Code Climate](https://codeclimate.com/github/mceachen/exiftool.rb.svg)](https://codeclimate.com/github/mceachen/exiftool.rb)
+[![Gem Downloads](https://img.shields.io/gem/dt/exiftool.svg)](http://rubygems.org/gems/exiftool)
+[![Gem Latest](https://img.shields.io/gem/dtv/exiftool.svg)](http://rubygems.org/gems/exiftool)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/82cfb3b0d0d5e67499c7/test_coverage)](https://codeclimate.com/github/exiftool-rb/exiftool.rb/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/82cfb3b0d0d5e67499c7/maintainability)](https://codeclimate.com/github/exiftool-rb/exiftool.rb/maintainability)
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
@@ -11,7 +14,7 @@ and renders it into a ruby hash, with *correctly typed values* and symbolized ke
 Ruby 2.2 through 2.4 are supported.
 
 The latest Exiftool is recommended, but you'll get that automatically by using the
-[exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem!
+[exiftool_vendored](https://github.com/exiftool-rb/exiftool_vendored.rb) gem!
 
 ## Features
 
@@ -106,7 +109,7 @@ Exiftool.new("Gemfile").errors?
 ### Step 1: Install ExifTool
 
 The easiest way is to use the "vendored" exiftool in the
-[exiftool_vendored](https://github.com/mceachen/exiftool_vendored) gem. Just add
+[exiftool_vendored](https://github.com/exiftool-rb/exiftool_vendored.rb) gem. Just add
 
     gem 'exiftool_vendored'
 
@@ -135,24 +138,24 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 1.2.1
 
-* Fixed `exiftool_installed?`, referenced by [issue #11](https://github.com/mceachen/exiftool.rb/issues/11).
+* Fixed `exiftool_installed?`, referenced by [issue #11](https://github.com/exiftool-rb/exiftool.rb/issues/11).
 
 ### 1.2.0
 
 * Add check for valid civil date. Addresses [issue
-  #10](https://github.com/mceachen/exiftool.rb/issues/10)). Thanks for the
+  #10](https://github.com/exiftool-rb/exiftool.rb/issues/10)). Thanks for the
   assist, [Victor Bogado da Silva Lins](https://github.com/bogado)!
 
 ### 1.1.0
 
 * Support `Pathname` instances as constructor args. 
-  Addresses [issue #8](https://github.com/mceachen/exiftool.rb/issues/8)
+  Addresses [issue #8](https://github.com/exiftool-rb/exiftool.rb/issues/8)
 
 * Dropped official support for jruby due to CI failures. 
 
 ### 1.0.1
 
-* Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/mceachen/exiftool.rb/issues/7),
+* Updates from [Sergey Morozov](https://github.com/morozgrafix) to address [issue #7](https://github.com/exiftool-rb/exiftool.rb/issues/7),
   which allows for `-n` (force numeric values)
 
 ### 0.8.0
@@ -162,7 +165,7 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 0.7.0
 
-* Added zero-date parsing to address [issue #2](https://github.com/mceachen/exiftool.rb/issues/2).
+* Added zero-date parsing to address [issue #2](https://github.com/exiftool-rb/exiftool.rb/issues/2).
   Thanks for the pull request, [Sergey Morozov](https://github.com/morozgrafix)!
 * Updated Travis configuration (RIP 1.9.x).
 
