@@ -30,18 +30,18 @@ describe Exiftool do
   end
 
   it 'supports a singular Pathname as a constructor arg' do
-    e = Exiftool.new(Pathname.new('test/utf8.jpg'))
-    validate_result(e, 'test/utf8.jpg')
+    e = Exiftool.new(Pathname.new('test/images/utf8.jpg'))
+    validate_result(e, 'test/images/utf8.jpg')
   end
 
   describe 'single-get' do
     it 'responds with known correct responses' do
-      Dir['test/*.jpg'].each do |filename|
+      Dir['test/images/*.jpg'].each do |filename|
         e = Exiftool.new(filename)
         _(e[:source_file]).must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
       end
-      Dir['test/*.tif'].each do |filename|
+      Dir['test/images/*.tif'].each do |filename|
         e = Exiftool.new(filename)
         _(e[:source_file]).must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
@@ -49,7 +49,7 @@ describe Exiftool do
     end
 
     it 'fails if there are multiple files provided and Exiftool is treated as a result' do
-      e = Exiftool.new(Dir['test/*.jpg'])
+      e = Exiftool.new(Dir['test/images/*.jpg'])
       _ { e.to_hash[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
       _ { e[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
       _ { e.raw[:aperture] }.must_raise Exiftool::NoDefaultResultWithMultiget
