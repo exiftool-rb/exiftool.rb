@@ -18,10 +18,12 @@ Gem::Specification.new do |spec|
   spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'
 
   spec.add_dependency 'json'
-  spec.add_development_dependency 'rake'
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'yard'
   spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'minitest-great_expectations'
   spec.add_development_dependency 'minitest-reporters' unless ENV['CI']
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'simplecov-console'
+  spec.add_development_dependency 'yard'
 end

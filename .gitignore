@@ -7,3 +7,5 @@ pkg/*
 /.ruby-version
 .history
 *.log
+coverage
+.DS_Store
