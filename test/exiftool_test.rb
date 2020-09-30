@@ -1,8 +1,8 @@
 require 'test_helper'
 require 'pathname'
+require 'pry-byebug'
 
 describe Exiftool do
-
   it 'returns a sensible version' do
     _(Exiftool.exiftool_version).must_match(/\A\d+\.\d+\z/)
   end
@@ -25,7 +25,7 @@ describe Exiftool do
   end
 
   it 'has errors with files without EXIF headers' do
-    e = Exiftool.new('Gemfile')
+    e = Exiftool.new('test/binary_file')
     _(e.errors?).must_be_true
   end
 
@@ -71,7 +71,7 @@ describe Exiftool do
     File.open(yaml_file, 'w') { |out| YAML.dump(actual, out) } if ENV['DUMP_RESULTS']
     expected = File.open(yaml_file) { |f| YAML::load(f) }
     expected.delete_if { |k, v| ignorable_key?(k) }
-    _(expected).must_equal_hash(actual)
+    _(actual).must_equal_hash(expected)
   end
 
   # These are expected to be different on travis, due to different paths, filesystems, or

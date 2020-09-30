@@ -148,7 +148,7 @@
 :bits_per_sample: 8
 :color_components: 3
 :y_cb_cr_sub_sampling: YCbCr4:2:2 (2 1)
-:profile_cmm_type: Lino
+:profile_cmm_type: Linotronic
 :profile_version: 2.1.0
 :profile_class: Display Device Profile
 :color_space_data: 'RGB '
@@ -158,12 +158,12 @@
 :profile_file_signature: acsp
 :primary_platform: Microsoft Corporation
 :cmm_flags: Not Embedded, Independent
-:device_manufacturer: 'IEC '
+:device_manufacturer: Hewlett-Packard
 :device_model: sRGB
 :device_attributes: Reflective, Glossy, Positive, Color
 :rendering_intent: Perceptual
 :connection_space_illuminant: 0.9642 1 0.82491
-:profile_creator: 'HP  '
+:profile_creator: Hewlett-Packard
 :profile_id: 0
 :profile_copyright: Copyright (c) 1998 Hewlett-Packard Company
 :profile_description: sRGB IEC61966-2.1
