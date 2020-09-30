@@ -11,7 +11,7 @@ This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
 and renders it into a ruby hash, with *correctly typed values* and symbolized keys.
 
-Ruby 2.3 through 2.6 are supported.
+Ruby 2.4 through 2.7 are supported.
 
 The latest Exiftool is recommended, but you'll get that automatically by using the
 [exiftool_vendored](https://github.com/exiftool-rb/exiftool_vendored.rb) gem!
