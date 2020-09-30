@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'pathname'
-require 'pry-byebug'
 
 describe Exiftool do
   it 'returns a sensible version' do
