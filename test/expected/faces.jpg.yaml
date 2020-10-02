@@ -237,7 +237,7 @@
 - normalized
 - normalized
 - normalized
-:profile_cmm_type: appl
+:profile_cmm_type: Apple Computer Inc.
 :profile_version: 2.2.0
 :profile_class: Input Device Profile
 :color_space_data: 'RGB '
@@ -247,12 +247,12 @@
 :profile_file_signature: acsp
 :primary_platform: Apple Computer Inc.
 :cmm_flags: Not Embedded, Independent
-:device_manufacturer: appl
+:device_manufacturer: Apple Computer Inc.
 :device_model: ''
 :device_attributes: Reflective, Glossy, Positive, Color
 :rendering_intent: Perceptual
 :connection_space_illuminant: 0.9642 1 0.82491
-:profile_creator: appl
+:profile_creator: Apple Computer Inc.
 :profile_id: 0
 :red_matrix_column: 0.45427 0.24263 0.01482
 :green_matrix_column: 0.35332 0.67441 0.09042
