@@ -9,6 +9,13 @@ Metrics/BlockLength:
   Exclude:
     - 'test/*.rb'
 
+# TODO: When we drop support for ruby 2.4 and 2.5
+# change YAML.load(f) in test/exiftool_test.rb
+# to YAML.safe_load(f, permitted_classes: [Symbol, Date, Rational])
+Security/YAMLLoad:
+  Exclude:
+    - 'test/exiftool_test.rb'
+
 ########
 # Below exclusions would require major refactoring
 # Ignoring for until better times...
