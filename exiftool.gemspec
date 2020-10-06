@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest-reporters' unless ENV['CI']
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'simplecov', '~> 0.17.1'
   spec.add_development_dependency 'simplecov-console'
   spec.add_development_dependency 'yard'
 end
