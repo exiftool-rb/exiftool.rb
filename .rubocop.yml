@@ -1,0 +1,20 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  NewCops: enable
+
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_perl_names
+
+Metrics/BlockLength:
+  Exclude:
+    - 'test/*.rb'
+
+########
+# Below exclusions would require major refactoring
+# Ignoring for until better times...
+
+Metrics/AbcSize:
+  Max: 24
+
+Metrics/MethodLength:
+  Max: 17
