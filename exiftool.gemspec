@@ -7,9 +7,9 @@ require 'exiftool/version'
 Gem::Specification.new do |spec|
   spec.name        = 'exiftool'
   spec.version     = Exiftool::VERSION
-  spec.authors     = ['Matthew McEachen']
-  spec.email       = %w[matthew-github@mceachen.org]
-  spec.homepage    = 'https://github.com/mceachen/exiftool.rb'
+  spec.authors     = ['Matthew McEachen', 'Sergey Morozov']
+  spec.email       = %w[matthew+github@mceachen.org morozgrafix@gmail.com]
+  spec.homepage    = 'https://github.com/exiftool-rb/exiftool.rb'
   spec.summary     = 'Multiget ExifTool wrapper for ruby'
   spec.description = 'Multiget ExifTool wrapper for ruby'
   spec.license     = 'MIT'
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -- lib`.split($/)
   spec.require_paths = %w[lib]
 
-  spec.requirements << 'ExifTool (see http://www.sno.phy.queensu.ca/~phil/exiftool/)'
+  spec.requirements << 'ExifTool (see http://exiftool.org)'
 
   spec.add_dependency 'json'
   spec.add_development_dependency 'bundler'

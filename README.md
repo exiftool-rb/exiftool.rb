@@ -136,6 +136,11 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.2
+
+* Code is following rubocop style guide (mostly)
+* Improved tests and code coverage
+
 ### 1.2.1
 
 * Fixed `exiftool_installed?`, referenced by [issue #11](https://github.com/exiftool-rb/exiftool.rb/issues/11).
@@ -148,10 +153,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ### 1.1.0
 
-* Support `Pathname` instances as constructor args. 
+* Support `Pathname` instances as constructor args.
   Addresses [issue #8](https://github.com/exiftool-rb/exiftool.rb/issues/8)
 
-* Dropped official support for jruby due to CI failures. 
+* Dropped official support for jruby due to CI failures.
 
 ### 1.0.1
 
