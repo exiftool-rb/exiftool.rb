@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require 'exiftool/field_parser'
 
 class Exiftool
+  # Exiftool Result
   class Result
     attr_reader :raw, :to_hash, :to_display_hash, :sym2display, :display2sym
 

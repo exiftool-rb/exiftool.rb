@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 require 'time'
-require 'rational'
 
 class Exiftool
+  # Exiftool FiledParser Class
   class FieldParser
-
-    WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/]
-    FRACTION_RE = /^(\d+)\/(\d+)$/
-    YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/
-    ZERO_DATE_RE = /\A[+:0 ]+\z/
+    WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/].freeze
+    FRACTION_RE = %r{^(\d+)/(\d+)$}.freeze
+    YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/.freeze
+    ZERO_DATE_RE = /\A[+:0 ]+\z/.freeze
 
     attr_reader :key, :display_key, :sym_key, :raw_value
 
@@ -20,26 +21,28 @@ class Exiftool
 
     def value
       @value ||= if lat_long?
-        as_lat_long
-      elsif date?
-        as_date
-      elsif fraction?
-        as_fraction
-      else
-        raw_value
-      end
+                   as_lat_long
+                 elsif date?
+                   as_date
+                 elsif fraction?
+                   as_fraction
+                 else
+                   raw_value
+                 end
     rescue StandardError => e
+      # :nocov:
       "Warning: Parsing '#{raw_value}' for attribute '#{key}' raised #{e.message}"
+      # :nocov:
     end
 
     def civil_date
-      if date? && !zero_date?
-        ymd = raw_value.scan(YMD_RE).first
-        if (ymd) then
-            ymd_a = ymd.map { |ea| ea.to_i }
-            Date.civil(*ymd_a) if Date.valid_civil?(*ymd_a)
-        end
-      end
+      return unless date? && !zero_date?
+
+      ymd = raw_value.scan(YMD_RE).first
+      return unless ymd
+
+      ymd_a = ymd.map(&:to_i)
+      Date.civil(*ymd_a) if Date.valid_civil?(*ymd_a)
     end
 
     private
@@ -50,10 +53,11 @@ class Exiftool
 
     def as_lat_long
       return raw_value if raw_value.is_a?(Numeric)
+
       value, direction = raw_value.split(' ')
-      if value =~ /\A\d+\.?\d*\z/
-        value.to_f * (['S', 'W'].include?(direction) ? -1 : 1)
-      end
+      return unless value =~ /\A\d+\.?\d*\z/
+
+      value.to_f * (%w[S W].include?(direction) ? -1 : 1)
     end
 
     def date?
@@ -82,7 +86,7 @@ class Exiftool
 
     def as_fraction
       scan = raw_value.scan(FRACTION_RE).first
-      Rational(*scan.map { |ea| ea.to_i }) unless scan.nil?
+      Rational(*scan.map(&:to_i)) unless scan.nil?
     end
   end
 end

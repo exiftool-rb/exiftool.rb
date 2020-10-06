@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 SimpleCov.start do
   add_filter '/test/'
@@ -25,8 +27,3 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
 )
 
 puts "Exiftool.exiftool_version = #{Exiftool.exiftool_version}"
-
-def newer_exiftool?
-  Exiftool.exiftool_version.to_f >= 9.99
-end
-
