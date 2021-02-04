@@ -2,10 +2,11 @@ env:
   global:
     - CC_TEST_REPORTER_ID=27df0a8ad648d4af0f931c1b0101cca2278fcfd755112b4d563650c45f48071c
 language: ruby
-dist: focal
+dist: xenial
 os: linux
 rvm:
-  - 2.7.1
+  - 3.0.0
+  - 2.7.2
   - 2.6.6
   - 2.5.8
   - 2.4.10
