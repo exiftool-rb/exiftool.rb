@@ -54,7 +54,7 @@ class Exiftool
     def as_lat_long
       return raw_value if raw_value.is_a?(Numeric)
 
-      value, direction = raw_value.split(' ')
+      value, direction = raw_value.split
       return unless value =~ /\A\d+\.?\d*\z/
 
       value.to_f * (%w[S W].include?(direction) ? -1 : 1)

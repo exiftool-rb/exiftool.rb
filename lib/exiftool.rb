@@ -8,8 +8,11 @@ require 'forwardable'
 # Exiftool Class
 class Exiftool
   class NoSuchFile < StandardError; end
+
   class NotAFile < StandardError; end
+
   class ExiftoolNotInstalled < StandardError; end
+
   class NoDefaultResultWithMultiget < StandardError; end
 
   class << self
