@@ -9,9 +9,9 @@ AllCops:
 Style/SpecialGlobalVars:
   EnforcedStyle: use_perl_names
 
-# Metrics/BlockLength:
-#   Exclude:
-#     - 'test/*.rb'
+Metrics/BlockLength:
+  Exclude:
+    - 'test/*.rb'
 
 # TODO: When we drop support for ruby 2.4 and 2.5
 # change YAML.load(f) in test/exiftool_test.rb
@@ -29,6 +29,3 @@ Metrics/AbcSize:
 
 Metrics/MethodLength:
   Max: 17
-
-Metrics/BlockLength:
-  Max: 100
