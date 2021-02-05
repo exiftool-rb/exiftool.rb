@@ -143,6 +143,13 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.3
+
+* Added Ruby 3.0.0 to Travis CI tests and updated config to Ruby 2.7.2
+* Added Ruby Deprecation note to README.md about dropping support for Ruby 2.4 and 2.5 starting March 31, 2021
+* rubocop fixes
+* Added `rubocop-minitest` and `rubocop-rake` for better styleguide coverage
+
 ### 1.2.2
 
 * Code is following rubocop style guide (mostly)
