@@ -4,6 +4,7 @@ require 'json'
 require 'shellwords'
 require 'exiftool/result'
 require 'forwardable'
+require 'pathname'
 
 # Exiftool Class
 class Exiftool
