@@ -10,6 +10,7 @@ require 'minitest/great_expectations'
 require 'yaml'
 require 'exiftool'
 require 'simplecov-console'
+require 'simplecov_json_formatter'
 
 # We need a predictable timezone offset so non-tz-offset timestamps are comparable:
 ENV['TZ'] = 'UTC'
@@ -22,7 +23,8 @@ end
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [
     SimpleCov::Formatter::HTMLFormatter,
-    SimpleCov::Formatter::Console
+    SimpleCov::Formatter::Console,
+    SimpleCov::Formatter::JSONFormatter
   ]
 )
 
