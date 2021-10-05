@@ -143,6 +143,13 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.4
+
+* Moved from travis-ci.org to travis-ci.com
+* Updated Ruby versions for Travis CI runs. Running on 2.6.8, 2.7.4 and 3.0.2
+* Updated simplecov version for test coverage reporting
+* Merged [PR #23](https://github.com/exiftool-rb/exiftool.rb/pull/23) by [urtabajev](https://github.com/urtabajev) that fixes `NameError` related to `pathname` standard library when multiget is used
+
 ### 1.2.3
 
 * Added Ruby 3.0.0 to Travis CI tests and updated config to Ruby 2.7.2
