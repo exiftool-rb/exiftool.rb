@@ -29,8 +29,11 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+<<<<<<< HEAD
       - name: Install Exiftool
         run: sudo apt install libimage-exiftool-perl
+=======
+>>>>>>> b3cd51f (Adding GitHub Workflow test action)
       - name: Run tests
         run: bundle exec rake
       - name: Test & publish code coverage
