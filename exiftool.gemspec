@@ -14,7 +14,9 @@ Gem::Specification.new do |spec|
   spec.description = 'Multiget ExifTool wrapper for ruby'
   spec.license     = 'MIT'
 
-  spec.required_ruby_version = '>= 2.4'
+  spec.metadata['rubygems_mfa_required'] = 'true'
+
+  spec.required_ruby_version = '>= 2.7'
 
   spec.files         = `git ls-files -- lib`.split($/)
   spec.require_paths = %w[lib]

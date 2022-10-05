@@ -3,7 +3,7 @@ require:
   - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.7
   NewCops: enable
 
 Style/SpecialGlobalVars:
@@ -12,6 +12,7 @@ Style/SpecialGlobalVars:
 Metrics/BlockLength:
   Exclude:
     - 'test/*.rb'
+    - 'exiftool.gemspec'
 
 # TODO: When we drop support for ruby 2.4 and 2.5
 # change YAML.load(f) in test/exiftool_test.rb

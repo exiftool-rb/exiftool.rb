@@ -5,9 +5,9 @@ language: ruby
 dist: focal
 os: linux
 rvm:
-  - 3.0.2
-  - 2.7.4
-  - 2.6.8
+  - 3.1.2
+  - 3.0.4
+  - 2.7.6
 cache: bundler
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -19,4 +19,4 @@ after_script:
 addons:
   apt:
     packages:
-    - libimage-exiftool-perl
+      - libimage-exiftool-perl
