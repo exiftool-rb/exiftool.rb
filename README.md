@@ -1,6 +1,7 @@
 # Ruby wrapper for ExifTool
 
 [![Build Status](https://app.travis-ci.com/exiftool-rb/exiftool.rb.svg?branch=master)](https://app.travis-ci.com/github/exiftool-rb/exiftool.rb)
+[![Build Status](https://github.com/exiftool-rb/exiftool.rb/actions/workflows/build.yml/badge.svg)](https://github.com/exiftool-rb/exiftool.rb/actions)
 [![Gem Version](https://badge.fury.io/rb/exiftool.svg)](http://rubygems.org/gems/exiftool)
 [![Gem Downloads](https://img.shields.io/gem/dt/exiftool.svg)](http://rubygems.org/gems/exiftool)
 [![Gem Latest](https://img.shields.io/gem/dtv/exiftool.svg)](http://rubygems.org/gems/exiftool)
