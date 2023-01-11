@@ -29,8 +29,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: Check available Exiftool Versions
-        run: sudo apt list --all-versions libimage-exiftool-perl
       - name: Install Exiftool
         run: sudo apt install libimage-exiftool-perl
       - name: Run tests
