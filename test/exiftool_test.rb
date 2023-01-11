@@ -17,12 +17,14 @@ IGNORABLE_KEYS = %i[
   file_modify_date
   file_modify_date_civil
   file_permissions
+  file_size
   intelligent_contrast
   max_focal_length
   min_focal_length
   source_file
   thumbnail_image
   preview_tiff
+
 ].freeze
 
 IGNORABLE_PATTERNS = [
