@@ -6,6 +6,9 @@ AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
 
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
 Style/SpecialGlobalVars:
   EnforcedStyle: use_perl_names
 
