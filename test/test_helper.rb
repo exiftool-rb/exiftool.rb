@@ -6,6 +6,7 @@ SimpleCov.start do
 end
 
 require 'minitest/autorun'
+require 'minitest/unit'
 require 'minitest/great_expectations'
 require 'yaml'
 require 'exiftool'
