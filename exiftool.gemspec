@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata['rubygems_mfa_required'] = 'true'
 
-  spec.required_ruby_version = '>= 2.7'
+  spec.required_ruby_version = '>= 3.0'
 
   spec.files         = `git ls-files -- lib`.split($/)
   spec.require_paths = %w[lib]
@@ -24,16 +24,4 @@ Gem::Specification.new do |spec|
   spec.requirements << 'ExifTool (see http://exiftool.org)'
 
   spec.add_dependency 'json'
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'minitest'
-  spec.add_development_dependency 'minitest-great_expectations'
-  spec.add_development_dependency 'minitest-reporters' unless ENV['CI']
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-minitest'
-  spec.add_development_dependency 'rubocop-rake'
-  spec.add_development_dependency 'simplecov'
-  spec.add_development_dependency 'simplecov-console'
-  spec.add_development_dependency 'simplecov_json_formatter'
-  spec.add_development_dependency 'yard'
 end
