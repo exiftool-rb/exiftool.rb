@@ -6,9 +6,9 @@ class Exiftool
   # Exiftool FiledParser Class
   class FieldParser
     WORD_BOUNDARY_RES = [/([A-Z\d]+)([A-Z][a-z])/, /([a-z\d])([A-Z])/].freeze
-    FRACTION_RE = %r{^(\d+)/(\d+)$}.freeze
-    YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/.freeze
-    ZERO_DATE_RE = /\A[+:0 ]+\z/.freeze
+    FRACTION_RE = %r{^(\d+)/(\d+)$}
+    YMD_RE = /\A(\d{4}):(\d{2}):(\d{2})\b/
+    ZERO_DATE_RE = /\A[+:0 ]+\z/
 
     attr_reader :key, :display_key, :sym_key, :raw_value
 
