@@ -147,6 +147,15 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.2.7
+
+- Fixed [exiftool-rb/exiftool_vendored.rb#37](https://github.com/exiftool-rb/exiftool_vendored.rb/issues/37) issue where track tags were treated as fractions and were reduced to the lowest term in the output.
+- Switched from codeclimate to qlty
+
+### 1.2.5 - 1.2.6
+
+- Maintenance release
+
 ### 1.2.4
 
 - Moved from travis-ci.org to travis-ci.com
