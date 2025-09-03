@@ -4,8 +4,8 @@
 [![Gem Version](https://badge.fury.io/rb/exiftool.svg)](http://rubygems.org/gems/exiftool)
 [![Gem Downloads](https://img.shields.io/gem/dt/exiftool.svg)](http://rubygems.org/gems/exiftool)
 [![Gem Latest](https://img.shields.io/gem/dtv/exiftool.svg)](http://rubygems.org/gems/exiftool)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/82cfb3b0d0d5e67499c7/test_coverage)](https://codeclimate.com/github/exiftool-rb/exiftool.rb/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/82cfb3b0d0d5e67499c7/maintainability)](https://codeclimate.com/github/exiftool-rb/exiftool.rb/maintainability)
+[![Code Coverage](https://qlty.sh/gh/exiftool-rb/projects/exiftool/coverage.svg)](https://qlty.sh/gh/exiftool-rb/projects/exiftool)
+[![Maintainability](https://qlty.sh/gh/exiftool-rb/projects/exiftool/maintainability.svg)](https://qlty.sh/gh/exiftool-rb/projects/exiftool)
 
 This gem is the simplest thing that could possibly work that
 reads the output of [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool)
