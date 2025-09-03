@@ -98,4 +98,9 @@ describe Exiftool::FieldParser do
     p = Exiftool::FieldParser.new('GPSLongitude', -122.475666666667)
     _(p.value).must_be_close_to(-122.475666666667)
   end
+
+  it 'parses track tags without reducing a fraction to lowest terms' do
+    p = Exiftool::FieldParser.new('Track', '2/24')
+    _(p.value).must_equal('2/24')
+  end
 end

@@ -81,7 +81,7 @@ class Exiftool
     end
 
     def fraction?
-      raw_value.is_a?(String) && raw_value =~ FRACTION_RE
+      raw_value.is_a?(String) && raw_value =~ FRACTION_RE && sym_key != :track
     end
 
     def as_fraction
