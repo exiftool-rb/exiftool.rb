@@ -34,6 +34,10 @@ jobs:
       - name: Run tests
         run: bundle exec rake
       - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v9.0.0
-        env:
-          CC_TEST_REPORTER_ID: 27df0a8ad648d4af0f931c1b0101cca2278fcfd755112b4d563650c45f48071c
+        uses: qltysh/qlty-action/coverage@v2
+        with:
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: coverage/.resultset.json
+        # uses: paambaati/codeclimate-action@v9.0.0
+        # env:
+        #   CC_TEST_REPORTER_ID: 27df0a8ad648d4af0f931c1b0101cca2278fcfd755112b4d563650c45f48071c
