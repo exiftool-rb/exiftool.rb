@@ -2,6 +2,7 @@
 
 require 'json'
 require 'shellwords'
+require 'open3'
 require 'exiftool/result'
 require 'forwardable'
 require 'pathname'
@@ -30,7 +31,20 @@ class Exiftool
 
   # This is a string, not a float, to handle versions like "9.40" properly.
   def self.exiftool_version
-    @exiftool_version ||= `#{command} -ver 2> /dev/null`.chomp
+    return @exiftool_version if defined?(@exiftool_version) && @exiftool_version
+
+    stdout_str = ''
+    begin
+      Open3.popen3(command, '-ver') do |_stdin, stdout, _stderr, wait_thr|
+        stdout_str = stdout.read.to_s.chomp
+        # Ensure the process is reaped
+        wait_thr.value
+      end
+    rescue Errno::ENOENT
+      stdout_str = ''
+    end
+
+    @exiftool_version = stdout_str
   end
 
   def self.expand_path(filename)
@@ -47,16 +61,45 @@ class Exiftool
 
   def initialize(filenames, exiftool_opts = '')
     @file2result = {}
+    io_input = nil
+    if filenames.is_a?(IO)
+      io_input = filenames
+      filenames = ['-']
+    end
+
     filenames = [filenames] if filenames.is_a?(String) || filenames.is_a?(Pathname)
     return if filenames.empty?
 
-    escaped_filenames = filenames.map do |f|
-      Shellwords.escape(self.class.expand_path(f.to_s))
-    end.join(' ')
-    # I'd like to use -dateformat, but it doesn't support timezone offsets properly,
-    # nor sub-second timestamps.
-    cmd = "#{self.class.command} #{exiftool_opts} -j -coordFormat \"%.8f\" #{escaped_filenames} 2> /dev/null"
-    json = `#{cmd}`.chomp
+    expanded_filenames = filenames.map do |f|
+      f == '-' ? '-' : self.class.expand_path(f.to_s)
+    end
+    args = [
+      self.class.command,
+      *Shellwords.split(exiftool_opts),
+      '-j',
+      '-coordFormat', '%.8f',
+      *expanded_filenames
+    ]
+
+    json = ''
+    begin
+      Open3.popen3(*args) do |stdin, stdout, _stderr, wait_thr|
+        if io_input
+          # Reading first 64KB.
+          # It is enough to parse exif tags.
+          # https://en.wikipedia.org/wiki/Exif#Technical_2
+          while (chunk = io_input.read(1 << 16))
+            stdin.write(chunk)
+          end
+          stdin.close
+        end
+        json = stdout.read.to_s.chomp
+        wait_thr.value
+      end
+    rescue Errno::ENOENT
+      json = ''
+    end
+
     raise ExiftoolNotInstalled if json == ''
 
     JSON.parse(json).each do |raw|

@@ -80,6 +80,17 @@ describe Exiftool do
     validate_result(e, 'test/utf8.jpg')
   end
 
+  it 'supports an IO object as a constructor arg' do
+    File.open('test/IMG_2452.jpg', 'rb') do |io|
+      e = Exiftool.new(io)
+      _(e.errors?).must_be_false
+      h = e.to_hash
+      _(h[:file_type]).must_equal 'JPEG'
+      _(h[:mime_type]).must_equal 'image/jpeg'
+      _(h[:make]).must_equal 'Canon'
+    end
+  end
+
   describe 'single-get' do
     it 'responds with known correct responses' do
       Dir['test/*.jpg'].each do |filename|

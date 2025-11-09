@@ -83,6 +83,16 @@ e.files_with_results
 # => ["path/to/iPhone 4S.jpg", "path/to/Droid X.jpg", …
 ```
 
+### Reading from IO
+
+You can pass an IO object to read metadata from standard input. ExifTool will infer the file type from content:
+
+```ruby
+io = File.open('test/IMG_2452.jpg', 'rb')
+e = Exiftool.new(io)
+e[:make] # => "Canon"
+```
+
 ### Dates without timezones
 
 It seems that most exif dates don't include timezone offsets, without which forces us to assume the
