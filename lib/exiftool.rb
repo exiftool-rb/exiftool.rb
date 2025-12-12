@@ -85,12 +85,7 @@ class Exiftool
     begin
       Open3.popen3(*args) do |stdin, stdout, _stderr, wait_thr|
         if io_input
-          # Reading first 64KB.
-          # It is enough to parse exif tags.
-          # https://en.wikipedia.org/wiki/Exif#Technical_2
-          while (chunk = io_input.read(1 << 16))
-            stdin.write(chunk)
-          end
+          IO.copy_stream(io_input, stdin)
           stdin.close
         end
         json = stdout.read.to_s.chomp
