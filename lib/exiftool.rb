@@ -6,6 +6,7 @@ require 'open3'
 require 'exiftool/result'
 require 'forwardable'
 require 'pathname'
+require 'stringio'
 
 # Exiftool Class
 class Exiftool
@@ -62,7 +63,7 @@ class Exiftool
   def initialize(filenames, exiftool_opts = '')
     @file2result = {}
     io_input = nil
-    if filenames.is_a?(IO)
+    if filenames.is_a?(IO) || filenames.is_a?(StringIO)
       io_input = filenames
       filenames = ['-']
     end
