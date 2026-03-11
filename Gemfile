@@ -7,7 +7,7 @@ gemspec
 
 group :development do
   gem 'bundler'
-  gem 'minitest'
+  gem 'minitest', '5.26.0'
   gem 'minitest-great_expectations'
   gem 'minitest-reporters' unless ENV['CI']
   gem 'rake'
