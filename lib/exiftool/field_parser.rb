@@ -48,7 +48,7 @@ class Exiftool
     private
 
     def lat_long?
-      sym_key == :gps_latitude || sym_key == :gps_longitude
+      %i[gps_latitude gps_longitude].include?(sym_key)
     end
 
     def as_lat_long

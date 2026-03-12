@@ -21,7 +21,7 @@ class Exiftool
 
         civil_date = p.civil_date
         if civil_date
-          civil_date_key = "#{p.sym_key}_civil".to_sym
+          civil_date_key = :"#{p.sym_key}_civil"
           @to_hash[civil_date_key] = civil_date
         end
       end

@@ -44,6 +44,7 @@ describe Exiftool do
   it 'sets custom path for exiftool' do
     e = Exiftool.dup
     e.command = 'foo/bar/exiftool'
+
     _(e.command).must_match('foo/bar/exiftool')
   end
 
@@ -85,6 +86,7 @@ describe Exiftool do
       e = Exiftool.new(io)
       _(e.errors?).must_be_false
       h = e.to_hash
+
       _(h[:file_type]).must_equal 'JPEG'
       _(h[:mime_type]).must_equal 'image/jpeg'
       _(h[:make]).must_equal 'Canon'
@@ -96,6 +98,7 @@ describe Exiftool do
     e = Exiftool.new(io)
     _(e.errors?).must_be_false
     h = e.to_hash
+
     _(h[:file_type]).must_equal 'JPEG'
     _(h[:mime_type]).must_equal 'image/jpeg'
     _(h[:make]).must_equal 'Canon'
@@ -105,11 +108,13 @@ describe Exiftool do
     it 'responds with known correct responses' do
       Dir['test/*.jpg'].each do |filename|
         e = Exiftool.new(filename)
+
         _(e[:source_file]).must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
       end
       Dir['test/*.tif'].each do |filename|
         e = Exiftool.new(filename)
+
         _(e[:source_file]).must_equal Exiftool.expand_path(filename)
         validate_result(e, filename)
       end
@@ -117,6 +122,7 @@ describe Exiftool do
 
     it 'fails if there are multiple files provided and Exiftool is treated as a result' do
       e = Exiftool.new(Dir['test/*.jpg'])
+
       _ { e.to_hash[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
       _ { e[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
       _ { e.raw[:aperture] }.must_raise Exiftool::NoDefaultResultWithMultiget
@@ -133,6 +139,7 @@ describe Exiftool do
     it 'returns list of files with results' do
       filenames = Dir['**/*.jpg'].to_a
       e = Exiftool.new(filenames)
+
       _(e.files_with_results.size).must_equal(6)
     end
   end

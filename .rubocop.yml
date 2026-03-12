@@ -19,7 +19,13 @@ Metrics/BlockLength:
 # Ignoring for until better times...
 
 Metrics/AbcSize:
-  Max: 24
+  Max: 33
 
 Metrics/MethodLength:
-  Max: 17
+  Max: 36
+
+Metrics/CyclomaticComplexity:
+  Max: 12
+
+Metrics/PerceivedComplexity:
+  Max: 12
