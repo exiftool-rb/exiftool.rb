@@ -91,6 +91,16 @@ describe Exiftool do
     end
   end
 
+  it 'supports a StringIO object as a constructor arg' do
+    io = StringIO.new(File.binread('test/IMG_2452.jpg'))
+    e = Exiftool.new(io)
+    _(e.errors?).must_be_false
+    h = e.to_hash
+    _(h[:file_type]).must_equal 'JPEG'
+    _(h[:mime_type]).must_equal 'image/jpeg'
+    _(h[:make]).must_equal 'Canon'
+  end
+
   describe 'single-get' do
     it 'responds with known correct responses' do
       Dir['test/*.jpg'].each do |filename|
