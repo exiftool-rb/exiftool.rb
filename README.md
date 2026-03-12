@@ -157,6 +157,15 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.3.1
+
+- Added support for StringIO
+- Housekeeping and maintenance changes
+
+### 1.3.0
+
+- Added ability reading metadata from IO
+
 ### 1.2.7
 
 - Fixed [exiftool-rb/exiftool_vendored.rb#37](https://github.com/exiftool-rb/exiftool_vendored.rb/issues/37) issue where track tags were treated as fractions and were reduced to the lowest term in the output.
