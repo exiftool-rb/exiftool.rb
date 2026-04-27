@@ -158,6 +158,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.4.1
+
+- Added test coverage for missing `exiftool` command handling.
+
 ### 1.4.0
 
 - Removed `minitest-great_expectations` from the development dependencies.

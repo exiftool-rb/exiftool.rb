@@ -48,6 +48,21 @@ describe Exiftool do
     assert_equal('foo/bar/exiftool', e.command)
   end
 
+  it 'returns empty version for missing exiftool command' do
+    e = Class.new(Exiftool)
+    e.command = 'no/such/exiftool'
+
+    assert_equal('', e.exiftool_version)
+    refute_predicate(e, :exiftool_installed?)
+  end
+
+  it 'raises ExiftoolNotInstalled for missing exiftool command' do
+    e = Class.new(Exiftool)
+    e.command = 'no/such/exiftool'
+
+    assert_raises(Exiftool::ExiftoolNotInstalled) { e.new('test/IMG_2452.jpg') }
+  end
+
   it 'raises NoSuchFile for missing files' do
     assert_raises(Exiftool::NoSuchFile) { Exiftool.new('no/such/file') }
   end
