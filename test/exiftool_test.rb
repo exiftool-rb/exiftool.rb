@@ -34,46 +34,50 @@ IGNORABLE_PATTERNS = [
 
 describe Exiftool do
   it 'returns a sensible version' do
-    _(Exiftool.exiftool_version).must_match(/\A\d+\.\d+\z/)
+    assert_match(/\A\d+\.\d+\z/, Exiftool.exiftool_version)
   end
 
   it 'returns true for exiftool installed' do
-    _(Exiftool.exiftool_installed?).must_be_true
+    assert_predicate(Exiftool, :exiftool_installed?)
   end
 
   it 'sets custom path for exiftool' do
     e = Exiftool.dup
     e.command = 'foo/bar/exiftool'
 
-    _(e.command).must_match('foo/bar/exiftool')
+    assert_equal('foo/bar/exiftool', e.command)
   end
 
   it 'raises NoSuchFile for missing files' do
-    _ { Exiftool.new('no/such/file') }.must_raise Exiftool::NoSuchFile
+    assert_raises(Exiftool::NoSuchFile) { Exiftool.new('no/such/file') }
   end
 
   it 'raises NotAFile for directories' do
-    _ { Exiftool.new('lib') }.must_raise Exiftool::NotAFile
+    assert_raises(Exiftool::NotAFile) { Exiftool.new('lib') }
   end
 
   it 'no-ops with no files' do
     e = Exiftool.new([])
-    _(e.errors?).must_be_false
+
+    refute_predicate(e, :errors?)
   end
 
   it 'has errors with files without EXIF headers' do
     e = Exiftool.new('test/binary_file')
-    _(e.errors?).must_be_true
+
+    assert_predicate(e, :errors?)
   end
 
   it 'returns results with error when explicitly asked' do
     e = Exiftool.new('test/binary_file')
-    _(e.results(include_results_with_errors: true).any?).must_be_true
+
+    assert_predicate(e.results(include_results_with_errors: true), :any?)
   end
 
   it 'doesn\'t return results with errors' do
     e = Exiftool.new('test/binary_file')
-    _(e.results.any?).must_be_false
+
+    refute_predicate(e.results, :any?)
   end
 
   it 'supports a singular Pathname as a constructor arg' do
@@ -84,24 +88,26 @@ describe Exiftool do
   it 'supports an IO object as a constructor arg' do
     File.open('test/IMG_2452.jpg', 'rb') do |io|
       e = Exiftool.new(io)
-      _(e.errors?).must_be_false
       h = e.to_hash
 
-      _(h[:file_type]).must_equal 'JPEG'
-      _(h[:mime_type]).must_equal 'image/jpeg'
-      _(h[:make]).must_equal 'Canon'
+      refute_predicate(e, :errors?)
+      assert_equal(
+        { file_type: 'JPEG', mime_type: 'image/jpeg', make: 'Canon' },
+        h.slice(:file_type, :mime_type, :make)
+      )
     end
   end
 
   it 'supports a StringIO object as a constructor arg' do
     io = StringIO.new(File.binread('test/IMG_2452.jpg'))
     e = Exiftool.new(io)
-    _(e.errors?).must_be_false
     h = e.to_hash
 
-    _(h[:file_type]).must_equal 'JPEG'
-    _(h[:mime_type]).must_equal 'image/jpeg'
-    _(h[:make]).must_equal 'Canon'
+    refute_predicate(e, :errors?)
+    assert_equal(
+      { file_type: 'JPEG', mime_type: 'image/jpeg', make: 'Canon' },
+      h.slice(:file_type, :mime_type, :make)
+    )
   end
 
   describe 'single-get' do
@@ -109,13 +115,13 @@ describe Exiftool do
       Dir['test/*.jpg'].each do |filename|
         e = Exiftool.new(filename)
 
-        _(e[:source_file]).must_equal Exiftool.expand_path(filename)
+        assert_equal(Exiftool.expand_path(filename), e[:source_file])
         validate_result(e, filename)
       end
       Dir['test/*.tif'].each do |filename|
         e = Exiftool.new(filename)
 
-        _(e[:source_file]).must_equal Exiftool.expand_path(filename)
+        assert_equal(Exiftool.expand_path(filename), e[:source_file])
         validate_result(e, filename)
       end
     end
@@ -123,9 +129,9 @@ describe Exiftool do
     it 'fails if there are multiple files provided and Exiftool is treated as a result' do
       e = Exiftool.new(Dir['test/*.jpg'])
 
-      _ { e.to_hash[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
-      _ { e[:source_file] }.must_raise Exiftool::NoDefaultResultWithMultiget
-      _ { e.raw[:aperture] }.must_raise Exiftool::NoDefaultResultWithMultiget
+      assert_raises(Exiftool::NoDefaultResultWithMultiget) { e.to_hash[:source_file] }
+      assert_raises(Exiftool::NoDefaultResultWithMultiget) { e[:source_file] }
+      assert_raises(Exiftool::NoDefaultResultWithMultiget) { e.raw[:aperture] }
     end
   end
 
@@ -140,7 +146,7 @@ describe Exiftool do
       filenames = Dir['**/*.jpg'].to_a
       e = Exiftool.new(filenames)
 
-      _(e.files_with_results.size).must_equal(6)
+      assert_equal(6, e.files_with_results.size)
     end
   end
 
@@ -151,7 +157,8 @@ describe Exiftool do
     File.open(yaml_file, 'w') { |out| YAML.dump(actual, out) } if ENV['DUMP_RESULTS']
     expected = File.open(yaml_file) { |f| YAML.safe_load(f, permitted_classes: [Symbol, Date, Rational]) }
     expected.delete_if { |k, _v| ignorable_key?(k) }
-    _(actual).must_equal_hash(expected)
+
+    assert_equal(expected, actual)
   end
 
   puts "Ignoring #{IGNORABLE_KEYS.size} keys."
