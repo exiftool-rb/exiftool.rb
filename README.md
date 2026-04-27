@@ -158,6 +158,13 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 
 ## Change history
 
+### 1.4.0
+
+- Removed `minitest-great_expectations` from the development dependencies.
+- Updated tests to use native Minitest assertions while keeping the existing `describe` and `it` blocks.
+- Updated supported Ruby versions to Ruby 3.2 through 4.0.
+- Added Ruby 4.0 to the GitHub Actions test matrix.
+
 ### 1.3.1
 
 - Added support for StringIO
