@@ -14,10 +14,6 @@ Metrics/BlockLength:
     - 'test/*.rb'
     - 'exiftool.gemspec'
 
-Metrics/ClassLength:
-  Exclude:
-    - 'lib/exiftool.rb'
-
 ########
 # Below exclusions would require major refactoring
 # Ignoring for until better times...
@@ -33,3 +29,6 @@ Metrics/CyclomaticComplexity:
 
 Metrics/PerceivedComplexity:
   Max: 12
+
+Metrics/ClassLength:
+  Max: 105
