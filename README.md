@@ -164,6 +164,10 @@ this if you've installed added the exiftool directory to the PATH of the shell t
 - Added control character sanitization for metadata keys while preserving metadata values.
 - Added test coverage for control character handling.
 
+### 1.4.2
+
+- Additional tests to improve test & code coverage
+
 ### 1.4.1
 
 - Added test coverage for missing `exiftool` command handling.
