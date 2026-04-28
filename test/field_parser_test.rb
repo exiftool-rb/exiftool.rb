@@ -15,10 +15,23 @@ describe Exiftool::FieldParser do
     assert_equal('Internal Serial Number', p.display_key)
   end
 
+  it 'sanitizes control characters in keys' do
+    p = Exiftool::FieldParser.new("Internal\nSerial\rNumber", '')
+
+    assert_equal('Internal Serial Number', p.display_key)
+    assert_equal(:internal_serial_number, p.sym_key)
+  end
+
   it 'parses date flags without warnings' do
     p = Exiftool::FieldParser.new('DateStampMode', 'Off')
 
     assert_equal('Off', p.value)
+  end
+
+  it 'preserves control characters in values' do
+    p = Exiftool::FieldParser.new('Comment', "hello\nworld")
+
+    assert_equal("hello\nworld", p.value)
   end
 
   it 'leaves dates without timezones as strings' do

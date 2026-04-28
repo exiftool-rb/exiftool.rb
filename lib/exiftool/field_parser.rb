@@ -14,7 +14,8 @@ class Exiftool
 
     def initialize(key, raw_value)
       @key = key
-      @display_key = WORD_BOUNDARY_RES.inject(key) { |k, regex| k.gsub(regex, '\1 \2') }
+      sanitized_key = key.gsub(Exiftool::CONTROL_CHAR_RE, ' ')
+      @display_key = WORD_BOUNDARY_RES.inject(sanitized_key) { |k, regex| k.gsub(regex, '\1 \2') }
       @sym_key = display_key.downcase.gsub(' ', '_').to_sym
       @raw_value = raw_value
     end
