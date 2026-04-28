@@ -14,6 +14,10 @@ Metrics/BlockLength:
     - 'test/*.rb'
     - 'exiftool.gemspec'
 
+Metrics/ClassLength:
+  Exclude:
+    - 'lib/exiftool.rb'
+
 ########
 # Below exclusions would require major refactoring
 # Ignoring for until better times...

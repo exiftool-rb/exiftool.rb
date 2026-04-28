@@ -48,6 +48,19 @@ describe Exiftool do
     assert_equal('foo/bar/exiftool', e.command)
   end
 
+  it 'raises InvalidCommand for commands with control characters' do
+    control_characters.each do |control_character|
+      command = [
+        'exiftool',
+        '-p',
+        '/etc/passwd'
+      ].join(control_character)
+      error = assert_raises(Exiftool::InvalidCommand) { Exiftool.command = command }
+
+      assert_equal(command.inspect, error.message)
+    end
+  end
+
   it 'returns empty version for missing exiftool command' do
     e = Class.new(Exiftool)
     e.command = 'no/such/exiftool'
@@ -65,6 +78,32 @@ describe Exiftool do
 
   it 'raises NoSuchFile for missing files' do
     assert_raises(Exiftool::NoSuchFile) { Exiftool.new('no/such/file') }
+  end
+
+  it 'raises NoSuchFile for filenames with control characters' do
+    control_characters.each do |control_character|
+      filename = [
+        'test/faces.jpg',
+        'leak.txt'
+      ].join(control_character)
+      error = assert_raises(Exiftool::NoSuchFile) { Exiftool.new(filename) }
+
+      assert_equal(filename.inspect, error.message)
+    end
+  end
+
+  it 'raises InvalidOption for exiftool options with control characters' do
+    control_characters.each do |control_character|
+      option = [
+        '-p',
+        '/etc/passwd',
+        '-w!',
+        'leak.txt'
+      ].join(control_character)
+      error = assert_raises(Exiftool::InvalidOption) { Exiftool.new('test/faces.jpg', option) }
+
+      assert_equal(option.inspect, error.message)
+    end
   end
 
   it 'raises NotAFile for directories' do
@@ -180,5 +219,11 @@ describe Exiftool do
 
   def ignorable_key?(key)
     IGNORABLE_KEYS.include?(key) || IGNORABLE_PATTERNS.any? { |ea| key.to_s =~ ea }
+  end
+
+  def control_characters
+    ((0..31).to_a + [127] + (128..159).to_a).map do |codepoint|
+      codepoint.chr(Encoding::UTF_8)
+    end
   end
 end

@@ -10,20 +10,28 @@ require 'stringio'
 
 # Exiftool Class
 class Exiftool
+  CONTROL_CHAR_RE = /[[:cntrl:]]/
+
   class NoSuchFile < StandardError; end
 
   class NotAFile < StandardError; end
+
+  class InvalidCommand < StandardError; end
+
+  class InvalidOption < StandardError; end
 
   class ExiftoolNotInstalled < StandardError; end
 
   class NoDefaultResultWithMultiget < StandardError; end
 
-  class << self
-    attr_writer :command
-  end
-
   def self.command
     @command ||= 'exiftool'
+  end
+
+  def self.command=(command)
+    raise(InvalidCommand, command.inspect) if command.match?(CONTROL_CHAR_RE)
+
+    @command = command
   end
 
   def self.exiftool_installed?
@@ -49,11 +57,26 @@ class Exiftool
   end
 
   def self.expand_path(filename)
+    filename = filename.to_s
+    raise(NoSuchFile, filename.inspect) if filename.match?(CONTROL_CHAR_RE)
+
     raise(NoSuchFile, filename) unless File.exist?(filename)
 
     raise(NotAFile, filename) unless File.file?(filename)
 
     File.expand_path(filename)
+  end
+
+  def self.expand_paths(filenames)
+    filenames.map do |f|
+      f == '-' ? '-' : expand_path(f.to_s)
+    end
+  end
+
+  def self.exiftool_args(exiftool_opts)
+    raise(InvalidOption, exiftool_opts.inspect) if exiftool_opts.match?(CONTROL_CHAR_RE)
+
+    Shellwords.split(exiftool_opts)
   end
 
   extend Forwardable
@@ -71,12 +94,10 @@ class Exiftool
     filenames = [filenames] if filenames.is_a?(String) || filenames.is_a?(Pathname)
     return if filenames.empty?
 
-    expanded_filenames = filenames.map do |f|
-      f == '-' ? '-' : self.class.expand_path(f.to_s)
-    end
+    expanded_filenames = self.class.expand_paths(filenames)
     args = [
       self.class.command,
-      *Shellwords.split(exiftool_opts),
+      *self.class.exiftool_args(exiftool_opts),
       '-j',
       '-coordFormat', '%.8f',
       *expanded_filenames
