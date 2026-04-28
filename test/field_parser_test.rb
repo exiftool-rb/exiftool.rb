@@ -34,6 +34,15 @@ describe Exiftool::FieldParser do
     assert_equal("hello\nworld", p.value)
   end
 
+  it 'returns a warning when value parsing raises an error' do
+    p = Exiftool::FieldParser.new('GPSLatitude', Object.new)
+
+    assert_match(
+      /\AWarning: Parsing '#<Object:0x[0-9a-f]+>' for attribute 'GPSLatitude' raised undefined method/,
+      p.value
+    )
+  end
+
   it 'leaves dates without timezones as strings' do
     p = Exiftool::FieldParser.new('CreateDate', '2004:09:19 12:25:20')
 

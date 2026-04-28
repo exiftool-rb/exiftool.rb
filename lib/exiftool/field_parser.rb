@@ -31,9 +31,7 @@ class Exiftool
                    raw_value
                  end
     rescue StandardError => e
-      # :nocov:
       "Warning: Parsing '#{raw_value}' for attribute '#{key}' raised #{e.message}"
-      # :nocov:
     end
 
     def civil_date
